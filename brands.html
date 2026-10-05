@@ -56,6 +56,7 @@
     }
 
     html, body {
+      width: 100%;
       max-width: 100%;
       overflow-x: clip;
       background-color: #F7FAFC;
@@ -63,6 +64,8 @@
       font-family: 'Plus Jakarta Sans', sans-serif;
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
+      scroll-behavior: smooth;
     }
 
     .font-heading { font-family: 'Space Grotesk', sans-serif; }
@@ -96,9 +99,11 @@
     .brand-card {
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .brand-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 25px -5px rgba(8, 27, 51, 0.08), 0 8px 10px -6px rgba(8, 27, 51, 0.08);
+    @media (hover: hover) and (pointer: fine) {
+      .brand-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 25px -5px rgba(8, 27, 51, 0.08), 0 8px 10px -6px rgba(8, 27, 51, 0.08);
+      }
     }
   </style>
 </head>

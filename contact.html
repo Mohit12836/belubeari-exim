@@ -56,6 +56,7 @@
     }
 
     html, body {
+      width: 100%;
       max-width: 100%;
       overflow-x: clip;
       background-color: #F7FAFC;
@@ -63,6 +64,8 @@
       font-family: 'Plus Jakarta Sans', sans-serif;
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
+      scroll-behavior: smooth;
     }
 
     .font-heading { font-family: 'Space Grotesk', sans-serif; }
@@ -91,6 +94,15 @@
     @keyframes sheenRun {
       0% { left: -60%; }
       100% { left: 140%; }
+    }
+
+    @media (max-width: 768px) {
+      input, select, textarea {
+        font-size: 16px !important;
+      }
+      button[type="submit"] {
+        min-height: 50px;
+      }
     }
   </style>
 </head>
