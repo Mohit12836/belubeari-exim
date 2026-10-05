@@ -380,13 +380,15 @@
       </a>
 
       <!-- Desktop Navigation Links (Large Screens) -->
-      <nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-xs xl:text-sm font-semibold text-slate-200">
-        <a href="#categories-section" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Categories</a>
-        <a href="#products-showcase" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">10 Product Lines</a>
-        <a href="#spec-finder" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Pitch Calculator</a>
-        <a href="#industries" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Industries</a>
-        <a href="#fabrication" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Workshop & Splicing</a>
-        <a href="#mumbai-hub" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Mumbai Hub</a>
+      <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-xs xl:text-sm font-semibold text-slate-200">
+        <a href="index.html" class="text-cyan-400 font-bold border-b-2 border-cyan-400 pb-0.5">Home</a>
+        <a href="about.html" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">About Us</a>
+        <a href="products.html" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Products</a>
+        <a href="gallery.html" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Gallery</a>
+        <a href="services.html" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Services</a>
+        <a href="brands.html" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Brands</a>
+        <a href="faq.html" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">FAQ</a>
+        <a href="contact.html" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Contact</a>
       </nav>
 
       <!-- Action Buttons + Mobile Toggle -->
@@ -411,31 +413,35 @@
     <!-- Mobile Slide-Down Navigation Drawer -->
     <div id="mobile-menu-drawer" class="hidden lg:hidden bg-[#081B33]/98 backdrop-blur-2xl border-b border-cyan-500/30 px-4 pt-3 pb-6 space-y-3 transition-all duration-300">
       <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-200 pt-1">
-        <a href="#categories-section" onclick="toggleMobileMenu()" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
-          <i data-lucide="layers" class="w-4 h-4 text-cyan-400"></i> Categories
+        <a href="index.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-cyan-950/60 border border-cyan-400 text-cyan-300 font-bold">
+          <i data-lucide="home" class="w-4 h-4 text-cyan-400"></i> Home
         </a>
-        <a href="#products-showcase" onclick="toggleMobileMenu()" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
-          <i data-lucide="boxes" class="w-4 h-4 text-blue-400"></i> 10 Products
+        <a href="about.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="info" class="w-4 h-4 text-cyan-400"></i> About Us
         </a>
-        <a href="#spec-finder" onclick="toggleMobileMenu()" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
-          <i data-lucide="cpu" class="w-4 h-4 text-orange-400"></i> Calculator
+        <a href="products.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="boxes" class="w-4 h-4 text-blue-400"></i> Products
         </a>
-        <a href="#industries" onclick="toggleMobileMenu()" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
-          <i data-lucide="globe-2" class="w-4 h-4 text-violet-400"></i> Industries
+        <a href="gallery.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="image" class="w-4 h-4 text-orange-400"></i> Gallery
         </a>
-        <a href="#fabrication" onclick="toggleMobileMenu()" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
-          <i data-lucide="wrench" class="w-4 h-4 text-emerald-400"></i> Workshop
+        <a href="services.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="wrench" class="w-4 h-4 text-emerald-400"></i> Services
         </a>
-        <a href="#mumbai-hub" onclick="toggleMobileMenu()" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
-          <i data-lucide="map-pin" class="w-4 h-4 text-sky-400"></i> Mumbai Hub
+        <a href="brands.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="award" class="w-4 h-4 text-violet-400"></i> Brands
         </a>
-      </div>
-
+        <a href="faq.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="help-circle" class="w-4 h-4 text-sky-400"></i> FAQ
+        </a>
+        <a href="contact.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="mail" class="w-4 h-4 text-amber-400"></i> Contact
+        </a>
       <div class="pt-2 flex items-center gap-2 border-t border-slate-800">
         <a href="tel:+919967384878" class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs font-bold text-slate-200">
           <i data-lucide="phone" class="w-4 h-4 text-cyan-400"></i> Call: +91 99673 84878
         </a>
-        <a href="#rfq-section" onclick="toggleMobileMenu()" class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-400 text-xs font-bold text-slate-950">
+        <a href="contact.html#enquiry-form" class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-400 text-xs font-bold text-slate-950">
           <i data-lucide="file-text" class="w-4 h-4"></i> Get Quote
         </a>
       </div>
@@ -762,8 +768,8 @@
           <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200">
             <img class="catalog-img w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
                  data-white="assets/products/white_bg/01_white_conveyor_belt_roll.jpg" 
-                 data-ind="CLIENT NE DI MAGES/public/images/products/pvc-green-cleated-conveyor.jpg" 
-                 src="CLIENT NE DI MAGES/public/images/products/pvc-green-cleated-conveyor.jpg" 
+                 data-ind="assets/client_raw/pvc-green-cleated-conveyor.jpg" 
+                 src="assets/client_raw/pvc-green-cleated-conveyor.jpg" 
                  alt="PVC Conveyor Belts">
             <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-md z-10">
               CONVEYOR_01
@@ -799,8 +805,8 @@
           <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200">
             <img class="catalog-img w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
                  data-white="assets/products/white_bg/02_white_pu_timing_belt.jpg" 
-                 data-ind="CLIENT NE DI MAGES/public/images/products/timing-belt-gates-powergrip.jpg" 
-                 src="CLIENT NE DI MAGES/public/images/products/timing-belt-gates-powergrip.jpg" 
+                 data-ind="assets/client_raw/timing-belt-gates-powergrip.jpg" 
+                 src="assets/client_raw/timing-belt-gates-powergrip.jpg" 
                  alt="PU Timing Belts">
             <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-md z-10">
               SYNCHRONOUS_02
@@ -836,8 +842,8 @@
           <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200">
             <img class="catalog-img w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
                  data-white="assets/products/white_bg/03_white_v_belts_set.jpg" 
-                 data-ind="CLIENT NE DI MAGES/public/images/products/timing-and-v-belts-mitsuboshi.jpg" 
-                 src="CLIENT NE DI MAGES/public/images/products/timing-and-v-belts-mitsuboshi.jpg" 
+                 data-ind="assets/client_raw/timing-and-v-belts-mitsuboshi.jpg" 
+                 src="assets/client_raw/timing-and-v-belts-mitsuboshi.jpg" 
                  alt="V-Belts">
             <span class="absolute top-3 left-3 bg-orange-500 text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-md z-10">
               V_BELT_03
@@ -873,8 +879,8 @@
           <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200">
             <img class="catalog-img w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
                  data-white="assets/products/white_bg/04_white_ball_bearings.jpg" 
-                 data-ind="CLIENT NE DI MAGES/public/images/products/precision-ball-roller-bearings.jpg" 
-                 src="CLIENT NE DI MAGES/public/images/products/precision-ball-roller-bearings.jpg" 
+                 data-ind="assets/client_raw/precision-ball-roller-bearings.jpg" 
+                 src="assets/client_raw/precision-ball-roller-bearings.jpg" 
                  alt="Precision Ball Bearings">
             <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-md z-10">
               BEARINGS_04
@@ -910,8 +916,8 @@
           <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200">
             <img class="catalog-img w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
                  data-white="assets/products/white_bg/05_white_pillow_block.jpg" 
-                 data-ind="CLIENT NE DI MAGES/public/images/products/pillow-block-units.jpg" 
-                 src="CLIENT NE DI MAGES/public/images/products/pillow-block-units.jpg" 
+                 data-ind="assets/client_raw/pillow-block-units.jpg" 
+                 src="assets/client_raw/pillow-block-units.jpg" 
                  alt="Pillow Block Units">
             <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-md z-10">
               MOUNTED_05
@@ -984,8 +990,8 @@
           <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200">
             <img class="catalog-img w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
                  data-white="assets/products/white_bg/07_white_flat_transmission_belts.jpg" 
-                 data-ind="CLIENT NE DI MAGES/public/images/products/nitta-poly-belts.jpg" 
-                 src="CLIENT NE DI MAGES/public/images/products/nitta-poly-belts.jpg" 
+                 data-ind="assets/client_raw/nitta-poly-belts.jpg" 
+                 src="assets/client_raw/nitta-poly-belts.jpg" 
                  alt="Flat Belts">
             <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-md z-10">
               HIGH_SPEED_07
@@ -1021,8 +1027,8 @@
           <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200">
             <img class="catalog-img w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
                  data-white="assets/products/white_bg/08_white_linatex_coated_belts.jpg" 
-                 data-ind="CLIENT NE DI MAGES/public/images/products/smt-automation-conveyor.jpg" 
-                 src="CLIENT NE DI MAGES/public/images/products/smt-automation-conveyor.jpg" 
+                 data-ind="assets/client_raw/smt-automation-conveyor.jpg" 
+                 src="assets/client_raw/smt-automation-conveyor.jpg" 
                  alt="Linatex Belts">
             <span class="absolute top-3 left-3 bg-orange-500 text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-md z-10">
               SPECIAL_08
@@ -1058,8 +1064,8 @@
           <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200">
             <img class="catalog-img w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
                  data-white="assets/products/white_bg/10_white_food_grade_pu_belts.jpg" 
-                 data-ind="CLIENT NE DI MAGES/public/images/products/pu-food-grade-conveyor-belt.jpg" 
-                 src="CLIENT NE DI MAGES/public/images/products/pu-food-grade-conveyor-belt.jpg" 
+                 data-ind="assets/client_raw/pu-food-grade-conveyor-belt.jpg" 
+                 src="assets/client_raw/pu-food-grade-conveyor-belt.jpg" 
                  alt="Food Grade PU Belts">
             <span class="absolute top-3 left-3 bg-cyan-500 text-slate-950 font-bold text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-md z-10">
               FDA_FOOD_09
@@ -1095,8 +1101,8 @@
           <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200">
             <img class="catalog-img w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
                  data-white="assets/products/white_bg/09_white_oil_seals_orings.jpg" 
-                 data-ind="CLIENT NE DI MAGES/public/images/products/textile-cots-and-aprons.jpg" 
-                 src="CLIENT NE DI MAGES/public/images/products/textile-cots-and-aprons.jpg" 
+                 data-ind="assets/client_raw/textile-cots-and-aprons.jpg" 
+                 src="assets/client_raw/textile-cots-and-aprons.jpg" 
                  alt="Textile Cots and Aprons">
             <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-md z-10">
               TEXTILE_10
@@ -1643,12 +1649,14 @@
         </div>
 
         <div class="flex flex-wrap items-center gap-6 text-xs sm:text-sm text-slate-200 font-bold">
-          <a href="#categories-section" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition">Categories</a>
-          <a href="#products-showcase" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition">10 Product Lines</a>
-          <a href="#spec-finder" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition">Pitch Calculator</a>
-          <a href="#industries" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition">Industries</a>
-          <a href="#fabrication" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition">Workshop</a>
-          <a href="#rfq-section" onmouseenter="playHoverSound()" class="hover:text-orange-400 text-amber-300 transition font-black">Request RFQ</a>
+          <a href="index.html" class="text-cyan-400 font-bold">Home</a>
+          <a href="about.html" class="hover:text-cyan-300 transition">About Us</a>
+          <a href="products.html" class="hover:text-cyan-300 transition">Products</a>
+          <a href="gallery.html" class="hover:text-cyan-300 transition">Gallery</a>
+          <a href="services.html" class="hover:text-cyan-300 transition">Services</a>
+          <a href="brands.html" class="hover:text-cyan-300 transition">Brands</a>
+          <a href="faq.html" class="hover:text-cyan-300 transition">FAQ</a>
+          <a href="contact.html" class="hover:text-orange-400 text-amber-300 transition font-black">Contact Us</a>
         </div>
       </div>
 

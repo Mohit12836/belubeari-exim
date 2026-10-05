@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>About Us | M/s Belubeari Exim - Industrial Components & Belting Mumbai</title>
+  <meta name="description" content="Belubeari Exim provides industrial components and power transmission solutions including belts, conveyor belts, bearings, linear motion components, and related industrial products from Masjid Bunder, Mumbai.">
+
+  <!-- Google Fonts: Space Grotesk (Tech Headings) + Plus Jakarta Sans (Clean Body) + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#081B33',
+              blue: '#1677FF',
+              cyan: '#00C6FF',
+              royal: '#3155FF',
+              violet: '#7C5CFF',
+              orange: '#FF8A25',
+              surface: '#0B2240',
+              card: '#0F2B52'
+            }
+          },
+          fontFamily: {
+            heading: ['"Space Grotesk"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          boxShadow: {
+            'glow-cyan': '0 0 25px rgba(0, 198, 255, 0.45)',
+            'glow-orange': '0 0 25px rgba(255, 138, 37, 0.45)',
+            'glow-blue': '0 0 30px rgba(22, 119, 255, 0.4)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      max-width: 100%;
+      overflow-x: clip;
+      background-color: #F7FAFC;
+      color: #081B33;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .font-heading { font-family: 'Space Grotesk', sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+    .btn-sheen {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-sheen::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+      transform: rotate(25deg);
+    }
+
+    .btn-sheen:hover::after {
+      animation: sheenRun 0.85s ease-in-out forwards;
+    }
+
+    @keyframes sheenRun {
+      0% { left: -60%; }
+      100% { left: 140%; }
+    }
+
+    .interactive-card {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .interactive-card:hover {
+      transform: translateY(-4px);
+    }
+  </style>
+</head>
+<body class="selection:bg-cyan-400 selection:text-slate-950 flex flex-col min-h-screen">
+
+  <!-- 1. TOP TELEMETRY STRIP -->
+  <aside aria-label="Logistics status" class="bg-[#051326] border-b border-cyan-500/30 text-xs py-2 px-3 sm:px-4 font-mono tracking-wide relative z-40 text-white shadow-md">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-y-2 gap-x-3">
+      <div class="flex items-center gap-2 min-w-0 max-w-full">
+        <span class="inline-flex items-center justify-center bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 p-1 rounded-full shrink-0 shadow-glow-cyan">
+          <i data-lucide="zap" class="w-3 h-3 fill-current"></i>
+        </span>
+        <span class="truncate text-slate-200 text-[10px] sm:text-xs">
+          <strong class="text-cyan-300 font-bold">[MUMBAI LOGISTICS HUB]</strong> 10,000+ SKUs Ready • 24-Hr Pan-India Transport
+        </span>
+      </div>
+
+      <div class="flex items-center gap-2.5 sm:gap-4 text-[10px] sm:text-[11px] shrink-0 ml-auto">
+        <span class="hidden md:flex items-center gap-1.5 text-slate-300 font-medium">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i> ISO 9001:2015 Sourcing
+        </span>
+        
+        <a href="contact.html#enquiry-form" class="btn-sheen bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-slate-950 px-2.5 sm:px-3.5 py-0.5 sm:py-1 rounded-lg text-[10px] sm:text-[11px] font-black uppercase tracking-wider transition shadow-glow-orange shrink-0">
+          Quick RFQ &rarr;
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. MAIN HEADER -->
+  <header class="sticky top-0 z-50 bg-[#081B33]/95 backdrop-blur-2xl border-b border-cyan-500/20 shadow-lg">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-2.5 sm:gap-3.5 shrink-0 group">
+        <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-cyan-400 via-blue-600 to-violet-600 flex items-center justify-center text-white font-black text-base sm:text-xl font-heading shadow-glow-cyan border border-cyan-300/40 group-hover:scale-105 transition shrink-0">
+          BE
+        </div>
+        <div class="min-w-0">
+          <div class="text-base sm:text-xl lg:text-2xl font-extrabold tracking-tight font-heading text-white leading-tight truncate">
+            M/s Belubeari Exim
+          </div>
+          <div class="text-[10px] sm:text-[11px] text-cyan-300 font-semibold tracking-wider uppercase flex items-center gap-1.5 truncate">
+            <span>Precision Belting</span>
+            <span class="text-slate-500">•</span>
+            <span class="font-mono text-[9px] sm:text-[10px] text-amber-400">MUMBAI</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-xs xl:text-sm font-semibold text-slate-200">
+        <a href="index.html" class="hover:text-cyan-300 transition-colors">Home</a>
+        <a href="about.html" class="text-cyan-400 font-bold border-b-2 border-cyan-400 pb-0.5">About Us</a>
+        <a href="products.html" class="hover:text-cyan-300 transition-colors">Products</a>
+        <a href="gallery.html" class="hover:text-cyan-300 transition-colors">Gallery</a>
+        <a href="services.html" class="hover:text-cyan-300 transition-colors">Services</a>
+        <a href="brands.html" class="hover:text-cyan-300 transition-colors">Brands</a>
+        <a href="faq.html" class="hover:text-cyan-300 transition-colors">FAQ</a>
+        <a href="contact.html" class="hover:text-cyan-300 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Action Buttons + Mobile Toggle -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <a href="tel:+919967384878" class="hidden md:inline-flex items-center gap-2 text-xs font-bold text-slate-200 hover:text-white px-3 py-2 rounded-xl bg-slate-900/90 border border-slate-700 transition hover:border-cyan-400">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-cyan-400"></i>
+          <span class="font-mono">+91 99673 84878</span>
+        </a>
+        <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote%20for%20Industrial%20Belts." target="_blank" class="btn-sheen inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-black text-xs sm:text-sm px-3 sm:px-4.5 py-2 sm:py-2.5 rounded-xl shadow-md shadow-emerald-500/25 transition transform hover:scale-[1.02] active:scale-[0.98]">
+          <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
+          <span class="hidden xs:inline">WhatsApp RFQ</span>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-toggle" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-slate-900/90 border border-slate-700 text-slate-200 hover:text-cyan-300 hover:border-cyan-400 transition" aria-label="Toggle Navigation Menu">
+          <i id="mobile-menu-icon" data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Slide-Down Navigation Drawer -->
+    <div id="mobile-menu-drawer" class="hidden lg:hidden bg-[#081B33]/98 backdrop-blur-2xl border-b border-cyan-500/30 px-4 pt-3 pb-6 space-y-3 transition-all duration-300">
+      <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-200 pt-1">
+        <a href="index.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="home" class="w-4 h-4 text-cyan-400"></i> Home
+        </a>
+        <a href="about.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-cyan-950/60 border border-cyan-400 text-cyan-300 font-bold">
+          <i data-lucide="info" class="w-4 h-4 text-cyan-400"></i> About Us
+        </a>
+        <a href="products.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="boxes" class="w-4 h-4 text-blue-400"></i> Products
+        </a>
+        <a href="gallery.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="image" class="w-4 h-4 text-orange-400"></i> Gallery
+        </a>
+        <a href="services.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="wrench" class="w-4 h-4 text-emerald-400"></i> Services
+        </a>
+        <a href="brands.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="award" class="w-4 h-4 text-violet-400"></i> Brands
+        </a>
+        <a href="faq.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="help-circle" class="w-4 h-4 text-sky-400"></i> FAQ
+        </a>
+        <a href="contact.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="mail" class="w-4 h-4 text-amber-400"></i> Contact
+        </a>
+      </div>
+
+      <div class="pt-2 flex items-center gap-2 border-t border-slate-800">
+        <a href="tel:+919967384878" class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs font-bold text-slate-200">
+          <i data-lucide="phone" class="w-4 h-4 text-cyan-400"></i> Call: +91 99673 84878
+        </a>
+        <a href="contact.html" class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-400 text-xs font-bold text-slate-950">
+          <i data-lucide="file-text" class="w-4 h-4"></i> Get Quote
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       ABOUT HERO SECTION (DEEP NAVY + ELECTRIC CYAN GLOW)
+       ========================================================================= -->
+  <section class="relative bg-[#081B33] text-white pt-16 pb-20 border-b border-cyan-500/20 overflow-hidden">
+    <div class="absolute -top-20 -right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="max-w-3xl text-left">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/15 text-cyan-300 text-xs font-mono font-bold uppercase tracking-wider mb-4 border border-cyan-400/30">
+          <i data-lucide="info" class="w-3.5 h-3.5"></i>
+          ABOUT BELUBEARI EXIM
+        </div>
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-white tracking-tight leading-tight">
+          Industrial Components. <br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 to-amber-300">Reliable Solutions.</span>
+        </h1>
+        <p class="text-slate-200 text-base sm:text-lg mt-5 leading-relaxed font-normal">
+          Belubeari Exim provides industrial components and power transmission solutions including belts, conveyor belts, bearings, linear motion components, and related industrial products. Based in Masjid Bunder, Mumbai, we serve engineering plants, machinery OEMs, and industrial buyers across India.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       WHAT WE DO SECTION (5 CORE PILLARS)
+       ========================================================================= -->
+  <section class="py-20 bg-gradient-to-b from-[#F7FAFC] via-[#EBF2FA] to-[#F7FAFC] border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-left max-w-2xl mb-12">
+        <div class="text-blue-700 text-xs font-mono uppercase tracking-widest font-bold mb-2 flex items-center gap-2">
+          <i data-lucide="layers" class="w-4 h-4 text-blue-600"></i>
+          [PRODUCT & SUPPLY SCOPE]
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold font-heading text-slate-950">
+          What We Do
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2">
+          Comprehensive inventory, custom slitting, and direct warehouse sourcing for factory automation and machinery maintenance.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Pillar 1 -->
+        <div class="interactive-card bg-white p-6 rounded-2xl border-2 border-slate-200/80 shadow-md flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 mb-4 font-black">
+              <i data-lucide="cpu" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold font-heading text-slate-950">Industrial Belts</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+              PU Steel-Cord Timing Belts (T5, T10, AT10, HTD 8M/14M), Raw-Edge Cogged V-Belts, Wedge Belts, and Polyamide Flat Transmission belts.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-xs font-mono font-bold text-blue-600">
+            <i data-lucide="check" class="w-4 h-4"></i> Synchronous & Friction Drives
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="interactive-card bg-white p-6 rounded-2xl border-2 border-slate-200/80 shadow-md flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-cyan-50 border border-cyan-200 flex items-center justify-center text-cyan-700 mb-4 font-black">
+              <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold font-heading text-slate-950">Conveyor Solutions</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+              FDA Food-Grade blue & white PU conveyor belts, heavy-duty green PVC belts, corrugated sidewalls, guide ropes, and custom cross cleats.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-xs font-mono font-bold text-cyan-700">
+            <i data-lucide="check" class="w-4 h-4"></i> Hot/Cold Endless Splicing
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="interactive-card bg-white p-6 rounded-2xl border-2 border-slate-200/80 shadow-md flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 mb-4 font-black">
+              <i data-lucide="disc" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold font-heading text-slate-950">Bearings</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+              Deep groove ball bearings (6000, 6200, 6300), spherical roller bearings, cylindrical bearings, and cast-iron pillow block units (UCP/UCF).
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-xs font-mono font-bold text-emerald-600">
+            <i data-lucide="check" class="w-4 h-4"></i> Chrome Steel / C3 Clearance
+          </div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="interactive-card bg-white p-6 rounded-2xl border-2 border-slate-200/80 shadow-md flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-violet-50 border border-violet-200 flex items-center justify-center text-violet-600 mb-4 font-black">
+              <i data-lucide="git-commit" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold font-heading text-slate-950">Linear Motion</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+              Linear motion bearings, guide rails, precision ball bushings, and CNC slide components for automated production machinery.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-xs font-mono font-bold text-violet-600">
+            <i data-lucide="check" class="w-4 h-4"></i> High Precision Automation
+          </div>
+        </div>
+
+        <!-- Pillar 5 -->
+        <div class="interactive-card bg-white p-6 rounded-2xl border-2 border-slate-200/80 shadow-md flex flex-col justify-between sm:col-span-2 lg:col-span-2">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700 mb-4 font-black">
+              <i data-lucide="shield" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold font-heading text-slate-950">Seals & Industrial Components</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+              High-temp Viton and NBR rotary oil seals, O-rings, rubber emery strips, textile spinning cots and aprons, ceramic guides, and specialized industrial grease.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-xs font-mono font-bold text-amber-700">
+            <i data-lucide="check" class="w-4 h-4"></i> Textile, Packaging & Chemical Sealing
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       OUR APPROACH (UNDERSTAND -> IDENTIFY -> SUPPLY -> SUPPORT)
+       ========================================================================= -->
+  <section class="py-20 bg-gradient-to-br from-[#0B2545] via-[#133E7C] to-[#1E60B5] text-white relative overflow-hidden border-b border-cyan-400/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-400/20 text-cyan-300 text-xs font-mono font-bold uppercase tracking-wider mb-3 border border-cyan-300/30">
+          <i data-lucide="compass" class="w-3.5 h-3.5"></i>
+          OUR ENGINEERING PROCESS
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+          Our Systematic Approach
+        </h2>
+        <p class="text-blue-100 text-sm sm:text-base mt-2">
+          How we ensure every machine gets the exact right component without guesswork or costly downtime.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Step 1 -->
+        <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 text-left relative overflow-hidden shadow-lg">
+          <div class="text-3xl font-black font-mono text-cyan-300 mb-3">01</div>
+          <h3 class="text-lg font-bold font-heading text-white">Understand</h3>
+          <p class="text-xs sm:text-sm text-blue-100 mt-2 leading-relaxed">
+            We review your machine specifications, operating speeds, load conditions, temperature range, and existing component sample photos.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 text-left relative overflow-hidden shadow-lg">
+          <div class="text-3xl font-black font-mono text-cyan-300 mb-3">02</div>
+          <h3 class="text-lg font-bold font-heading text-white">Identify</h3>
+          <p class="text-xs sm:text-sm text-blue-100 mt-2 leading-relaxed">
+            Our technical team verifies pitch profile, tooth geometry, belt thickness, bearing clearances, or material grade (FDA/Oil-Resistant).
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 text-left relative overflow-hidden shadow-lg">
+          <div class="text-3xl font-black font-mono text-orange-400 mb-3">03</div>
+          <h3 class="text-lg font-bold font-heading text-white">Supply</h3>
+          <p class="text-xs sm:text-sm text-blue-100 mt-2 leading-relaxed">
+            Instant slitting, jointing, or picking from our 10,000+ SKU Mumbai inventory followed by same-day Pan-India dispatch via express transport.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 text-left relative overflow-hidden shadow-lg">
+          <div class="text-3xl font-black font-mono text-emerald-400 mb-3">04</div>
+          <h3 class="text-lg font-bold font-heading text-white">Support</h3>
+          <p class="text-xs sm:text-sm text-blue-100 mt-2 leading-relaxed">
+            Ongoing technical assistance, re-order part number mapping, and troubleshooting to maximize belt life and bearing performance.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       HAVE A REQUIREMENT? CTA SECTION (CRISP WHITE CARD)
+       ========================================================================= -->
+  <section class="py-16 bg-[#EEF4FB] text-slate-900 border-b border-blue-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div class="bg-white p-8 sm:p-10 rounded-3xl border-2 border-blue-200 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 text-left">
+        <div>
+          <span class="text-blue-700 text-xs font-mono font-bold uppercase tracking-wider block mb-1">[DIRECT INQUIRY]</span>
+          <h3 class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-950">Have an Industrial Requirement?</h3>
+          <p class="text-slate-600 text-sm mt-1">Send us your part number or sample photo for instant rate calculation.</p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 shrink-0">
+          <a href="contact.html" class="btn-sheen px-6 py-3.5 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-slate-950 font-black text-sm shadow-md transition">
+            Contact Team &rarr;
+          </a>
+          <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20have%20an%20industrial%20requirement." target="_blank" class="px-5 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm shadow-md flex items-center gap-2 transition">
+            <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       STANDARD FOOTER
+       ========================================================================= -->
+  <footer class="py-14 bg-[#081B33] text-slate-300 text-xs border-t-2 border-cyan-500/30 font-sans">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-700">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-white font-black text-lg font-heading shadow-glow-cyan border border-cyan-300/40">
+            BE
+          </div>
+          <div>
+            <div class="text-lg font-black font-heading text-white">M/s Belubeari Exim</div>
+            <div class="text-xs text-cyan-300 font-semibold font-mono">Stockist & Industrial Belting Partner • Masjid Bunder, Mumbai</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-6 text-xs sm:text-sm text-slate-200 font-bold">
+          <a href="index.html" class="hover:text-cyan-300 transition">Home</a>
+          <a href="about.html" class="text-cyan-300 transition">About Us</a>
+          <a href="products.html" class="hover:text-cyan-300 transition">Products</a>
+          <a href="gallery.html" class="hover:text-cyan-300 transition">Gallery</a>
+          <a href="services.html" class="hover:text-cyan-300 transition">Services</a>
+          <a href="brands.html" class="hover:text-cyan-300 transition">Brands</a>
+          <a href="faq.html" class="hover:text-cyan-300 transition">FAQ</a>
+          <a href="contact.html" class="hover:text-orange-400 text-amber-300 transition font-black">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-300 font-medium">
+        <div>
+          © 2026 M/s Belubeari Exim. All Rights Reserved. 261/263 Yusuf Meherali Road, Masjid Bunder, Mumbai 400003.
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="flex items-center gap-1.5 text-emerald-400 font-bold"><i data-lucide="shield-check" class="w-4 h-4"></i> GST & IEC Registered</span>
+          <span class="text-slate-600">•</span>
+          <span class="text-cyan-300 font-bold">ISO 9001:2015 Sourcing</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FLOATING QUICK WHATSAPP CTA -->
+  <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20have%20a%20query%20regarding%20industrial%20components." target="_blank" class="btn-sheen fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black px-5 py-3.5 rounded-full shadow-2xl shadow-emerald-500/40 transition transform hover:scale-105 active:scale-95">
+    <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+    <span class="hidden sm:inline text-xs font-black">WhatsApp RFQ</span>
+  </a>
+
+  <script>
+    lucide.createIcons();
+
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobile-menu-drawer');
+      const icon = document.getElementById('mobile-menu-icon');
+      if (drawer.classList.contains('hidden')) {
+        drawer.classList.remove('hidden');
+        if (icon) icon.setAttribute('data-lucide', 'x');
+      } else {
+        drawer.classList.add('hidden');
+        if (icon) icon.setAttribute('data-lucide', 'menu');
+      }
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

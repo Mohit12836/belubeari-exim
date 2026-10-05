@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Brands & Product Partners | M/s Belubeari Exim Mumbai</title>
+  <meta name="description" content="Explore trusted brands and manufacturing sources supplied by M/s Belubeari Exim: Gates, Mitsuboshi, Nitta, Kureha, SKF equivalent, IPOL, and Navkar.">
+
+  <!-- Google Fonts: Space Grotesk (Tech Headings) + Plus Jakarta Sans (Clean Body) + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#081B33',
+              blue: '#1677FF',
+              cyan: '#00C6FF',
+              royal: '#3155FF',
+              violet: '#7C5CFF',
+              orange: '#FF8A25',
+              surface: '#0B2240',
+              card: '#0F2B52'
+            }
+          },
+          fontFamily: {
+            heading: ['"Space Grotesk"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          boxShadow: {
+            'glow-cyan': '0 0 25px rgba(0, 198, 255, 0.45)',
+            'glow-orange': '0 0 25px rgba(255, 138, 37, 0.45)',
+            'glow-blue': '0 0 30px rgba(22, 119, 255, 0.4)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      max-width: 100%;
+      overflow-x: clip;
+      background-color: #F7FAFC;
+      color: #081B33;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .font-heading { font-family: 'Space Grotesk', sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+    .btn-sheen {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-sheen::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+      transform: rotate(25deg);
+    }
+
+    .btn-sheen:hover::after {
+      animation: sheenRun 0.85s ease-in-out forwards;
+    }
+
+    @keyframes sheenRun {
+      0% { left: -60%; }
+      100% { left: 140%; }
+    }
+
+    .brand-card {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .brand-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -5px rgba(8, 27, 51, 0.08), 0 8px 10px -6px rgba(8, 27, 51, 0.08);
+    }
+  </style>
+</head>
+<body class="selection:bg-cyan-400 selection:text-slate-950 flex flex-col min-h-screen">
+
+  <!-- 1. TOP TELEMETRY STRIP -->
+  <aside aria-label="Logistics status" class="bg-[#051326] border-b border-cyan-500/30 text-xs py-2 px-3 sm:px-4 font-mono tracking-wide relative z-40 text-white shadow-md">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-y-2 gap-x-3">
+      <div class="flex items-center gap-2 min-w-0 max-w-full">
+        <span class="inline-flex items-center justify-center bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 p-1 rounded-full shrink-0 shadow-glow-cyan">
+          <i data-lucide="award" class="w-3 h-3 fill-current"></i>
+        </span>
+        <span class="truncate text-slate-200 text-[10px] sm:text-xs">
+          <strong class="text-cyan-300 font-bold">[BRAND ECOSYSTEM]</strong> Trusted Manufacturing Sources & Direct Stock
+        </span>
+      </div>
+
+      <div class="flex items-center gap-2.5 sm:gap-4 text-[10px] sm:text-[11px] shrink-0 ml-auto">
+        <span class="hidden md:flex items-center gap-1.5 text-slate-300 font-medium">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i> Genuine Quality Assured
+        </span>
+        <a href="contact.html#enquiry-form" class="btn-sheen bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-slate-950 px-2.5 sm:px-3.5 py-0.5 sm:py-1 rounded-lg text-[10px] sm:text-[11px] font-black uppercase tracking-wider transition shadow-glow-orange shrink-0">
+          Quick RFQ &rarr;
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. MAIN HEADER -->
+  <header class="sticky top-0 z-50 bg-[#081B33]/95 backdrop-blur-2xl border-b border-cyan-500/20 shadow-lg">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-2.5 sm:gap-3.5 shrink-0 group">
+        <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-cyan-400 via-blue-600 to-violet-600 flex items-center justify-center text-white font-black text-base sm:text-xl font-heading shadow-glow-cyan border border-cyan-300/40 group-hover:scale-105 transition shrink-0">
+          BE
+        </div>
+        <div class="min-w-0">
+          <div class="text-base sm:text-xl lg:text-2xl font-extrabold tracking-tight font-heading text-white leading-tight truncate">
+            M/s Belubeari Exim
+          </div>
+          <div class="text-[10px] sm:text-[11px] text-cyan-300 font-semibold tracking-wider uppercase flex items-center gap-1.5 truncate">
+            <span>Precision Belting</span>
+            <span class="text-slate-500">•</span>
+            <span class="font-mono text-[9px] sm:text-[10px] text-amber-400">MUMBAI</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-xs xl:text-sm font-semibold text-slate-200">
+        <a href="index.html" class="hover:text-cyan-300 transition-colors">Home</a>
+        <a href="about.html" class="hover:text-cyan-300 transition-colors">About Us</a>
+        <a href="products.html" class="hover:text-cyan-300 transition-colors">Products</a>
+        <a href="gallery.html" class="hover:text-cyan-300 transition-colors">Gallery</a>
+        <a href="services.html" class="hover:text-cyan-300 transition-colors">Services</a>
+        <a href="brands.html" class="text-cyan-400 font-bold border-b-2 border-cyan-400 pb-0.5">Brands</a>
+        <a href="faq.html" class="hover:text-cyan-300 transition-colors">FAQ</a>
+        <a href="contact.html" class="hover:text-cyan-300 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Action Buttons + Mobile Toggle -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <a href="tel:+919967384878" class="hidden md:inline-flex items-center gap-2 text-xs font-bold text-slate-200 hover:text-white px-3 py-2 rounded-xl bg-slate-900/90 border border-slate-700 transition hover:border-cyan-400">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-cyan-400"></i>
+          <span class="font-mono">+91 99673 84878</span>
+        </a>
+        <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20price%20quote%20for%20branded%20industrial%20products." target="_blank" class="btn-sheen inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-black text-xs sm:text-sm px-3 sm:px-4.5 py-2 sm:py-2.5 rounded-xl shadow-md shadow-emerald-500/25 transition transform hover:scale-[1.02] active:scale-[0.98]">
+          <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
+          <span class="hidden xs:inline">WhatsApp RFQ</span>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-toggle" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-slate-900/90 border border-slate-700 text-slate-200 hover:text-cyan-300 hover:border-cyan-400 transition" aria-label="Toggle Navigation Menu">
+          <i id="mobile-menu-icon" data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Slide-Down Navigation Drawer -->
+    <div id="mobile-menu-drawer" class="hidden lg:hidden bg-[#081B33]/98 backdrop-blur-2xl border-b border-cyan-500/30 px-4 pt-3 pb-6 space-y-3 transition-all duration-300">
+      <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-200 pt-1">
+        <a href="index.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="home" class="w-4 h-4 text-cyan-400"></i> Home
+        </a>
+        <a href="about.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="info" class="w-4 h-4 text-cyan-400"></i> About Us
+        </a>
+        <a href="products.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="boxes" class="w-4 h-4 text-blue-400"></i> Products
+        </a>
+        <a href="gallery.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="image" class="w-4 h-4 text-orange-400"></i> Gallery
+        </a>
+        <a href="services.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="wrench" class="w-4 h-4 text-emerald-400"></i> Services
+        </a>
+        <a href="brands.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-cyan-950/60 border border-cyan-400 text-cyan-300 font-bold">
+          <i data-lucide="award" class="w-4 h-4 text-violet-400"></i> Brands
+        </a>
+        <a href="faq.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="help-circle" class="w-4 h-4 text-sky-400"></i> FAQ
+        </a>
+        <a href="contact.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="mail" class="w-4 h-4 text-amber-400"></i> Contact
+        </a>
+      </div>
+
+      <div class="pt-2 flex items-center gap-2 border-t border-slate-800">
+        <a href="tel:+919967384878" class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs font-bold text-slate-200">
+          <i data-lucide="phone" class="w-4 h-4 text-cyan-400"></i> Call: +91 99673 84878
+        </a>
+        <a href="contact.html" class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-400 text-xs font-bold text-slate-950">
+          <i data-lucide="file-text" class="w-4 h-4"></i> Get Quote
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       HERO SECTION: BRANDS
+       ========================================================================= -->
+  <section class="relative bg-gradient-to-b from-[#081B33] via-[#0B2240] to-[#081B33] text-white py-16 lg:py-24 border-b border-cyan-500/20 overflow-hidden">
+    <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#00C6FF 1px, transparent 1px); background-size: 24px 24px;"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-300 text-xs font-mono font-bold tracking-wider uppercase mb-5">
+        <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400"></i> Trusted Sourcing Network
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black font-heading tracking-tight max-w-4xl mx-auto leading-tight">
+        Brands & Product <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-amber-400 bg-clip-text text-transparent">Partners</span>
+      </h1>
+
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mt-4 font-normal leading-relaxed">
+        Products sourced from trusted manufacturers, reputed international brands, and accredited domestic industrial production partners.
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       VERIFIED BRANDS SHOWCASE GRID
+       ========================================================================= -->
+  <main class="py-14 sm:py-20 bg-[#F4F7FA] flex-grow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Verified Partner Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- Gates PowerGrip -->
+        <div class="brand-card bg-white p-7 rounded-3xl border border-slate-200 shadow-md flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+              <div>
+                <span class="text-xs font-mono font-bold text-red-600 uppercase tracking-wider">[TIMING DRIVES]</span>
+                <h3 class="text-2xl font-black font-heading text-slate-900 mt-0.5">Gates PowerGrip</h3>
+              </div>
+              <div class="w-12 h-12 rounded-2xl bg-red-50 border border-red-100 flex items-center justify-center font-black text-red-600 font-mono text-sm">
+                GT4
+              </div>
+            </div>
+            
+            <div class="mt-4 space-y-2">
+              <div class="text-xs font-mono font-bold text-slate-500 uppercase">Product Categories:</div>
+              <ul class="text-sm text-slate-700 space-y-1.5">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> HTD 8M & 14M Curvilinear Timing Belts</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> PowerGrip GT3 / GT4 Synchronous Belts</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> High-Torque Industrial Rubber Profiles</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-mono font-bold text-emerald-600">Direct Stockist</span>
+            <a href="https://wa.me/919967384878?text=Hello,%20I%20need%20price%20for%20Gates%20PowerGrip%20Belts" target="_blank" class="text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1">Inquire &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Mitsuboshi Belting -->
+        <div class="brand-card bg-white p-7 rounded-3xl border border-slate-200 shadow-md flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+              <div>
+                <span class="text-xs font-mono font-bold text-blue-600 uppercase tracking-wider">[V-BELT & TRANSMISSION]</span>
+                <h3 class="text-2xl font-black font-heading text-slate-900 mt-0.5">Mitsuboshi (MBL)</h3>
+              </div>
+              <div class="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center font-black text-blue-600 font-mono text-sm">
+                MBL
+              </div>
+            </div>
+            
+            <div class="mt-4 space-y-2">
+              <div class="text-xs font-mono font-bold text-slate-500 uppercase">Product Categories:</div>
+              <ul class="text-sm text-slate-700 space-y-1.5">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Raw Edge Cogged V-Belts (REC/RECMF)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Classical Wrapped V-Belts (A, B, C, D)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Wedge V-Belts (SPZ, SPA, SPB, SPC)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-mono font-bold text-emerald-600">Ready Stock</span>
+            <a href="https://wa.me/919967384878?text=Hello,%20I%20need%20price%20for%20Mitsuboshi%20V%20Belts" target="_blank" class="text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1">Inquire &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Nitta Corporation -->
+        <div class="brand-card bg-white p-7 rounded-3xl border border-slate-200 shadow-md flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+              <div>
+                <span class="text-xs font-mono font-bold text-emerald-600 uppercase tracking-wider">[FLAT POWER BELTS]</span>
+                <h3 class="text-2xl font-black font-heading text-slate-900 mt-0.5">Nitta Corporation</h3>
+              </div>
+              <div class="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center font-black text-emerald-600 font-mono text-sm">
+                NTA
+              </div>
+            </div>
+            
+            <div class="mt-4 space-y-2">
+              <div class="text-xs font-mono font-bold text-slate-500 uppercase">Product Categories:</div>
+              <ul class="text-sm text-slate-700 space-y-1.5">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Polyamide Core High-Speed Flat Belts</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Poly Belt Tangential Drive Belting</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Textile Ring Frame & Rotor Drive Belts</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-mono font-bold text-emerald-600">Textile Specialists</span>
+            <a href="https://wa.me/919967384878?text=Hello,%20I%20need%20price%20for%20Nitta%20Poly%20Belts" target="_blank" class="text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1">Inquire &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Navkar Belting & Conveyor -->
+        <div class="brand-card bg-white p-7 rounded-3xl border border-slate-200 shadow-md flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+              <div>
+                <span class="text-xs font-mono font-bold text-amber-600 uppercase tracking-wider">[CONVEYOR SOLUTIONS]</span>
+                <h3 class="text-2xl font-black font-heading text-slate-900 mt-0.5">Navkar Belting</h3>
+              </div>
+              <div class="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-100 flex items-center justify-center font-black text-amber-600 font-mono text-sm">
+                NB
+              </div>
+            </div>
+            
+            <div class="mt-4 space-y-2">
+              <div class="text-xs font-mono font-bold text-slate-500 uppercase">Product Categories:</div>
+              <ul class="text-sm text-slate-700 space-y-1.5">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Food Grade PU & PVC Conveyor Belting</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Cleated & Corrugated Sidewall Elevator Belts</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Endless Vulcanized & Jointed Conveyors</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-mono font-bold text-emerald-600">Custom Fabrication</span>
+            <a href="https://wa.me/919967384878?text=Hello,%20I%20need%20price%20for%20Navkar%20Conveyor%20Belts" target="_blank" class="text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1">Inquire &rarr;</a>
+          </div>
+        </div>
+
+        <!-- SKF & Asahi Equivalent Bearings -->
+        <div class="brand-card bg-white p-7 rounded-3xl border border-slate-200 shadow-md flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+              <div>
+                <span class="text-xs font-mono font-bold text-purple-600 uppercase tracking-wider">[BEARINGS & BLOCKS]</span>
+                <h3 class="text-2xl font-black font-heading text-slate-900 mt-0.5">Bearings & Blocks</h3>
+              </div>
+              <div class="w-12 h-12 rounded-2xl bg-purple-50 border border-purple-100 flex items-center justify-center font-black text-purple-600 font-mono text-sm">
+                BRG
+              </div>
+            </div>
+            
+            <div class="mt-4 space-y-2">
+              <div class="text-xs font-mono font-bold text-slate-500 uppercase">Product Categories:</div>
+              <ul class="text-sm text-slate-700 space-y-1.5">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Deep Groove Ball Bearings (6000/6200/6300)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Pillow Block Units UCP, UCF, UCFL</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Thrust Bearings & Linear Motion Guides</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-mono font-bold text-emerald-600">Precision Standard</span>
+            <a href="https://wa.me/919967384878?text=Hello,%20I%20need%20price%20for%20Bearings%20and%20Pillow%20Blocks" target="_blank" class="text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1">Inquire &rarr;</a>
+          </div>
+        </div>
+
+        <!-- IPOL Lubricants & Sourcing Partners -->
+        <div class="brand-card bg-white p-7 rounded-3xl border border-slate-200 shadow-md flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+              <div>
+                <span class="text-xs font-mono font-bold text-cyan-600 uppercase tracking-wider">[INDUSTRIAL GREASE]</span>
+                <h3 class="text-2xl font-black font-heading text-slate-900 mt-0.5">IPOL & Sourcing</h3>
+              </div>
+              <div class="w-12 h-12 rounded-2xl bg-cyan-50 border border-cyan-100 flex items-center justify-center font-black text-cyan-600 font-mono text-sm">
+                IPOL
+              </div>
+            </div>
+            
+            <div class="mt-4 space-y-2">
+              <div class="text-xs font-mono font-bold text-slate-500 uppercase">Product Categories:</div>
+              <ul class="text-sm text-slate-700 space-y-1.5">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> High-Temperature Lithium Bearing Grease</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Heavy-Duty Machine Lubricants & Oils</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Ceramic Guides & Textile Emery Strips</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-mono font-bold text-emerald-600">All-In-One Sourcing</span>
+            <a href="https://wa.me/919967384878?text=Hello,%20I%20need%20price%20for%20Industrial%20Grease%20and%20Components" target="_blank" class="text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1">Inquire &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Verified Trade Integrity Notice -->
+      <div class="mt-12 bg-blue-50/80 border border-blue-200 rounded-2xl p-5 sm:p-6 text-slate-800 text-xs sm:text-sm leading-relaxed flex items-start gap-4">
+        <i data-lucide="info" class="w-6 h-6 text-blue-600 shrink-0 mt-0.5"></i>
+        <div>
+          <strong class="font-bold text-slate-900 block mb-1">Authentic Quality Sourcing Policy:</strong>
+          All brand names, logos, and part numbers mentioned on this website are the property of their respective trademark holders and are referenced for product identification, dimensional compatibility, and cross-referencing purposes. M/s Belubeari Exim supplies genuine quality industrial goods through established open-market distribution channels and direct factory procurement.
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       HAVE A REQUIREMENT? CTA SECTION
+       ========================================================================= -->
+  <section class="py-16 bg-[#EEF4FB] text-slate-900 border-b border-blue-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div class="bg-white p-8 sm:p-10 rounded-3xl border-2 border-blue-200 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 text-left">
+        <div>
+          <span class="text-blue-700 text-xs font-mono font-bold uppercase tracking-wider block mb-1">[DIRECT INQUIRY]</span>
+          <h3 class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-950">Looking for a Specific Brand?</h3>
+          <p class="text-slate-600 text-sm mt-1">Send us your exact brand part number for instant Mumbai warehouse rate check.</p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 shrink-0">
+          <a href="contact.html" class="btn-sheen px-6 py-3.5 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-slate-950 font-black text-sm shadow-md transition">
+            Contact Team &rarr;
+          </a>
+          <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20am%20looking%20for%20a%20specific%20brand%20part." target="_blank" class="px-5 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm shadow-md flex items-center gap-2 transition">
+            <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       STANDARD FOOTER
+       ========================================================================= -->
+  <footer class="py-14 bg-[#081B33] text-slate-300 text-xs border-t-2 border-cyan-500/30 font-sans">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-700">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-white font-black text-lg font-heading shadow-glow-cyan border border-cyan-300/40">
+            BE
+          </div>
+          <div>
+            <div class="text-lg font-black font-heading text-white">M/s Belubeari Exim</div>
+            <div class="text-xs text-cyan-300 font-semibold font-mono">Stockist & Industrial Belting Partner • Masjid Bunder, Mumbai</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-6 text-xs sm:text-sm text-slate-200 font-bold">
+          <a href="index.html" class="hover:text-cyan-300 transition">Home</a>
+          <a href="about.html" class="hover:text-cyan-300 transition">About Us</a>
+          <a href="products.html" class="hover:text-cyan-300 transition">Products</a>
+          <a href="gallery.html" class="hover:text-cyan-300 transition">Gallery</a>
+          <a href="services.html" class="hover:text-cyan-300 transition">Services</a>
+          <a href="brands.html" class="text-cyan-300 transition font-black">Brands</a>
+          <a href="faq.html" class="hover:text-cyan-300 transition">FAQ</a>
+          <a href="contact.html" class="hover:text-orange-400 text-amber-300 transition font-black">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-300 font-medium">
+        <div>
+          © 2026 M/s Belubeari Exim. All Rights Reserved. 261/263 Yusuf Meherali Road, Masjid Bunder, Mumbai 400003.
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="flex items-center gap-1.5 text-emerald-400 font-bold"><i data-lucide="shield-check" class="w-4 h-4"></i> GST & IEC Registered</span>
+          <span class="text-slate-600">•</span>
+          <span class="text-cyan-300 font-bold">ISO 9001:2015 Sourcing</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FLOATING QUICK WHATSAPP CTA -->
+  <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20have%20a%20query%20regarding%20industrial%20components." target="_blank" class="btn-sheen fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black px-5 py-3.5 rounded-full shadow-2xl shadow-emerald-500/40 transition transform hover:scale-105 active:scale-95">
+    <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+    <span class="hidden sm:inline text-xs font-black">WhatsApp RFQ</span>
+  </a>
+
+  <script>
+    lucide.createIcons();
+
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobile-menu-drawer');
+      const icon = document.getElementById('mobile-menu-icon');
+      if (drawer.classList.contains('hidden')) {
+        drawer.classList.remove('hidden');
+        if (icon) icon.setAttribute('data-lucide', 'x');
+      } else {
+        drawer.classList.add('hidden');
+        if (icon) icon.setAttribute('data-lucide', 'menu');
+      }
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

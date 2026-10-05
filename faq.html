@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Frequently Asked Questions | M/s Belubeari Exim Mumbai</title>
+  <meta name="description" content="Find answers to common questions about industrial belts, conveyor solutions, bearings, photo identification, and ordering from Belubeari Exim Mumbai.">
+
+  <!-- Google Fonts: Space Grotesk (Tech Headings) + Plus Jakarta Sans (Clean Body) + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#081B33',
+              blue: '#1677FF',
+              cyan: '#00C6FF',
+              royal: '#3155FF',
+              violet: '#7C5CFF',
+              orange: '#FF8A25',
+              surface: '#0B2240',
+              card: '#0F2B52'
+            }
+          },
+          fontFamily: {
+            heading: ['"Space Grotesk"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          boxShadow: {
+            'glow-cyan': '0 0 25px rgba(0, 198, 255, 0.45)',
+            'glow-orange': '0 0 25px rgba(255, 138, 37, 0.45)',
+            'glow-blue': '0 0 30px rgba(22, 119, 255, 0.4)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      max-width: 100%;
+      overflow-x: clip;
+      background-color: #F7FAFC;
+      color: #081B33;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .font-heading { font-family: 'Space Grotesk', sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+    .btn-sheen {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-sheen::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+      transform: rotate(25deg);
+    }
+
+    .btn-sheen:hover::after {
+      animation: sheenRun 0.85s ease-in-out forwards;
+    }
+
+    @keyframes sheenRun {
+      0% { left: -60%; }
+      100% { left: 140%; }
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      padding-top: 1rem;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+      color: #1677FF;
+    }
+  </style>
+</head>
+<body class="selection:bg-cyan-400 selection:text-slate-950 flex flex-col min-h-screen">
+
+  <!-- 1. TOP TELEMETRY STRIP -->
+  <aside aria-label="Logistics status" class="bg-[#051326] border-b border-cyan-500/30 text-xs py-2 px-3 sm:px-4 font-mono tracking-wide relative z-40 text-white shadow-md">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-y-2 gap-x-3">
+      <div class="flex items-center gap-2 min-w-0 max-w-full">
+        <span class="inline-flex items-center justify-center bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 p-1 rounded-full shrink-0 shadow-glow-cyan">
+          <i data-lucide="help-circle" class="w-3 h-3 fill-current"></i>
+        </span>
+        <span class="truncate text-slate-200 text-[10px] sm:text-xs">
+          <strong class="text-cyan-300 font-bold">[HELP & FAQ]</strong> Common Technical Inquiries, Sizes & Order Verification
+        </span>
+      </div>
+
+      <div class="flex items-center gap-2.5 sm:gap-4 text-[10px] sm:text-[11px] shrink-0 ml-auto">
+        <span class="hidden md:flex items-center gap-1.5 text-slate-300 font-medium">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-emerald-400"></i> Fast 15-Min Response
+        </span>
+        <a href="contact.html#enquiry-form" class="btn-sheen bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-slate-950 px-2.5 sm:px-3.5 py-0.5 sm:py-1 rounded-lg text-[10px] sm:text-[11px] font-black uppercase tracking-wider transition shadow-glow-orange shrink-0">
+          Quick RFQ &rarr;
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. MAIN HEADER -->
+  <header class="sticky top-0 z-50 bg-[#081B33]/95 backdrop-blur-2xl border-b border-cyan-500/20 shadow-lg">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-2.5 sm:gap-3.5 shrink-0 group">
+        <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-cyan-400 via-blue-600 to-violet-600 flex items-center justify-center text-white font-black text-base sm:text-xl font-heading shadow-glow-cyan border border-cyan-300/40 group-hover:scale-105 transition shrink-0">
+          BE
+        </div>
+        <div class="min-w-0">
+          <div class="text-base sm:text-xl lg:text-2xl font-extrabold tracking-tight font-heading text-white leading-tight truncate">
+            M/s Belubeari Exim
+          </div>
+          <div class="text-[10px] sm:text-[11px] text-cyan-300 font-semibold tracking-wider uppercase flex items-center gap-1.5 truncate">
+            <span>Precision Belting</span>
+            <span class="text-slate-500">•</span>
+            <span class="font-mono text-[9px] sm:text-[10px] text-amber-400">MUMBAI</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-xs xl:text-sm font-semibold text-slate-200">
+        <a href="index.html" class="hover:text-cyan-300 transition-colors">Home</a>
+        <a href="about.html" class="hover:text-cyan-300 transition-colors">About Us</a>
+        <a href="products.html" class="hover:text-cyan-300 transition-colors">Products</a>
+        <a href="gallery.html" class="hover:text-cyan-300 transition-colors">Gallery</a>
+        <a href="services.html" class="hover:text-cyan-300 transition-colors">Services</a>
+        <a href="brands.html" class="hover:text-cyan-300 transition-colors">Brands</a>
+        <a href="faq.html" class="text-cyan-400 font-bold border-b-2 border-cyan-400 pb-0.5">FAQ</a>
+        <a href="contact.html" class="hover:text-cyan-300 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Action Buttons + Mobile Toggle -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <a href="tel:+919967384878" class="hidden md:inline-flex items-center gap-2 text-xs font-bold text-slate-200 hover:text-white px-3 py-2 rounded-xl bg-slate-900/90 border border-slate-700 transition hover:border-cyan-400">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-cyan-400"></i>
+          <span class="font-mono">+91 99673 84878</span>
+        </a>
+        <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20have%20a%20question%20regarding%20an%20industrial%20product." target="_blank" class="btn-sheen inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-black text-xs sm:text-sm px-3 sm:px-4.5 py-2 sm:py-2.5 rounded-xl shadow-md shadow-emerald-500/25 transition transform hover:scale-[1.02] active:scale-[0.98]">
+          <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
+          <span class="hidden xs:inline">WhatsApp RFQ</span>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-toggle" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-slate-900/90 border border-slate-700 text-slate-200 hover:text-cyan-300 hover:border-cyan-400 transition" aria-label="Toggle Navigation Menu">
+          <i id="mobile-menu-icon" data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Slide-Down Navigation Drawer -->
+    <div id="mobile-menu-drawer" class="hidden lg:hidden bg-[#081B33]/98 backdrop-blur-2xl border-b border-cyan-500/30 px-4 pt-3 pb-6 space-y-3 transition-all duration-300">
+      <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-200 pt-1">
+        <a href="index.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="home" class="w-4 h-4 text-cyan-400"></i> Home
+        </a>
+        <a href="about.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="info" class="w-4 h-4 text-cyan-400"></i> About Us
+        </a>
+        <a href="products.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="boxes" class="w-4 h-4 text-blue-400"></i> Products
+        </a>
+        <a href="gallery.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="image" class="w-4 h-4 text-orange-400"></i> Gallery
+        </a>
+        <a href="services.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="wrench" class="w-4 h-4 text-emerald-400"></i> Services
+        </a>
+        <a href="brands.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="award" class="w-4 h-4 text-violet-400"></i> Brands
+        </a>
+        <a href="faq.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-cyan-950/60 border border-cyan-400 text-cyan-300 font-bold">
+          <i data-lucide="help-circle" class="w-4 h-4 text-sky-400"></i> FAQ
+        </a>
+        <a href="contact.html" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="mail" class="w-4 h-4 text-amber-400"></i> Contact
+        </a>
+      </div>
+
+      <div class="pt-2 flex items-center gap-2 border-t border-slate-800">
+        <a href="tel:+919967384878" class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs font-bold text-slate-200">
+          <i data-lucide="phone" class="w-4 h-4 text-cyan-400"></i> Call: +91 99673 84878
+        </a>
+        <a href="contact.html#enquiry-form" class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-400 text-xs font-bold text-slate-950">
+          <i data-lucide="file-text" class="w-4 h-4"></i> Get Quote
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       HERO SECTION: FAQ
+       ========================================================================= -->
+  <section class="relative bg-gradient-to-b from-[#081B33] via-[#0B2240] to-[#081B33] text-white py-16 lg:py-24 border-b border-cyan-500/20 overflow-hidden">
+    <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#00C6FF 1px, transparent 1px); background-size: 24px 24px;"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-300 text-xs font-mono font-bold tracking-wider uppercase mb-5">
+        <i data-lucide="help-circle" class="w-3.5 h-3.5 text-cyan-400"></i> Quick Technical Answers
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black font-heading tracking-tight max-w-4xl mx-auto leading-tight">
+        Frequently Asked <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-amber-400 bg-clip-text text-transparent">Questions</span>
+      </h1>
+
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mt-4 font-normal leading-relaxed">
+        Quick answers to common questions about our products, technical specifications, custom sizes, quotations, and dispatch procedures.
+      </p>
+
+      <!-- Instant Search Input -->
+      <div class="mt-8 max-w-lg mx-auto relative">
+        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
+          <i data-lucide="search" class="w-5 h-5"></i>
+        </div>
+        <input 
+          type="text" 
+          id="faqSearchInput" 
+          onkeyup="searchFAQs()" 
+          placeholder="Search question (e.g. belt size, quote, photo, conveyor)..." 
+          class="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-[#081B33] transition"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8 ACCORDION FAQS SECTION
+       ========================================================================= -->
+  <main class="py-14 sm:py-20 bg-[#F4F7FA] flex-grow">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div id="faqList" class="space-y-4">
+        
+        <!-- Q1 -->
+        <div class="faq-item active bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-sm transition">
+          <button onclick="toggleFAQ(this)" class="w-full flex items-center justify-between text-left gap-4">
+            <span class="font-heading font-extrabold text-base sm:text-lg text-slate-900">
+              What products does Belubeari Exim supply?
+            </span>
+            <div class="faq-icon p-2 rounded-xl bg-slate-100 text-slate-700 transition shrink-0">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </div>
+          </button>
+          <div class="faq-answer text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p>
+              Belubeari Exim supplies a comprehensive range of industrial power transmission and conveyor components including:
+            </p>
+            <ul class="list-disc pl-5 mt-2 space-y-1 text-slate-700">
+              <li><strong>Industrial Belts:</strong> Timing belts (HTD, GT4, T5, T10, AT10, PU steel cord), Cogged & Classic V-belts, Flat high-speed belts.</li>
+              <li><strong>Conveyor Belts:</strong> Food-grade PU white/blue, PVC green/black, cleated incline, and corrugated sidewall belts.</li>
+              <li><strong>Bearings & Linear Motion:</strong> Deep groove ball bearings, linear bearings, linear guides, and cast iron pillow blocks (UCP, UCF, UCFL).</li>
+              <li><strong>Components & Seals:</strong> Oil seals, rubber emery strips, and synthetic textile cots & spinning aprons.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="faq-item bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-sm transition">
+          <button onclick="toggleFAQ(this)" class="w-full flex items-center justify-between text-left gap-4">
+            <span class="font-heading font-extrabold text-base sm:text-lg text-slate-900">
+              I don't know the exact belt specification. Can you help?
+            </span>
+            <div class="faq-icon p-2 rounded-xl bg-slate-100 text-slate-700 transition shrink-0">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </div>
+          </button>
+          <div class="faq-answer text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p>
+              <strong>Yes, absolutely.</strong> Our engineering desk frequently assists maintenance engineers who have worn-out belts. You can simply share:
+            </p>
+            <ul class="list-disc pl-5 mt-2 space-y-1 text-slate-700">
+              <li>A clear photo of the belt tooth profile or side markings</li>
+              <li>Number of teeth and overall width (in mm)</li>
+              <li>Machine make and pulley center-to-center distance</li>
+            </ul>
+            <p class="mt-2">
+              Our technical team will calculate the exact pitch and recommend the right drop-in replacement.
+            </p>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="faq-item bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-sm transition">
+          <button onclick="toggleFAQ(this)" class="w-full flex items-center justify-between text-left gap-4">
+            <span class="font-heading font-extrabold text-base sm:text-lg text-slate-900">
+              Can I send a product photo?
+            </span>
+            <div class="faq-icon p-2 rounded-xl bg-slate-100 text-slate-700 transition shrink-0">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </div>
+          </button>
+          <div class="faq-answer text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p>
+              <strong>Yes!</strong> A clear photo is often the fastest way to identify the required component. You can send photos of old belts, worn bearings, or conveyor profiles directly to our 
+              <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20am%20sending%20a%20photo%20of%20my%20product." target="_blank" class="text-emerald-600 font-bold hover:underline inline-flex items-center gap-1">
+                <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp desk (+91 99673 84878)
+              </a>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="faq-item bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-sm transition">
+          <button onclick="toggleFAQ(this)" class="w-full flex items-center justify-between text-left gap-4">
+            <span class="font-heading font-extrabold text-base sm:text-lg text-slate-900">
+              Do you supply conveyor belts?
+            </span>
+            <div class="faq-icon p-2 rounded-xl bg-slate-100 text-slate-700 transition shrink-0">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </div>
+          </button>
+          <div class="faq-answer text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p>
+              Yes. Belubeari Exim supplies food-grade FDA compliant PU conveyor belts (white/blue for food and pharma processing), PVC conveyor belts for material handling, silicone high-temperature belts, and custom-welded cleated or sidewall elevator belts according to customer drawings.
+            </p>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="faq-item bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-sm transition">
+          <button onclick="toggleFAQ(this)" class="w-full flex items-center justify-between text-left gap-4">
+            <span class="font-heading font-extrabold text-base sm:text-lg text-slate-900">
+              Do you supply bearings and linear motion products?
+            </span>
+            <div class="faq-icon p-2 rounded-xl bg-slate-100 text-slate-700 transition shrink-0">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </div>
+          </button>
+          <div class="faq-answer text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p>
+              Yes. Our warehouse stock includes standard and precision deep groove radial ball bearings (6000, 6200, 6300 series 2RS/ZZ), cast iron pillow block units (UCP 200 series, UCF 4-bolt flange, UCFL 2-bolt flange), thrust ball bearings, and linear motion slide rails with carriage blocks for CNC and automation machines.
+            </p>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="faq-item bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-sm transition">
+          <button onclick="toggleFAQ(this)" class="w-full flex items-center justify-between text-left gap-4">
+            <span class="font-heading font-extrabold text-base sm:text-lg text-slate-900">
+              Can I ask for a quotation?
+            </span>
+            <div class="faq-icon p-2 rounded-xl bg-slate-100 text-slate-700 transition shrink-0">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </div>
+          </button>
+          <div class="faq-answer text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p>
+              Yes, we provide official commercial quotations with GST breakup for single sample units as well as bulk plant orders. Simply use our 
+              <a href="contact.html#enquiry-form" class="text-blue-600 font-bold hover:underline">Online RFQ Form</a> or message us on WhatsApp with your required quantities and delivery city.
+            </p>
+          </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="faq-item bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-sm transition">
+          <button onclick="toggleFAQ(this)" class="w-full flex items-center justify-between text-left gap-4">
+            <span class="font-heading font-extrabold text-base sm:text-lg text-slate-900">
+              How can I contact Belubeari Exim?
+            </span>
+            <div class="faq-icon p-2 rounded-xl bg-slate-100 text-slate-700 transition shrink-0">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </div>
+          </button>
+          <div class="faq-answer text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p>You can reach our sales and warehouse team through multiple channels:</p>
+            <ul class="list-disc pl-5 mt-2 space-y-1 text-slate-700">
+              <li><strong>Direct Calls:</strong> +91 99673 84878 / +91 93214 69698</li>
+              <li><strong>WhatsApp:</strong> +91 99673 84878</li>
+              <li><strong>Email:</strong> sales@belubeariexim.com</li>
+              <li><strong>Office & Warehouse:</strong> 261/263 Yusuf Meherali Road, Office No. 8, 2nd Floor, Masjid Bunder, Mumbai – 400003.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="faq-item bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-sm transition">
+          <button onclick="toggleFAQ(this)" class="w-full flex items-center justify-between text-left gap-4">
+            <span class="font-heading font-extrabold text-base sm:text-lg text-slate-900">
+              What information should I send for a product enquiry?
+            </span>
+            <div class="faq-icon p-2 rounded-xl bg-slate-100 text-slate-700 transition shrink-0">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </div>
+          </button>
+          <div class="faq-answer text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p>To give you the most accurate price and fastest dispatch timeline, please include:</p>
+            <ol class="list-decimal pl-5 mt-2 space-y-1 text-slate-700">
+              <li>Product Name / Part Number (e.g. 800-8M-30 or UCP 205)</li>
+              <li>Dimensions & Material (Width, Pitch, Thickness, Cord Type)</li>
+              <li>Quantity required</li>
+              <li>Delivery location / Pin code for transport calculation</li>
+              <li>A photo of the existing component if exact part code is missing</li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       HAVE A REQUIREMENT? CTA SECTION
+       ========================================================================= -->
+  <section class="py-16 bg-[#EEF4FB] text-slate-900 border-b border-blue-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div class="bg-white p-8 sm:p-10 rounded-3xl border-2 border-blue-200 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 text-left">
+        <div>
+          <span class="text-blue-700 text-xs font-mono font-bold uppercase tracking-wider block mb-1">[DIRECT INQUIRY]</span>
+          <h3 class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-950">Still Have Questions?</h3>
+          <p class="text-slate-600 text-sm mt-1">Our technical specialists in Masjid Bunder, Mumbai are ready to assist you.</p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 shrink-0">
+          <a href="contact.html" class="btn-sheen px-6 py-3.5 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-slate-950 font-black text-sm shadow-md transition">
+            Contact Team &rarr;
+          </a>
+          <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20have%20a%20question%20regarding%20an%20industrial%20product." target="_blank" class="px-5 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm shadow-md flex items-center gap-2 transition">
+            <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       STANDARD FOOTER
+       ========================================================================= -->
+  <footer class="py-14 bg-[#081B33] text-slate-300 text-xs border-t-2 border-cyan-500/30 font-sans">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-700">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-white font-black text-lg font-heading shadow-glow-cyan border border-cyan-300/40">
+            BE
+          </div>
+          <div>
+            <div class="text-lg font-black font-heading text-white">M/s Belubeari Exim</div>
+            <div class="text-xs text-cyan-300 font-semibold font-mono">Stockist & Industrial Belting Partner • Masjid Bunder, Mumbai</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-6 text-xs sm:text-sm text-slate-200 font-bold">
+          <a href="index.html" class="hover:text-cyan-300 transition">Home</a>
+          <a href="about.html" class="hover:text-cyan-300 transition">About Us</a>
+          <a href="products.html" class="hover:text-cyan-300 transition">Products</a>
+          <a href="gallery.html" class="hover:text-cyan-300 transition">Gallery</a>
+          <a href="services.html" class="hover:text-cyan-300 transition">Services</a>
+          <a href="brands.html" class="hover:text-cyan-300 transition">Brands</a>
+          <a href="faq.html" class="text-cyan-300 transition font-black">FAQ</a>
+          <a href="contact.html" class="hover:text-orange-400 text-amber-300 transition font-black">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-300 font-medium">
+        <div>
+          © 2026 M/s Belubeari Exim. All Rights Reserved. 261/263 Yusuf Meherali Road, Masjid Bunder, Mumbai 400003.
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="flex items-center gap-1.5 text-emerald-400 font-bold"><i data-lucide="shield-check" class="w-4 h-4"></i> GST & IEC Registered</span>
+          <span class="text-slate-600">•</span>
+          <span class="text-cyan-300 font-bold">ISO 9001:2015 Sourcing</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FLOATING QUICK WHATSAPP CTA -->
+  <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20have%20a%20query%20regarding%20industrial%20components." target="_blank" class="btn-sheen fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black px-5 py-3.5 rounded-full shadow-2xl shadow-emerald-500/40 transition transform hover:scale-105 active:scale-95">
+    <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+    <span class="hidden sm:inline text-xs font-black">WhatsApp RFQ</span>
+  </a>
+
+  <script>
+    lucide.createIcons();
+
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobile-menu-drawer');
+      const icon = document.getElementById('mobile-menu-icon');
+      if (drawer.classList.contains('hidden')) {
+        drawer.classList.remove('hidden');
+        if (icon) icon.setAttribute('data-lucide', 'x');
+      } else {
+        drawer.classList.add('hidden');
+        if (icon) icon.setAttribute('data-lucide', 'menu');
+      }
+      lucide.createIcons();
+    }
+
+    function toggleFAQ(button) {
+      const item = button.closest('.faq-item');
+      const isActive = item.classList.contains('active');
+      
+      // Close all other items (accordion behavior)
+      document.querySelectorAll('.faq-item').forEach(el => {
+        el.classList.remove('active');
+      });
+
+      if (!isActive) {
+        item.classList.add('active');
+      }
+      lucide.createIcons();
+    }
+
+    function searchFAQs() {
+      const query = document.getElementById('faqSearchInput').value.toLowerCase();
+      const items = document.querySelectorAll('.faq-item');
+
+      items.forEach(item => {
+        const text = item.innerText.toLowerCase();
+        if (text.includes(query)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
