@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>M/s Belubeari Exim | Cinematic Full-Motion Industrial Showroom</title>
+  <meta name="description" content="Ultra High-Motion Interactive Showroom for Conveyor Belts, Timing Belts, CNC Pulleys & Precision Bearings. Masjid Bunder Mumbai Hub.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            heading: ['Space Grotesk', 'Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Courier New', 'monospace'],
+          },
+          colors: {
+            brand: {
+              electricBlue: '#1677FF',
+              cyan: '#00C6FF',
+              royalBlue: '#3155FF',
+              violet: '#7C5CFF',
+              orange: '#FF8A25',
+              amber: '#FFB347',
+              deepNavy: '#081B33',
+              graphite: '#0E1B2E',
+              softWhite: '#F7FAFC',
+              coolGrey: '#E9EEF4',
+              cardLight: '#FFFFFF',
+              darkSurface: '#0B2240',
+            }
+          },
+          boxShadow: {
+            'glow-cyan': '0 0 35px -5px rgba(0, 198, 255, 0.55)',
+            'glow-blue': '0 0 45px -5px rgba(22, 119, 255, 0.55)',
+            'glow-violet': '0 0 40px -5px rgba(124, 92, 255, 0.5)',
+            'glow-orange': '0 0 40px -5px rgba(255, 138, 37, 0.55)',
+            'card-light': '0 12px 35px -10px rgba(8, 27, 51, 0.1), 0 0 0 1px rgba(8, 27, 51, 0.05)',
+            'card-light-hover': '0 25px 50px -15px rgba(22, 119, 255, 0.25), 0 0 0 2px rgba(0, 198, 255, 0.5)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons & GSAP Animation Suite -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <style>
+    /* ==========================================================================
+       CINEMATIC HIGH-MOTION ENGINE STYLES
+       ========================================================================== */
+    :root {
+      --mouse-x: 50vw;
+      --mouse-y: 25vh;
+      --scroll-progress: 0%;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      max-width: 100%;
+      overflow-x: clip;
+      background-color: #F7FAFC;
+      color: #081B33;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      perspective: 1200px;
+    }
+
+    .font-heading { font-family: 'Space Grotesk', sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+    /* Scroll Progress Bar at Top */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3.5px;
+      background: linear-gradient(90deg, #00C6FF, #1677FF, #7C5CFF, #FF8A25);
+      z-index: 100;
+      width: 0%;
+      transition: width 0.1s ease-out;
+      box-shadow: 0 0 12px rgba(0, 198, 255, 0.8);
+    }
+
+    /* Ambient Cursor Spotlight Glow */
+    #cursor-spotlight {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 99;
+      background: radial-gradient(700px circle at var(--mouse-x) var(--mouse-y), rgba(0, 198, 255, 0.08), rgba(255, 138, 37, 0.04), transparent 70%);
+      transition: opacity 0.3s ease;
+    }
+
+    /* ==========================================================================
+       ANIMATION 01: 5-LAYER LIVING AURORA GRADIENT BLOBS
+       ========================================================================== */
+    .aurora-viewport {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .blob-1 {
+      position: absolute;
+      top: -12%;
+      left: -8%;
+      width: clamp(500px, 55vw, 900px);
+      height: clamp(500px, 55vw, 900px);
+      background: radial-gradient(circle, rgba(22, 119, 255, 0.5) 0%, rgba(49, 85, 255, 0.25) 50%, transparent 70%);
+      filter: blur(85px);
+      border-radius: 50%;
+      animation: morphBlob1 20s ease-in-out infinite alternate;
+    }
+
+    .blob-2 {
+      position: absolute;
+      top: 10%;
+      right: -12%;
+      width: clamp(450px, 50vw, 850px);
+      height: clamp(450px, 50vw, 850px);
+      background: radial-gradient(circle, rgba(0, 198, 255, 0.45) 0%, rgba(22, 119, 255, 0.2) 50%, transparent 70%);
+      filter: blur(90px);
+      border-radius: 50%;
+      animation: morphBlob2 24s ease-in-out infinite alternate;
+    }
+
+    .blob-3 {
+      position: absolute;
+      bottom: -15%;
+      left: 15%;
+      width: clamp(480px, 52vw, 850px);
+      height: clamp(480px, 52vw, 850px);
+      background: radial-gradient(circle, rgba(124, 92, 255, 0.4) 0%, rgba(49, 85, 255, 0.15) 50%, transparent 70%);
+      filter: blur(95px);
+      border-radius: 50%;
+      animation: morphBlob3 18s ease-in-out infinite alternate;
+    }
+
+    .blob-4 {
+      position: absolute;
+      top: 30%;
+      left: 40%;
+      width: clamp(380px, 42vw, 700px);
+      height: clamp(380px, 42vw, 700px);
+      background: radial-gradient(circle, rgba(255, 138, 37, 0.35) 0%, rgba(255, 179, 71, 0.15) 45%, transparent 70%);
+      filter: blur(85px);
+      border-radius: 50%;
+      animation: morphBlob4 16s ease-in-out infinite alternate;
+    }
+
+    .blob-5 {
+      position: absolute;
+      bottom: 5%;
+      right: 15%;
+      width: clamp(350px, 38vw, 650px);
+      height: clamp(350px, 38vw, 650px);
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.3) 0%, rgba(0, 198, 255, 0.15) 50%, transparent 70%);
+      filter: blur(90px);
+      border-radius: 50%;
+      animation: morphBlob1 28s ease-in-out infinite alternate-reverse;
+    }
+
+    @keyframes morphBlob1 {
+      0% { transform: translate(-10%, 0%) scale(1) rotate(0deg); }
+      50% { transform: translate(25%, 35px) scale(1.2) rotate(15deg); }
+      100% { transform: translate(-15%, 70px) scale(0.92) rotate(-10deg); }
+    }
+
+    @keyframes morphBlob2 {
+      0% { transform: translate(0%, 0%) scale(1) rotate(0deg); }
+      50% { transform: translate(-30%, -45px) scale(1.18) rotate(-15deg); }
+      100% { transform: translate(20%, 30px) scale(0.9) rotate(10deg); }
+    }
+
+    @keyframes morphBlob3 {
+      0% { transform: translate(0%, 0%) scale(0.95); }
+      50% { transform: translate(-50px, -60px) scale(1.15); }
+      100% { transform: translate(40px, 25px) scale(1); }
+    }
+
+    @keyframes morphBlob4 {
+      0% { transform: translate(0%, 0%) scale(1); }
+      50% { transform: translate(55px, 40px) scale(1.25); }
+      100% { transform: translate(-40px, -30px) scale(0.88); }
+    }
+
+    /* ==========================================================================
+       ANIMATION 02: DIAGONAL LIGHT SWEEP BEAMS
+       ========================================================================== */
+    .light-sweep-beam {
+      position: absolute;
+      top: -60%;
+      left: -40%;
+      width: 180%;
+      height: 220%;
+      background: linear-gradient(115deg, transparent 42%, rgba(0, 198, 255, 0.1) 48%, rgba(255, 138, 37, 0.08) 52%, transparent 58%);
+      pointer-events: none;
+      animation: lightBeamSweep 14s ease-in-out infinite;
+      z-index: 1;
+    }
+
+    @keyframes lightBeamSweep {
+      0% { transform: translateY(-25%) rotate(0deg); opacity: 0.35; }
+      50% { transform: translateY(15%) rotate(4deg); opacity: 0.95; }
+      100% { transform: translateY(-25%) rotate(0deg); opacity: 0.35; }
+    }
+
+    /* ==========================================================================
+       ANIMATION 03: DRIFTING TECHNICAL ENGINEERING GRID
+       ========================================================================== */
+    .technical-grid-animated {
+      background-image: 
+        radial-gradient(rgba(0, 198, 255, 0.25) 1.2px, transparent 1.2px),
+        linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+      background-size: 36px 36px, 72px 72px, 72px 72px;
+      animation: gridDrift 35s linear infinite;
+    }
+
+    @keyframes gridDrift {
+      0% { background-position: 0 0, 0 0, 0 0; }
+      100% { background-position: 72px 36px, 72px 0, 0 72px; }
+    }
+
+    /* Laser Measurement Draw Line */
+    .measurement-draw-line {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .measurement-draw-line::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, transparent, #00C6FF, #FF8A25, transparent);
+      animation: laserScan 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    @keyframes laserScan {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    /* ==========================================================================
+       ANIMATION 04: ROTATING 360° CONIC BORDER BEAM
+       ========================================================================== */
+    .border-beam-box {
+      position: relative;
+      background: rgba(11, 34, 64, 0.92);
+      border-radius: 1.25rem;
+      overflow: hidden;
+      padding: 2px;
+    }
+
+    .border-beam-box::before {
+      content: '';
+      position: absolute;
+      inset: -50%;
+      background: conic-gradient(from 0deg, transparent 0 300deg, #00C6FF 330deg, #FF8A25 360deg);
+      animation: rotateLaser 5s linear infinite;
+      z-index: 0;
+    }
+
+    .border-beam-content {
+      position: relative;
+      z-index: 1;
+      background: rgba(11, 34, 64, 0.98);
+      border-radius: inherit;
+      width: 100%;
+      height: 100%;
+    }
+
+    @keyframes rotateLaser {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* ==========================================================================
+       ANIMATION 05: 3D TILT & SPRING PERSPECTIVE CARDS
+       ========================================================================== */
+    .tilt-card {
+      transform-style: preserve-3d;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+      will-change: transform;
+    }
+
+    .tilt-card-inner {
+      transform: translateZ(20px);
+    }
+
+    /* ==========================================================================
+       ANIMATION 06: MULTI-STOP TEXT GRADIENT SHIMMER
+       ========================================================================== */
+    .shimmer-text-cinematic {
+      background: linear-gradient(90deg, #FFFFFF 0%, #00C6FF 20%, #3155FF 40%, #7C5CFF 60%, #FF8A25 80%, #FFFFFF 100%);
+      background-size: 250% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textGradientRun 6s linear infinite;
+    }
+
+    @keyframes textGradientRun {
+      to { background-position: 250% center; }
+    }
+
+    /* Button Light Sheen */
+    .btn-sheen-sweep {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-sheen-sweep::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+      transform: rotate(25deg);
+    }
+
+    .btn-sheen-sweep:hover::after {
+      animation: sheenRun 0.8s ease-in-out forwards;
+    }
+
+    @keyframes sheenRun {
+      0% { left: -60%; }
+      100% { left: 140%; }
+    }
+
+    /* Concentric Radar Rings */
+    .radar-pulse-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px dashed rgba(0, 198, 255, 0.35);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: radarPulse 4s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+
+    @keyframes radarPulse {
+      0% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.4; }
+      100% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.9; }
+    }
+
+    /* Sound Visualizer Bars */
+    .sound-bar {
+      width: 2.5px;
+      height: 12px;
+      background-color: #00C6FF;
+      border-radius: 9999px;
+      animation: soundPulse 1s ease-in-out infinite alternate;
+    }
+    .sound-bar:nth-child(2) { animation-delay: 0.2s; height: 16px; background-color: #1677FF; }
+    .sound-bar:nth-child(3) { animation-delay: 0.4s; height: 8px; background-color: #FF8A25; }
+
+    @keyframes soundPulse {
+      0% { transform: scaleY(0.4); opacity: 0.6; }
+      100% { transform: scaleY(1.3); opacity: 1; }
+    }
+
+    /* Scroll Reveal Baseline */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="selection:bg-cyan-400 selection:text-slate-950 flex flex-col min-h-screen">
+
+  <!-- Top Real-time Scroll Progress Bar -->
+  <div id="progress-bar"></div>
+  <div id="cursor-spotlight"></div>
+
+  <!-- 1. TOP TELEMETRY STRIP -->
+  <aside aria-label="Logistics status" class="bg-[#051326] border-b border-cyan-500/30 text-xs py-2 px-4 font-mono tracking-wide relative z-20 text-white shadow-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5 truncate">
+        <span class="inline-flex items-center justify-center bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 p-1 rounded-full shrink-0 shadow-glow-cyan">
+          <i data-lucide="zap" class="w-3 h-3 fill-current"></i>
+        </span>
+        <span class="truncate text-slate-200 text-[11px] sm:text-xs">
+          <strong class="text-cyan-300 font-bold">[CINEMATIC SHOWROOM EDITION]</strong> 10,000+ SKUs Ready • Direct Import • Same-Day Dispatch Hub
+        </span>
+      </div>
+
+      <div class="flex items-center gap-4 text-[11px] shrink-0">
+        <span class="hidden md:flex items-center gap-1.5 text-slate-300 font-medium">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i> ISO 9001:2015 Sourcing
+        </span>
+        
+        <!-- SOUND TOGGLE (DEFAULT OFF) -->
+        <button id="sound-toggle-btn" onclick="toggleAudioEngine()" class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-900/90 border border-cyan-500/40 text-cyan-300 hover:text-white transition hover:border-cyan-400 shadow-sm" title="Toggle Ambient Soundscape">
+          <span id="sound-icon-box" class="flex items-center gap-1">
+            <i data-lucide="volume-x" class="w-3.5 h-3.5 text-slate-400"></i>
+            <span class="font-mono text-[10px] uppercase font-bold text-slate-400">Audio: OFF</span>
+          </span>
+          <div id="sound-bars" class="hidden items-center gap-0.5 ml-1">
+            <div class="sound-bar"></div>
+            <div class="sound-bar"></div>
+            <div class="sound-bar"></div>
+          </div>
+        </button>
+
+        <a href="#rfq-section" onmouseenter="playHoverSound()" class="btn-sheen-sweep bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-slate-950 px-3.5 py-1 rounded-lg text-[11px] font-black uppercase tracking-wider transition shadow-glow-orange">
+          Instant RFQ &rarr;
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. MAIN HEADER -->
+  <header class="sticky top-0 z-50 bg-[#081B33]/90 backdrop-blur-2xl border-b border-cyan-500/20 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="#" onmouseenter="playHoverSound()" class="flex items-center gap-3.5 shrink-0 group">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-400 via-blue-600 to-violet-600 flex items-center justify-center text-white font-black text-xl font-heading shadow-glow-cyan border border-cyan-300/40 group-hover:scale-105 transition">
+          BE
+        </div>
+        <div>
+          <div class="text-xl sm:text-2xl font-extrabold tracking-tight font-heading text-white leading-none">
+            M/s Belubeari Exim
+          </div>
+          <div class="text-[11px] text-cyan-300 font-semibold tracking-wider uppercase mt-1 flex items-center gap-2">
+            <span>High-Motion Technology Showroom</span>
+            <span class="text-slate-500">•</span>
+            <span class="font-mono text-[10px] text-amber-400">SYS_ID: 400003</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-200">
+        <a href="#categories-section" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Categories</a>
+        <a href="#products-showcase" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">10 Product Lines</a>
+        <a href="#spec-finder" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Pitch Calculator</a>
+        <a href="#industries" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Industries</a>
+        <a href="#fabrication" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Workshop</a>
+        <a href="#mumbai-hub" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Mumbai Hub</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3 shrink-0">
+        <a href="tel:+919967384878" onmouseenter="playHoverSound()" class="hidden sm:inline-flex items-center gap-2 text-xs font-bold text-slate-200 hover:text-white px-3.5 py-2 rounded-xl bg-slate-900/90 border border-slate-700 transition hover:border-cyan-400">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-cyan-400"></i>
+          <span class="font-mono">+91 99673 84878</span>
+        </a>
+        <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote%20for%20Industrial%20Belts." target="_blank" onmouseenter="playHoverSound()" class="btn-sheen-sweep inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-black text-xs sm:text-sm px-4.5 py-2.5 rounded-xl shadow-md shadow-emerald-500/25 transition transform hover:scale-[1.02] active:scale-[0.98]">
+          <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
+          <span>WhatsApp RFQ</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       SECTION 1 — HERO (DEEP NAVY + 5-LAYER AURORA BLOBS + 3D PARALLAX + LASER)
+       ========================================================================= -->
+  <section id="hero-stage" class="relative bg-[#081B33] text-white pt-16 pb-24 border-b border-cyan-500/20 overflow-hidden technical-grid-animated">
+    
+    <!-- 5 Huge Independent Animated Gradient Mesh Blobs -->
+    <div class="aurora-viewport">
+      <div class="blob-1"></div>
+      <div class="blob-2"></div>
+      <div class="blob-3"></div>
+      <div class="blob-4"></div>
+      <div class="blob-5"></div>
+      <div class="light-sweep-beam"></div>
+    </div>
+
+    <!-- 3D HTML5 Canvas Particles -->
+    <canvas id="interactive-particle-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Coordinate Header Bar -->
+      <div class="flex items-center justify-between text-[11px] font-mono text-cyan-300 mb-6 pb-2 border-b border-cyan-500/25">
+        <div class="flex items-center gap-3">
+          <span class="flex items-center gap-1.5"><i data-lucide="crosshair" class="w-3.5 h-3.5 text-cyan-400"></i> GRID_POS: 18.9536° N, 72.8361° E</span>
+          <span class="text-slate-500">|</span>
+          <span class="text-slate-200 font-semibold">HUB: YUSUF MEHERALI ROAD</span>
+        </div>
+        <div class="hidden sm:flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-orange-400 animate-ping"></span>
+          <span class="text-orange-400 font-bold">100% READY STOCK IN MUMBAI</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Choreographed Headline -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-blue-600/30 via-cyan-500/20 to-orange-500/20 border border-cyan-400/40 text-cyan-300 text-xs font-extrabold uppercase tracking-wider backdrop-blur-md shadow-glow-cyan">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+            <span>Mumbai's Direct Import & Wholesale Stockist</span>
+          </div>
+
+          <!-- Staggered Headline -->
+          <div class="space-y-1">
+            <div class="text-3xl sm:text-4xl lg:text-[48px] font-bold font-heading text-slate-200 tracking-tight leading-tight">
+              The Right Belt.
+            </div>
+            <div class="text-3xl sm:text-4xl lg:text-[48px] font-bold font-heading text-white tracking-tight leading-tight">
+              The Right Bearing.
+            </div>
+            <div class="text-4xl sm:text-5xl lg:text-[58px] font-extrabold font-heading tracking-tight leading-[1.08]">
+              <span class="shimmer-text-cinematic drop-shadow-[0_0_40px_rgba(0,198,255,0.6)]">
+                The Right Solution.
+              </span>
+            </div>
+          </div>
+
+          <!-- Laser Measurement Draw Line -->
+          <div class="h-0.5 w-full max-w-lg bg-slate-800 rounded-full measurement-draw-line"></div>
+
+          <p class="text-slate-200 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
+            Direct stockists of FDA Food-Grade PU Conveyor Belts, Steel-Cord Synchronous Timing Belts, Raw-Edge Cogged V-Belts, CNC Pulleys, and SKF/Asahi equivalent mounted bearings. Ready inventory in Masjid Bunder, Mumbai.
+          </p>
+
+          <!-- 3 Precision Animated Metric Counters -->
+          <div class="grid grid-cols-3 gap-3.5 pt-1 max-w-xl">
+            <div class="bg-[#0B2240]/85 backdrop-blur-md p-4 rounded-xl text-left border-l-4 border-l-cyan-400 border border-cyan-500/20 shadow-md">
+              <div class="text-2xl sm:text-3xl font-extrabold font-heading text-white" id="counter-skus">10,000+</div>
+              <div class="text-[11px] sm:text-xs text-cyan-300 font-semibold mt-0.5">SKUs in Stock</div>
+            </div>
+            <div class="bg-[#0B2240]/85 backdrop-blur-md p-4 rounded-xl text-left border-l-4 border-l-orange-400 border border-orange-500/20 shadow-md">
+              <div class="text-2xl sm:text-3xl font-extrabold font-heading text-orange-400">Same-Day</div>
+              <div class="text-[11px] sm:text-xs text-slate-200 font-semibold mt-0.5">Express Dispatch</div>
+            </div>
+            <div class="bg-[#0B2240]/85 backdrop-blur-md p-4 rounded-xl text-left border-l-4 border-l-violet-400 border border-violet-500/20 shadow-md">
+              <div class="text-2xl sm:text-3xl font-extrabold font-heading text-violet-300">30-Min</div>
+              <div class="text-[11px] sm:text-xs text-slate-200 font-semibold mt-0.5">Custom Slitting</div>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#rfq-section" onmouseenter="playHoverSound()" class="btn-sheen-sweep inline-flex items-center gap-2.5 bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-400 hover:to-amber-400 text-slate-950 font-black text-sm px-7 py-4 rounded-xl shadow-glow-orange transition transform hover:scale-[1.03] active:scale-[0.98]">
+              <i data-lucide="file-text" class="w-4 h-4"></i>
+              <span>Get Wholesale Price Quote</span>
+            </a>
+            <a href="#spec-finder" onmouseenter="playHoverSound()" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600/40 to-cyan-500/30 hover:bg-blue-600/60 text-white font-bold text-sm px-6 py-4 rounded-xl border border-cyan-400/40 hover:border-cyan-300 transition shadow-lg backdrop-blur-md">
+              <i data-lucide="sliders" class="w-4 h-4 text-cyan-300"></i>
+              <span>Interactive Pitch Calculator</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right: 360° Rotating Border Beam & 3D Stage -->
+        <div class="lg:col-span-5 relative">
+          <div class="border-beam-box tilt-card shadow-glow-blue" id="hero-tilt-card">
+            <div class="border-beam-content p-4">
+              
+              <div class="relative h-80 sm:h-96 w-full bg-[#051326] rounded-xl flex items-center justify-center overflow-hidden border border-cyan-500/40">
+                
+                <!-- Concentric Radar Rings -->
+                <div class="radar-pulse-ring w-64 h-64"></div>
+                <div class="radar-pulse-ring w-48 h-48"></div>
+
+                <img id="hero-feature-img" src="assets/client_processed/gates-powergrip-gt4-heavy-duty-timing-belt.jpg" alt="Gates PowerGrip GT4 & Conveyor Belts at Belubeari Exim" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105 relative z-10">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#051326] via-[#051326]/20 to-transparent z-10 pointer-events-none"></div>
+                
+                <!-- Reticle Badge -->
+                <div class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-slate-900/90 border border-cyan-400/50 text-[10px] font-mono text-cyan-300 flex items-center gap-1.5 backdrop-blur-md z-20 shadow-md">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping"></span>
+                  <span>PROFILE: GT4-8M-HEAVY</span>
+                </div>
+              </div>
+              
+              <div class="p-4 text-left">
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="px-2.5 py-0.5 rounded bg-gradient-to-r from-orange-500 to-amber-500 text-slate-950 font-black text-[10px] uppercase tracking-wider shadow-sm">
+                    Ready Stock in Mumbai
+                  </span>
+                  <span class="text-[11px] font-bold text-cyan-300 flex items-center gap-1 font-mono">
+                    DISPATCH: TODAY
+                  </span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold font-heading text-white">
+                  PU Steel-Cord Timing Belts & Cleated Conveyors
+                </h3>
+                <p class="text-xs text-slate-300 mt-1 line-clamp-2">
+                  HTD 8M/14M, T5, T10, AT10, and custom vulcanized sidewall conveyor rolls tailored in our Mumbai workshop.
+                </p>
+                <div class="mt-3 flex items-center justify-between text-xs pt-2 border-t border-slate-700/80 font-mono">
+                  <span class="text-cyan-300 font-semibold">WIDTHS: 10mm TO 2000mm</span>
+                  <button onclick="openRfqModal('PU Steel-Cord Timing Belts'); playHoverSound();" class="text-orange-400 hover:text-orange-300 font-bold flex items-center gap-1">
+                    Inquire Now &rarr;
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 2 — PRODUCT CATEGORIES (BRIGHT WHITE + 3D TILT HOVER CARDS)
+       ========================================================================= -->
+  <section id="categories-section" class="py-20 bg-gradient-to-b from-[#F7FAFC] via-[#E9EEF4] to-[#F7FAFC] border-b border-slate-200 relative overflow-hidden">
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 reveal-on-scroll">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-mono font-bold uppercase tracking-wider mb-2 border border-blue-200">
+          <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+          CORE PRODUCT DIVISIONS
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900">
+          Complete Industrial Transmission Ecosystem
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2">
+          From heavy industrial conveyor lines to high-precision CNC automation, we stock complete mechanical power transmission systems under one roof in Mumbai.
+        </p>
+      </div>
+
+      <!-- 4 Category Feature Cards with 3D Tilt -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Category 1: Conveyor Belting -->
+        <div class="tilt-card bg-white rounded-2xl p-6 shadow-card-light hover:shadow-card-light-hover border border-slate-200/80 flex flex-col justify-between reveal-on-scroll" onmouseenter="playHoverSound()">
+          <div class="tilt-card-inner">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white mb-5 shadow-md shadow-blue-500/20">
+              <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+            </div>
+            <span class="text-[11px] font-mono font-bold text-cyan-600 uppercase tracking-wider">DIVISION 01</span>
+            <h3 class="text-lg font-extrabold font-heading text-slate-900 mt-1">Conveyor Belting (PU & PVC)</h3>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              FDA Food-Grade blue/white PU, rough top, chevron, high-temperature Teflon, and custom cleated sidewall conveyor rolls.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-500 font-mono">1-ply to 4-ply</span>
+            <a href="#products-showcase" onclick="filterCategory('conveyor', document.querySelectorAll('.cat-filter-btn')[1])" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+              Explore &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Category 2: Timing Belts & Pulleys -->
+        <div class="tilt-card bg-white rounded-2xl p-6 shadow-card-light hover:shadow-card-light-hover border border-slate-200/80 flex flex-col justify-between reveal-on-scroll" onmouseenter="playHoverSound()">
+          <div class="tilt-card-inner">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-violet-600 flex items-center justify-center text-white mb-5 shadow-md shadow-violet-500/20">
+              <i data-lucide="cpu" class="w-6 h-6"></i>
+            </div>
+            <span class="text-[11px] font-mono font-bold text-violet-600 uppercase tracking-wider">DIVISION 02</span>
+            <h3 class="text-lg font-extrabold font-heading text-slate-900 mt-1">Timing Belts & CNC Pulleys</h3>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              HTD 3M/5M/8M/14M, T5, T10, AT10 with steel cords. Precision aluminum & steel pulleys with taper lock bushings.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-500 font-mono">Zero Backlash</span>
+            <a href="#products-showcase" onclick="filterCategory('timing', document.querySelectorAll('.cat-filter-btn')[2])" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+              Explore &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Category 3: V-Belts & Flat Drives -->
+        <div class="tilt-card bg-white rounded-2xl p-6 shadow-card-light hover:shadow-card-light-hover border border-slate-200/80 flex flex-col justify-between reveal-on-scroll" onmouseenter="playHoverSound()">
+          <div class="tilt-card-inner">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center text-white mb-5 shadow-md shadow-orange-500/20">
+              <i data-lucide="activity" class="w-6 h-6"></i>
+            </div>
+            <span class="text-[11px] font-mono font-bold text-orange-600 uppercase tracking-wider">DIVISION 03</span>
+            <h3 class="text-lg font-extrabold font-heading text-slate-900 mt-1">V-Belts & Transmission</h3>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              Raw-edge cogged wedge belts (SPA, SPB, SPC, 3V, 5V, 8V) and high-speed polyamide flat drive sandwich belts.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-500 font-mono">High Torque</span>
+            <a href="#products-showcase" onclick="filterCategory('vbelt', document.querySelectorAll('.cat-filter-btn')[3])" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+              Explore &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Category 4: Bearings & Pillow Blocks -->
+        <div class="tilt-card bg-white rounded-2xl p-6 shadow-card-light hover:shadow-card-light-hover border border-slate-200/80 flex flex-col justify-between reveal-on-scroll" onmouseenter="playHoverSound()">
+          <div class="tilt-card-inner">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white mb-5 shadow-md shadow-emerald-500/20">
+              <i data-lucide="disc" class="w-6 h-6"></i>
+            </div>
+            <span class="text-[11px] font-mono font-bold text-emerald-600 uppercase tracking-wider">DIVISION 04</span>
+            <h3 class="text-lg font-extrabold font-heading text-slate-900 mt-1">Bearings & Mounted Units</h3>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              Deep groove ball bearings, spherical roller bearings, cast-iron pillow blocks (UCP/UCF), and high-temp Viton oil seals.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-500 font-mono">High RPM / C3</span>
+            <a href="#products-showcase" onclick="filterCategory('bearing', document.querySelectorAll('.cat-filter-btn')[4])" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+              Explore &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3 — MASTER PRODUCT SHOWCASE (ELECTRIC SKY + DUAL VIEW)
+       ========================================================================= -->
+  <section id="products-showcase" class="py-20 bg-gradient-to-br from-[#1677FF] via-[#3155FF] to-[#081B33] text-white relative overflow-hidden border-b border-cyan-400/30">
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 reveal-on-scroll">
+        <div>
+          <div class="text-cyan-200 text-xs font-mono uppercase tracking-widest mb-2 flex items-center gap-2">
+            <i data-lucide="boxes" class="w-4 h-4 text-cyan-300"></i>
+            [CATALOG_INDEX: 10 MASTER PRODUCT LINES]
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+            Comprehensive Industrial Catalog
+          </h2>
+          <p class="text-blue-100 text-sm sm:text-base mt-2 max-w-2xl font-normal">
+            Toggle between studio-grade clean white catalog shots and live plant application views. All items ready in stock for immediate Pan-India dispatch.
+          </p>
+        </div>
+
+        <!-- Mode Toggle Switcher -->
+        <div class="flex flex-wrap items-center gap-3">
+          <div class="inline-flex items-center p-1 rounded-xl bg-slate-900/60 backdrop-blur-md border border-white/20 shadow-lg">
+            <button id="btn-view-white" onclick="switchViewMode('white'); playHoverSound();" class="px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-gradient-to-r from-cyan-400 to-blue-400 text-slate-950 shadow-md">
+              <i data-lucide="sun" class="w-3.5 h-3.5"></i>
+              <span>Studio Catalog</span>
+            </button>
+            <button id="btn-view-ind" onclick="switchViewMode('ind'); playHoverSound();" class="px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 text-blue-100 hover:text-white">
+              <i data-lucide="factory" class="w-3.5 h-3.5"></i>
+              <span>Plant In-Action</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="flex items-center gap-2.5 overflow-x-auto pb-4 mb-8 custom-scrollbar">
+        <button onclick="filterCategory('all', this); playHoverSound();" class="cat-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-blue-900 whitespace-nowrap shadow-md">
+          All Products (10)
+        </button>
+        <button onclick="filterCategory('conveyor', this); playHoverSound();" class="cat-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-blue-900/40 hover:bg-blue-900/60 text-white border border-white/20 whitespace-nowrap">
+          Conveyor Belts (PVC/PU)
+        </button>
+        <button onclick="filterCategory('timing', this); playHoverSound();" class="cat-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-blue-900/40 hover:bg-blue-900/60 text-white border border-white/20 whitespace-nowrap">
+          Timing Belts & Pulleys
+        </button>
+        <button onclick="filterCategory('vbelt', this); playHoverSound();" class="cat-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-blue-900/40 hover:bg-blue-900/60 text-white border border-white/20 whitespace-nowrap">
+          V-Belts & Transmission
+        </button>
+        <button onclick="filterCategory('bearing', this); playHoverSound();" class="cat-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-blue-900/40 hover:bg-blue-900/60 text-white border border-white/20 whitespace-nowrap">
+          Bearings & Mounted Units
+        </button>
+      </div>
+
+      <!-- 10 Product Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="product-grid">
+
+        <!-- 1. PVC Conveyor Belts -->
+        <div class="tilt-card bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl flex flex-col product-item reveal-on-scroll" data-category="conveyor" onmouseenter="playHoverSound()">
+          <div class="relative bg-slate-100 h-52 flex items-center justify-center p-3 overflow-hidden border-b border-slate-200">
+            <img class="catalog-img w-full h-full object-contain" 
+                 data-white="assets/products/white_bg/01_white_conveyor_belt_roll.jpg" 
+                 data-ind="assets/products/industrial_env/01_conveyor_belts_pvc_cleated.jpg" 
+                 src="assets/products/white_bg/01_white_conveyor_belt_roll.jpg" 
+                 alt="PVC Conveyor Belts">
+            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono px-2 py-0.5 rounded shadow-sm">
+              CONVEYOR_01
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-bold text-slate-900 font-heading">PVC & Rubber Conveyor Belts</h3>
+              <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                Chevron, rough-top, corrugated sidewall, and plain conveyor rolls. 1-ply to 4-ply high-tensile fabric carcass.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between font-mono">
+              <span class="text-xs font-bold text-emerald-600 flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Ready Stock
+              </span>
+              <button onclick="openRfqModal('PVC & Rubber Conveyor Belts'); playHoverSound();" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+                Quote &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. PU Timing Belts -->
+        <div class="tilt-card bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl flex flex-col product-item reveal-on-scroll" data-category="timing" onmouseenter="playHoverSound()">
+          <div class="relative bg-slate-100 h-52 flex items-center justify-center p-3 overflow-hidden border-b border-slate-200">
+            <img class="catalog-img w-full h-full object-contain" 
+                 data-white="assets/products/white_bg/02_white_pu_timing_belt.jpg" 
+                 data-ind="assets/products/industrial_env/02_pu_timing_belts_steel_cord.jpg" 
+                 src="assets/products/white_bg/02_white_pu_timing_belt.jpg" 
+                 alt="PU Timing Belts">
+            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono px-2 py-0.5 rounded shadow-sm">
+              SYNCHRONOUS_02
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-bold text-slate-900 font-heading">PU Steel-Cord Timing Belts</h3>
+              <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                T5, T10, AT5, AT10, HTD 5M, 8M, 14M, and STD pitches. Thermoplastic polyurethane with reinforced steel wire cords.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between font-mono">
+              <span class="text-xs font-bold text-emerald-600 flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Open/Endless
+              </span>
+              <button onclick="openRfqModal('PU Steel-Cord Timing Belts'); playHoverSound();" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+                Quote &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Raw-Edge Cogged V-Belts -->
+        <div class="tilt-card bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl flex flex-col product-item reveal-on-scroll" data-category="vbelt" onmouseenter="playHoverSound()">
+          <div class="relative bg-slate-100 h-52 flex items-center justify-center p-3 overflow-hidden border-b border-slate-200">
+            <img class="catalog-img w-full h-full object-contain" 
+                 data-white="assets/products/white_bg/03_white_v_belts_set.jpg" 
+                 data-ind="assets/products/industrial_env/03_v_belts_cogged_wedge.jpg" 
+                 src="assets/products/white_bg/03_white_v_belts_set.jpg" 
+                 alt="V-Belts">
+            <span class="absolute top-3 left-3 bg-orange-500 text-white text-[10px] font-mono px-2 py-0.5 rounded shadow-sm">
+              V_BELT_03
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-bold text-slate-900 font-heading">Raw Edge Cogged & Wedge V-Belts</h3>
+              <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                Sections A, B, C, SPA, SPB, SPC, 3V, 5V, 8V, and banded sets. High heat and oil resistant synthetic rubber for heavy motors.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between font-mono">
+              <span class="text-xs font-bold text-emerald-600 flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Stock Ready
+              </span>
+              <button onclick="openRfqModal('Raw Edge Cogged & Wedge V-Belts'); playHoverSound();" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+                Quote &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Precision Ball Bearings -->
+        <div class="tilt-card bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl flex flex-col product-item reveal-on-scroll" data-category="bearing" onmouseenter="playHoverSound()">
+          <div class="relative bg-slate-100 h-52 flex items-center justify-center p-3 overflow-hidden border-b border-slate-200">
+            <img class="catalog-img w-full h-full object-contain" 
+                 data-white="assets/products/white_bg/04_white_ball_bearings.jpg" 
+                 data-ind="assets/products/industrial_env/04_deep_groove_ball_bearings.jpg" 
+                 src="assets/products/white_bg/04_white_ball_bearings.jpg" 
+                 alt="Precision Ball Bearings">
+            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono px-2 py-0.5 rounded shadow-sm">
+              BEARINGS_04
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-bold text-slate-900 font-heading">Deep Groove & Spherical Bearings</h3>
+              <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                6000, 6200, 6300 series, cylindrical roller and taper roller bearings. Chrome steel with 2RS rubber seals and C3 clearance.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between font-mono">
+              <span class="text-xs font-bold text-emerald-600 flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Bulk Rates
+              </span>
+              <button onclick="openRfqModal('Deep Groove & Spherical Bearings'); playHoverSound();" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+                Quote &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Pillow Block Bearings -->
+        <div class="tilt-card bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl flex flex-col product-item reveal-on-scroll" data-category="bearing" onmouseenter="playHoverSound()">
+          <div class="relative bg-slate-100 h-52 flex items-center justify-center p-3 overflow-hidden border-b border-slate-200">
+            <img class="catalog-img w-full h-full object-contain" 
+                 data-white="assets/products/white_bg/05_white_pillow_block.jpg" 
+                 data-ind="assets/products/industrial_env/05_pillow_block_mounted_units.jpg" 
+                 src="assets/products/white_bg/05_white_pillow_block.jpg" 
+                 alt="Pillow Block Units">
+            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono px-2 py-0.5 rounded shadow-sm">
+              MOUNTED_05
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-bold text-slate-900 font-heading">Cast Iron Pillow Block Units (UCP)</h3>
+              <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                UCP, UCF, UCFL 200 & 300 series. Solid cast-iron housings with self-aligning bearing inserts, grease nipples and set screws.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between font-mono">
+              <span class="text-xs font-bold text-emerald-600 flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> In Stock
+              </span>
+              <button onclick="openRfqModal('Cast Iron Pillow Block Units (UCP)'); playHoverSound();" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+                Quote &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. CNC Timing Pulleys -->
+        <div class="tilt-card bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl flex flex-col product-item reveal-on-scroll" data-category="timing" onmouseenter="playHoverSound()">
+          <div class="relative bg-slate-100 h-52 flex items-center justify-center p-3 overflow-hidden border-b border-slate-200">
+            <img class="catalog-img w-full h-full object-contain" 
+                 data-white="assets/products/white_bg/06_white_timing_pulleys.jpg" 
+                 data-ind="assets/products/industrial_env/06_timing_pulleys_taper_lock.jpg" 
+                 src="assets/products/white_bg/06_white_timing_pulleys.jpg" 
+                 alt="Timing Pulleys">
+            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono px-2 py-0.5 rounded shadow-sm">
+              PULLEYS_06
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-bold text-slate-900 font-heading">CNC Timing Pulleys & Taper Bushings</h3>
+              <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                Precision toothed aluminum & alloy steel pulleys with taper-lock bushings. Compatible with HTD 3M, 5M, 8M, 14M, XL, L drives.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between font-mono">
+              <span class="text-xs font-bold text-emerald-600 flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Custom Teeth
+              </span>
+              <button onclick="openRfqModal('CNC Timing Pulleys & Taper Bushings'); playHoverSound();" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+                Quote &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Flat Transmission Belts -->
+        <div class="tilt-card bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl flex flex-col product-item reveal-on-scroll" data-category="vbelt" onmouseenter="playHoverSound()">
+          <div class="relative bg-slate-100 h-52 flex items-center justify-center p-3 overflow-hidden border-b border-slate-200">
+            <img class="catalog-img w-full h-full object-contain" 
+                 data-white="assets/products/white_bg/07_white_flat_transmission_belts.jpg" 
+                 data-ind="assets/products/industrial_env/07_flat_transmission_belts.jpg" 
+                 src="assets/products/white_bg/07_white_flat_transmission_belts.jpg" 
+                 alt="Flat Belts">
+            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono px-2 py-0.5 rounded shadow-sm">
+              HIGH_SPEED_07
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-bold text-slate-900 font-heading">High-Speed Flat Transmission Belts</h3>
+              <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                Polyamide tension-core sandwich belts for textile ring frames, flour mills, carton folders, paper converting, and printing presses.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between font-mono">
+              <span class="text-xs font-bold text-emerald-600 flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Endless Custom
+              </span>
+              <button onclick="openRfqModal('High-Speed Flat Transmission Belts'); playHoverSound();" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+                Quote &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Linatex Coated Belts -->
+        <div class="tilt-card bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl flex flex-col product-item reveal-on-scroll" data-category="timing" onmouseenter="playHoverSound()">
+          <div class="relative bg-slate-100 h-52 flex items-center justify-center p-3 overflow-hidden border-b border-slate-200">
+            <img class="catalog-img w-full h-full object-contain" 
+                 data-white="assets/products/white_bg/08_white_linatex_coated_belts.jpg" 
+                 data-ind="assets/products/industrial_env/08_linatex_coated_vacuum_belts.jpg" 
+                 src="assets/products/white_bg/08_white_linatex_coated_belts.jpg" 
+                 alt="Linatex Belts">
+            <span class="absolute top-3 left-3 bg-orange-500 text-white text-[10px] font-mono px-2 py-0.5 rounded shadow-sm">
+              SPECIAL_08
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-bold text-slate-900 font-heading">Linatex & Sponge Coated Puller Belts</h3>
+              <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                Haul-off caterpillar belts with red Linatex high-friction coating, yellow sponge, and CNC milled vacuum holes for packaging machines.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between font-mono">
+              <span class="text-xs font-bold text-emerald-600 flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Custom Built
+              </span>
+              <button onclick="openRfqModal('Linatex & Sponge Coated Puller Belts'); playHoverSound();" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+                Quote &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Food-Grade PU Conveyor Belts -->
+        <div class="tilt-card bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl flex flex-col product-item reveal-on-scroll" data-category="conveyor" onmouseenter="playHoverSound()">
+          <div class="relative bg-slate-100 h-52 flex items-center justify-center p-3 overflow-hidden border-b border-slate-200">
+            <img class="catalog-img w-full h-full object-contain" 
+                 data-white="assets/products/white_bg/10_white_food_grade_pu_belts.jpg" 
+                 data-ind="assets/client_processed/food-grade-pu-conveyor-belts-poster.jpg" 
+                 src="assets/products/white_bg/10_white_food_grade_pu_belts.jpg" 
+                 alt="Food Grade PU Belts">
+            <span class="absolute top-3 left-3 bg-cyan-500 text-slate-950 font-bold text-[10px] font-mono px-2 py-0.5 rounded shadow-sm">
+              FDA_FOOD_09
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-bold text-slate-900 font-heading">Food-Grade PU Blue & White Belts</h3>
+              <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                FDA/EU compliant oil and grease-resistant Polyurethane belts for biscuits, confectionery, meat processing, and pharma tablet cooling lines.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between font-mono">
+              <span class="text-xs font-bold text-emerald-600 flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Hygienic PU
+              </span>
+              <button onclick="openRfqModal('Food-Grade PU Blue & White Belts'); playHoverSound();" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+                Quote &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Oil Seals & Viton O-Rings -->
+        <div class="tilt-card bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl flex flex-col product-item reveal-on-scroll" data-category="bearing" onmouseenter="playHoverSound()">
+          <div class="relative bg-slate-100 h-52 flex items-center justify-center p-3 overflow-hidden border-b border-slate-200">
+            <img class="catalog-img w-full h-full object-contain" 
+                 data-white="assets/products/white_bg/09_white_oil_seals_orings.jpg" 
+                 data-ind="assets/products/industrial_env/09_oil_seals_viton_orings.jpg" 
+                 src="assets/products/white_bg/09_white_oil_seals_orings.jpg" 
+                 alt="Oil Seals and O-Rings">
+            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono px-2 py-0.5 rounded shadow-sm">
+              SEALING_10
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-bold text-slate-900 font-heading">High-Temp Oil Seals & Viton O-Rings</h3>
+              <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                Rotary shaft oil seals (TC, TG4, SC), hydraulic pneumatic seals, and chemical-resistant Viton / Silicone / NBR O-rings for machinery gearboxes.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between font-mono">
+              <span class="text-xs font-bold text-emerald-600 flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Metric Stock
+              </span>
+              <button onclick="openRfqModal('High-Temp Oil Seals & Viton O-Rings'); playHoverSound();" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+                Quote &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4 — REQUIREMENT SOLUTION / SPEC CALCULATOR (DEEP GRAPHITE + ORANGE)
+       ========================================================================= -->
+  <section id="spec-finder" class="py-20 bg-[#0E1B2E] text-white border-b border-orange-500/30 relative overflow-hidden">
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 reveal-on-scroll">
+        <div class="text-orange-400 text-xs font-mono uppercase tracking-widest mb-2 flex items-center justify-center gap-2">
+          <i data-lucide="cpu" class="w-4 h-4 text-orange-400"></i>
+          [PITCH_CALCULATOR_TERMINAL]
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+          Technical Pitch & Belt Sizing Calculator
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base mt-2">
+          Click any pitch or profile below to instantly load standard widths, pitch lengths, and get factory pricing direct on WhatsApp.
+        </p>
+      </div>
+
+      <!-- Spec Selector Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Pitch Selector Buttons -->
+        <div class="lg:col-span-5 space-y-4 reveal-on-scroll">
+          <h4 class="text-xs font-mono font-bold text-slate-300 uppercase tracking-wider">Select Belt Family & Pitch:</h4>
+          
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+            <button onclick="selectPitch('HTD 8M', '8.0mm Curvilinear', 'High Torque Heavy Drive', '20mm, 30mm, 50mm, 85mm', 'Rubber or PU with Steel Cord', 'assets/client_processed/gates-powergrip-htd-8m-green-tooth-timing-belts.jpg', this); playHoverSound();" class="pitch-btn p-3 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 text-slate-950 font-bold text-xs text-left shadow-glow-orange">
+              <div class="font-extrabold text-sm">HTD 8M</div>
+              <div class="text-[10px] opacity-90 font-mono">8.0mm Curvilinear</div>
+            </button>
+
+            <button onclick="selectPitch('HTD 14M', '14.0mm Curvilinear', 'Ultra-Heavy Power Transmission', '40mm, 55mm, 85mm, 115mm', 'Neoprene/Rubber with Fiberglass', 'assets/client_processed/gates-powergrip-gt4-heavy-duty-timing-belt.jpg', this); playHoverSound();" class="pitch-btn p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 font-bold text-xs text-left border border-slate-700">
+              <div class="font-extrabold text-sm">HTD 14M</div>
+              <div class="text-[10px] text-slate-400 font-mono">14.0mm Heavy</div>
+            </button>
+
+            <button onclick="selectPitch('T10 Metric', '10.0mm Trapezoidal', 'European CNC & Packaging', '16mm, 25mm, 32mm, 50mm', 'White PU + Steel Tension Wire', 'assets/products/white_bg/02_white_pu_timing_belt.jpg', this); playHoverSound();" class="pitch-btn p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 font-bold text-xs text-left border border-slate-700">
+              <div class="font-extrabold text-sm">T10 Pitch</div>
+              <div class="text-[10px] text-slate-400 font-mono">10.0mm Trapezoid</div>
+            </button>
+
+            <button onclick="selectPitch('AT10 Heavy', '10.0mm Reinforced', 'Zero Backlash Automation', '25mm, 32mm, 50mm, 75mm', 'PU with High-Tensile Steel', 'assets/products/industrial_env/02_pu_timing_belts_steel_cord.jpg', this); playHoverSound();" class="pitch-btn p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 font-bold text-xs text-left border border-slate-700">
+              <div class="font-extrabold text-sm">AT10 Pitch</div>
+              <div class="text-[10px] text-slate-400 font-mono">High Precision</div>
+            </button>
+
+            <button onclick="selectPitch('PU Cleated Conveyor', 'Custom Flights & Side-Walls', 'Inclined Bulk & Food Handling', '300mm to 1200mm width', 'Food Grade Blue/White PU', 'assets/client_processed/pu-blue-cleated-conveyor-belt.jpg', this); playHoverSound();" class="pitch-btn p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 font-bold text-xs text-left border border-slate-700">
+              <div class="font-extrabold text-sm">Cleated PU</div>
+              <div class="text-[10px] text-slate-400 font-mono">Food & Incline</div>
+            </button>
+
+            <button onclick="selectPitch('SPB Wedge V-Belt', '16.3mm Top x 13mm Height', 'Heavy Industrial Motor Drives', 'SPB 1250 to SPB 6000 Lw', 'Raw Edge Cogged Synthetic', 'assets/products/white_bg/03_white_v_belts_set.jpg', this); playHoverSound();" class="pitch-btn p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 font-bold text-xs text-left border border-slate-700">
+              <div class="font-extrabold text-sm">SPB V-Belt</div>
+              <div class="text-[10px] text-slate-400 font-mono">Wedge Power</div>
+            </button>
+          </div>
+
+          <div class="p-4 rounded-xl bg-[#081324] border border-slate-700 text-xs text-slate-300 space-y-1 font-mono">
+            <p class="font-bold text-orange-400 flex items-center gap-1.5">
+              <i data-lucide="info" class="w-4 h-4 text-orange-400"></i> SLITTING_CAPACITY: 30_MINS
+            </p>
+            <p>We stock full-sleeve rolls and slit timing belts to exact millimeter width specifications within 30 minutes in Mumbai.</p>
+          </div>
+        </div>
+
+        <!-- Right: Dynamic Spec Details Display Card -->
+        <div class="lg:col-span-7 reveal-on-scroll">
+          <div class="bg-[#12243D] rounded-2xl p-6 sm:p-8 border border-orange-500/30 shadow-xl tilt-card">
+            <div class="tilt-card-inner">
+              <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-700 pb-5">
+                <div>
+                  <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-orange-400 bg-orange-500/15 px-2.5 py-1 rounded border border-orange-500/30">
+                    SPEC_SHEET_DATA
+                  </span>
+                  <h3 id="spec-title" class="text-2xl font-extrabold font-heading text-white mt-2">
+                    HTD 8M Synchronous Timing Belt
+                  </h3>
+                </div>
+                <span id="spec-pitch" class="text-xs font-mono font-bold text-cyan-300 bg-cyan-500/15 border border-cyan-500/30 px-3 py-1.5 rounded-lg">
+                  8.0mm Curvilinear Pitch
+                </span>
+              </div>
+
+              <!-- Spec Attributes Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 py-6 text-xs">
+                <div class="p-3.5 rounded-xl bg-[#081324] border border-slate-700">
+                  <span class="text-slate-400 font-mono block uppercase text-[10px]">Primary Application</span>
+                  <span id="spec-app" class="text-white font-bold text-sm mt-0.5 block">High Torque Heavy Drive & Machinery</span>
+                </div>
+                <div class="p-3.5 rounded-xl bg-[#081324] border border-slate-700">
+                  <span class="text-slate-400 font-mono block uppercase text-[10px]">Standard Stock Widths</span>
+                  <span id="spec-widths" class="text-orange-400 font-bold text-sm mt-0.5 block font-mono">20mm, 30mm, 50mm, 85mm (Custom Slit)</span>
+                </div>
+                <div class="p-3.5 rounded-xl bg-[#081324] border border-slate-700">
+                  <span class="text-slate-400 font-mono block uppercase text-[10px]">Material & Cord Construction</span>
+                  <span id="spec-material" class="text-white font-bold text-sm mt-0.5 block">Rubber or PU with Steel / Kevlar Cord</span>
+                </div>
+                <div class="p-3.5 rounded-xl bg-[#081324] border border-slate-700">
+                  <span class="text-slate-400 font-mono block uppercase text-[10px]">Mumbai Warehouse Stock Status</span>
+                  <span class="text-emerald-400 font-bold text-sm mt-0.5 block flex items-center gap-1.5 font-mono">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> READY IN STOCK (SAME-DAY CUT)
+                  </span>
+                </div>
+              </div>
+
+              <!-- Image preview + WhatsApp Button -->
+              <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
+                <img id="spec-img" src="assets/client_processed/gates-powergrip-htd-8m-green-tooth-timing-belts.jpg" alt="Selected Belt" class="w-20 h-20 rounded-xl object-cover border border-cyan-500/30 shrink-0">
+                
+                <div class="flex-1 w-full flex flex-col sm:flex-row gap-3">
+                  <button onclick="requestSpecQuote(); playHoverSound();" class="btn-sheen-sweep flex-1 py-3 px-5 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-slate-950 font-black text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-orange-500/25 transition">
+                    <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
+                    <span>Inquire Price for this Profile</span>
+                  </button>
+                  <button onclick="openRfqModal('Selected Pitch Sizing'); playHoverSound();" class="py-3 px-5 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-white font-bold text-xs flex items-center justify-center gap-2 border border-slate-700">
+                    <i data-lucide="file-text" class="w-4 h-4 text-cyan-400"></i>
+                    <span>Fill RFQ Form</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 5 — INDUSTRIES (BRIGHT WHITE + HOVER ACCENTS)
+       ========================================================================= -->
+  <section id="industries" class="py-20 bg-white text-slate-900 border-b border-slate-200 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 reveal-on-scroll">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-mono font-bold uppercase tracking-wider mb-2 border border-blue-200">
+          <i data-lucide="globe-2" class="w-4 h-4"></i>
+          SECTOR SOLUTIONS MATRIX
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900">
+          Engineering Drives Tailored by Sector
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2">
+          We supply exact replacement belts and transmission drives to major original equipment manufacturers (OEMs) and processing plants across India.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Industry 1: Food & Confectionery -->
+        <div class="tilt-card bg-slate-50 border border-slate-200/80 rounded-2xl p-6 text-left hover:border-orange-400 hover:shadow-card-light-hover reveal-on-scroll" onmouseenter="playHoverSound()">
+          <div class="w-11 h-11 rounded-xl bg-cyan-100 text-cyan-700 flex items-center justify-center mb-4">
+            <i data-lucide="utensils" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold font-heading text-slate-900">Food & Bakery Processing</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            FDA certified non-toxic white and blue PU belts, oil/fat resistant conveyor belts, and knife-edge transfer bands for biscuits, chocolates, and dough sheeting.
+          </p>
+          <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-blue-600 font-semibold flex items-center justify-between font-mono">
+            <span>FDA_EU_CERTIFIED</span>
+            <button onclick="openRfqModal('Food Processing Belts'); playHoverSound();" class="text-orange-600 hover:text-orange-700 font-bold">Inquire &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Industry 2: Packaging & Corrugation -->
+        <div class="tilt-card bg-slate-50 border border-slate-200/80 rounded-2xl p-6 text-left hover:border-orange-400 hover:shadow-card-light-hover reveal-on-scroll" onmouseenter="playHoverSound()">
+          <div class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-4">
+            <i data-lucide="package" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold font-heading text-slate-900">Packaging & Box Folding</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            High-friction red Linatex puller belts, feeder belts for carton gluing machines, vacuum punched belts, and wear-resistant rubber transmission loops.
+          </p>
+          <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-emerald-600 font-semibold flex items-center justify-between font-mono">
+            <span>NON_MARKING_GRIP</span>
+            <button onclick="openRfqModal('Packaging Machine Belts'); playHoverSound();" class="text-orange-600 hover:text-orange-700 font-bold">Inquire &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Industry 3: Textile & Spinning -->
+        <div class="tilt-card bg-slate-50 border border-slate-200/80 rounded-2xl p-6 text-left hover:border-orange-400 hover:shadow-card-light-hover reveal-on-scroll" onmouseenter="playHoverSound()">
+          <div class="w-11 h-11 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center mb-4">
+            <i data-lucide="scissors" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold font-heading text-slate-900">Textile & Spinning Mills</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            Spindle tapes, tangential belts for ring frames, synthetic cots, aprons, and high-speed polyamide flat drive belts engineered for zero elongation.
+          </p>
+          <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-blue-600 font-semibold flex items-center justify-between font-mono">
+            <span>ANTI_STATIC_POLYAMIDE</span>
+            <button onclick="openRfqModal('Textile Spindle & Flat Belts'); playHoverSound();" class="text-orange-600 hover:text-orange-700 font-bold">Inquire &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Industry 4: Automation & Robotics -->
+        <div class="tilt-card bg-slate-50 border border-slate-200/80 rounded-2xl p-6 text-left hover:border-orange-400 hover:shadow-card-light-hover reveal-on-scroll" onmouseenter="playHoverSound()">
+          <div class="w-11 h-11 rounded-xl bg-violet-100 text-violet-700 flex items-center justify-center mb-4">
+            <i data-lucide="bot" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold font-heading text-slate-900">CNC, SMT & Robotics</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            Zero-backlash AT10 and HTD timing belts with steel cords for 3D printers, CNC routers, pick-and-place robots, and electronic SMT assembly conveyors.
+          </p>
+          <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-violet-600 font-semibold flex items-center justify-between font-mono">
+            <span>ZERO_BACKLASH</span>
+            <button onclick="openRfqModal('CNC & Robotics Timing Belts'); playHoverSound();" class="text-orange-600 hover:text-orange-700 font-bold">Inquire &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Industry 5: Heavy Material Handling -->
+        <div class="tilt-card bg-slate-50 border border-slate-200/80 rounded-2xl p-6 text-left hover:border-orange-400 hover:shadow-card-light-hover reveal-on-scroll" onmouseenter="playHoverSound()">
+          <div class="w-11 h-11 rounded-xl bg-red-100 text-red-700 flex items-center justify-center mb-4">
+            <i data-lucide="truck" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold font-heading text-slate-900">Logistics & Heavy Material</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            Heavy-duty multi-ply rubber conveyor belts, rough-top baggage handling belts for airports, quarry incline belts, and high-torque banded V-belts.
+          </p>
+          <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-red-600 font-semibold flex items-center justify-between font-mono">
+            <span>HIGH_IMPACT_ABRASION</span>
+            <button onclick="openRfqModal('Heavy Material Conveyor Belts'); playHoverSound();" class="text-orange-600 hover:text-orange-700 font-bold">Inquire &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Industry 6: Printing Press & Paper -->
+        <div class="tilt-card bg-slate-50 border border-slate-200/80 rounded-2xl p-6 text-left hover:border-orange-400 hover:shadow-card-light-hover reveal-on-scroll" onmouseenter="playHoverSound()">
+          <div class="w-11 h-11 rounded-xl bg-cyan-100 text-cyan-700 flex items-center justify-center mb-4">
+            <i data-lucide="printer" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold font-heading text-slate-900">Printing Press & Paper Converting</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            Feeder belts with high friction NBR coating, suction belts with precision drilled vacuum holes, and anti-static flat belts for web offset printing machines.
+          </p>
+          <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-cyan-600 font-semibold flex items-center justify-between font-mono">
+            <span>HIGH_FRICTION_NBR</span>
+            <button onclick="openRfqModal('Printing Press Belts'); playHoverSound();" class="text-orange-600 hover:text-orange-700 font-bold">Inquire &rarr;</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6 — WORKSHOP & SPLICING CAPABILITIES
+       ========================================================================= -->
+  <section id="fabrication" class="py-20 bg-[#F1F5F9] text-slate-900 border-b border-slate-300 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-5 space-y-5 text-left reveal-on-scroll">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-xs font-mono font-bold uppercase tracking-wider">
+            <i data-lucide="wrench" class="w-3.5 h-3.5"></i>
+            WORKSHOP & CUSTOM JOINTING
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 leading-tight">
+            Custom Splicing, Cleats & Endless Jointing Services
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Belubeari Exim doesn't just sell standard rolls. In our Masjid Bunder workshop facility, we customize conveyor belts to your exact machine geometry with precision hot/cold vulcanizing and high-frequency welded attachments.
+          </p>
+
+          <div class="space-y-3 pt-2">
+            <div class="bg-white p-3.5 rounded-xl border border-slate-200 flex items-start gap-3 shadow-sm" onmouseenter="playHoverSound()">
+              <i data-lucide="check-circle" class="w-5 h-5 text-blue-600 shrink-0 mt-0.5"></i>
+              <div class="text-xs">
+                <strong class="text-slate-900 text-sm block">Finger & Step Endless Splicing</strong>
+                Smooth, seamless jointing with zero seam elevation for high-speed vibration-free travel.
+              </div>
+            </div>
+            <div class="bg-white p-3.5 rounded-xl border border-slate-200 flex items-start gap-3 shadow-sm" onmouseenter="playHoverSound()">
+              <i data-lucide="check-circle" class="w-5 h-5 text-orange-500 shrink-0 mt-0.5"></i>
+              <div class="text-xs">
+                <strong class="text-slate-900 text-sm block">Corrugated Sidewalls & T-Cleats</strong>
+                High-capacity vertical incline conveying for granules, powder, food chips, and mining.
+              </div>
+            </div>
+            <div class="bg-white p-3.5 rounded-xl border border-slate-200 flex items-start gap-3 shadow-sm" onmouseenter="playHoverSound()">
+              <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+              <div class="text-xs">
+                <strong class="text-slate-900 text-sm block">V-Guide Tracking Ropes & Perforations</strong>
+                Prevents belt run-off on long centers and allows CNC vacuum suction hold-down.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Workshop Showcase Cards -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 reveal-on-scroll">
+          <div class="tilt-card bg-white rounded-2xl overflow-hidden p-3 border border-slate-200 shadow-sm" onmouseenter="playHoverSound()">
+            <img src="assets/client_processed/pvc-green-incline-sidewall-cleated-belt.jpg" alt="Incline Sidewall Cleated Belt" class="w-full h-44 object-cover rounded-xl">
+            <div class="p-3 text-left">
+              <span class="text-blue-600 font-bold text-xs">High-Capacity Sidewall Belts</span>
+              <p class="text-[11px] text-slate-600 mt-1">Prevents material spillage on 30° to 75° steep incline conveyors.</p>
+            </div>
+          </div>
+
+          <div class="tilt-card bg-white rounded-2xl overflow-hidden p-3 border border-slate-200 shadow-sm" onmouseenter="playHoverSound()">
+            <img src="assets/client_processed/pu-blue-cleated-conveyor-belt.jpg" alt="Food Grade Cleated Belt" class="w-full h-44 object-cover rounded-xl">
+            <div class="p-3 text-left">
+              <span class="text-blue-600 font-bold text-xs">FDA Food-Grade Cleats</span>
+              <p class="text-[11px] text-slate-600 mt-1">High-frequency welded PU cleats for hygienic sanitary food handling.</p>
+            </div>
+          </div>
+
+          <div class="tilt-card bg-white rounded-2xl overflow-hidden p-3 border border-slate-200 shadow-sm" onmouseenter="playHoverSound()">
+            <img src="assets/client_processed/pvc-green-corrugated-sidewall-roll.webp" alt="Corrugated Sidewall Roll" class="w-full h-44 object-cover rounded-xl">
+            <div class="p-3 text-left">
+              <span class="text-blue-600 font-bold text-xs">Flexible Wave Sidewalls</span>
+              <p class="text-[11px] text-slate-600 mt-1">Available in heights 40mm to 120mm with custom cross-cleats.</p>
+            </div>
+          </div>
+
+          <div class="tilt-card bg-white rounded-2xl overflow-hidden p-3 border border-slate-200 shadow-sm" onmouseenter="playHoverSound()">
+            <img src="assets/client_processed/pu-blue-endless-conveyor-loop.jpg" alt="Endless Loop Belt" class="w-full h-44 object-cover rounded-xl">
+            <div class="p-3 text-left">
+              <span class="text-blue-600 font-bold text-xs">Precision Endless Loops</span>
+              <p class="text-[11px] text-slate-600 mt-1">Tested for uniform thickness, tensile strength and dynamic balance.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 7 — FINAL RFQ & LOGISTICS HUB
+       ========================================================================= -->
+  <section id="rfq-section" class="py-20 bg-[#081B33] text-white relative overflow-hidden border-b border-cyan-500/20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+      
+      <div class="bg-[#0B2240] rounded-3xl p-8 sm:p-12 border border-cyan-500/30 text-left relative overflow-hidden shadow-2xl reveal-on-scroll">
+        <div class="absolute -top-20 -right-20 w-64 h-64 bg-orange-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/20 text-orange-300 text-xs font-mono font-bold uppercase tracking-wider mb-2 border border-orange-500/30">
+            <span class="w-2 h-2 rounded-full bg-orange-400 animate-pulse"></span> DIRECT WHOLESALE RATES • 15-MIN RESPONSE
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+            Request an Instant Wholesale Quote
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base mt-2">
+            Share your required belt profile, width, length, or sample photo. Our Mumbai sales engineers will calculate prices and confirm dispatch schedule within 15 minutes!
+          </p>
+        </div>
+
+        <form id="rfq-form" onsubmit="handleFormSubmit(event)" class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-300 mb-1 font-mono">Company / Your Name *</label>
+            <input type="text" id="rfq-name" required placeholder="e.g. Rajesh Shah (Shah Automation)" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400 transition">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-300 mb-1 font-mono">WhatsApp / Contact Number *</label>
+            <input type="tel" id="rfq-phone" required placeholder="e.g. 98200 12345" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400 transition">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-300 mb-1 font-mono">Product Category *</label>
+            <select id="rfq-product" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white text-sm focus:outline-none focus:border-cyan-400 transition font-mono">
+              <option value="PVC & Rubber Conveyor Belts">PVC & Rubber Conveyor Belts</option>
+              <option value="PU Steel-Cord Timing Belts">PU Steel-Cord Timing Belts</option>
+              <option value="Food-Grade PU Blue/White Belts">Food-Grade PU Blue/White Belts</option>
+              <option value="Raw Edge Cogged & Wedge V-Belts">Raw Edge Cogged & Wedge V-Belts</option>
+              <option value="CNC Timing Pulleys & Taper Bushings">CNC Timing Pulleys & Taper Bushings</option>
+              <option value="Deep Groove & Roller Bearings">Deep Groove & Roller Bearings</option>
+              <option value="Cast Iron Pillow Block Units (UCP/UCF)">Cast Iron Pillow Block Units (UCP/UCF)</option>
+              <option value="Special Coated Haul-Off Puller Belts">Special Coated Haul-Off Puller Belts</option>
+              <option value="High-Speed Flat Transmission Belts">High-Speed Flat Transmission Belts</option>
+              <option value="High-Temp Oil Seals & Viton O-Rings">High-Temp Oil Seals & Viton O-Rings</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-300 mb-1 font-mono">Approx Quantity & City</label>
+            <input type="text" id="rfq-qty" placeholder="e.g. 20 Pcs / Surat, Gujarat" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400 transition">
+          </div>
+          <div class="sm:col-span-2">
+            <label class="block text-xs font-bold text-slate-300 mb-1 font-mono">Technical Dimensions / Part Number / Specs</label>
+            <textarea id="rfq-notes" rows="2" placeholder="e.g. HTD 8M-1440-50mm width 10 pcs, or Conveyor belt 600mm width x 22m endless with 30mm cleats" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400 transition"></textarea>
+          </div>
+          <div class="sm:col-span-2 pt-2 flex flex-col sm:flex-row gap-3">
+            <button type="submit" onmouseenter="playHoverSound()" class="btn-sheen-sweep flex-1 py-4 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-400 hover:to-amber-400 text-slate-950 font-black text-sm sm:text-base shadow-xl shadow-orange-500/30 flex items-center justify-center gap-2 transition transform hover:scale-[1.01] active:scale-[0.99]">
+              <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+              <span>Send Instant RFQ to WhatsApp (+91 99673 84878)</span>
+            </button>
+            <a href="tel:+919967384878" onmouseenter="playHoverSound()" class="px-6 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-sm flex items-center justify-center gap-2 border border-slate-700 transition">
+              <i data-lucide="phone" class="w-4 h-4 text-cyan-400"></i>
+              <span>Call Direct</span>
+            </a>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8. MUMBAI LOGISTICS HUB -->
+  <section id="mumbai-hub" class="py-20 bg-[#051326] text-white border-b border-cyan-500/20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-6 space-y-4 text-left reveal-on-scroll">
+          <div class="text-cyan-300 text-xs font-mono uppercase tracking-widest flex items-center gap-2">
+            <i data-lucide="map-pin" class="w-4 h-4 text-cyan-400"></i>
+            [LOGISTICS_HUB: MASJID BUNDER]
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold font-heading text-white">
+            Masjid Bunder, Mumbai Distribution Hub
+          </h2>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Located in the heart of Mumbai’s commercial engineering market, our warehouse and workshop ensure instant inventory access, custom cutting, and rapid pan-India transport dispatch.
+          </p>
+
+          <div class="space-y-3 pt-2 text-sm text-slate-300">
+            <div class="bg-[#0B2240] p-4 rounded-xl border border-cyan-500/30 flex items-start gap-3 shadow-md" onmouseenter="playHoverSound()">
+              <i data-lucide="building-2" class="w-5 h-5 text-cyan-400 shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="text-white block font-heading text-base">M/s Belubeari Exim</strong>
+                <span class="font-mono text-xs text-slate-300">261/263, Yusuf Meherali Road, Office No. 8, 2nd Floor, Masjid Bunder, Mumbai – 400003, Maharashtra, India.</span>
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="bg-[#0B2240] p-3 rounded-xl border border-slate-700 flex items-center gap-3" onmouseenter="playHoverSound()">
+                <i data-lucide="phone-call" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+                <span class="text-xs font-mono font-semibold text-slate-200">+91 99673 84878 / +91 93214 69698</span>
+              </div>
+              <div class="bg-[#0B2240] p-3 rounded-xl border border-slate-700 flex items-center gap-3" onmouseenter="playHoverSound()">
+                <i data-lucide="mail" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+                <span class="text-xs font-mono font-semibold text-slate-200">sales@belubeariexim.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pan-India Transport Grid -->
+        <div class="lg:col-span-6 bg-[#0B2240] p-6 sm:p-8 rounded-2xl text-left shadow-xl border border-cyan-500/30 reveal-on-scroll">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-lg font-bold font-heading text-white">Daily Pan-India Dispatch Carriers</h3>
+            <span class="text-[10px] font-mono font-bold text-orange-400 bg-orange-500/15 px-2 py-0.5 rounded border border-orange-500/30">24-HR EXPRESS</span>
+          </div>
+          <p class="text-xs text-slate-300 mb-5 leading-relaxed font-normal">
+            Consignments booked daily to all major industrial clusters in Gujarat, Maharashtra, Tamil Nadu, Delhi NCR, Karnataka, Punjab, and West Bengal.
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 text-xs text-slate-200 font-bold font-mono">
+            <div class="p-3 rounded-xl bg-[#051326] border border-slate-700 text-center flex flex-col items-center justify-center gap-1 hover:border-cyan-400 transition" onmouseenter="playHoverSound()">
+              <i data-lucide="truck" class="w-4 h-4 text-cyan-400"></i>
+              <span>V-Trans India</span>
+            </div>
+            <div class="p-3 rounded-xl bg-[#051326] border border-slate-700 text-center flex flex-col items-center justify-center gap-1 hover:border-cyan-400 transition" onmouseenter="playHoverSound()">
+              <i data-lucide="truck" class="w-4 h-4 text-cyan-400"></i>
+              <span>TCI Express</span>
+            </div>
+            <div class="p-3 rounded-xl bg-[#051326] border border-slate-700 text-center flex flex-col items-center justify-center gap-1 hover:border-cyan-400 transition" onmouseenter="playHoverSound()">
+              <i data-lucide="truck" class="w-4 h-4 text-cyan-400"></i>
+              <span>Gati-KWE</span>
+            </div>
+            <div class="p-3 rounded-xl bg-[#051326] border border-slate-700 text-center flex flex-col items-center justify-center gap-1 hover:border-cyan-400 transition" onmouseenter="playHoverSound()">
+              <i data-lucide="truck" class="w-4 h-4 text-cyan-400"></i>
+              <span>Safechem</span>
+            </div>
+            <div class="p-3 rounded-xl bg-[#051326] border border-slate-700 text-center flex flex-col items-center justify-center gap-1 hover:border-cyan-400 transition" onmouseenter="playHoverSound()">
+              <i data-lucide="plane" class="w-4 h-4 text-sky-400"></i>
+              <span>DTDC Cargo (Air)</span>
+            </div>
+            <div class="p-3 rounded-xl bg-[#051326] border border-slate-700 text-center flex flex-col items-center justify-center gap-1 hover:border-cyan-400 transition" onmouseenter="playHoverSound()">
+              <i data-lucide="package-check" class="w-4 h-4 text-emerald-400"></i>
+              <span>Local Pickup</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FOOTER -->
+  <footer class="py-12 bg-[#030B17] text-slate-400 text-xs border-t border-slate-800 font-mono">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-white font-black text-base font-heading shadow-glow-cyan">
+            BE
+          </div>
+          <div>
+            <div class="text-base font-bold font-heading text-white">M/s Belubeari Exim</div>
+            <div class="text-[11px] text-slate-400 font-sans">Authorized Stockist & Industrial Supply Partner • Mumbai</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-6 text-xs text-slate-300 font-sans font-semibold">
+          <a href="#categories-section" onmouseenter="playHoverSound()" class="hover:text-cyan-400 transition">Categories</a>
+          <a href="#products-showcase" onmouseenter="playHoverSound()" class="hover:text-cyan-400 transition">Products</a>
+          <a href="#spec-finder" onmouseenter="playHoverSound()" class="hover:text-cyan-400 transition">Pitch Calculator</a>
+          <a href="#industries" onmouseenter="playHoverSound()" class="hover:text-cyan-400 transition">Industries</a>
+          <a href="#fabrication" onmouseenter="playHoverSound()" class="hover:text-cyan-400 transition">Workshop</a>
+          <a href="#rfq-section" onmouseenter="playHoverSound()" class="hover:text-cyan-400 transition">Request Quote</a>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500">
+        <div>
+          © 2026 M/s Belubeari Exim. All Rights Reserved. 261/263 Yusuf Meherali Road, Masjid Bunder, Mumbai 400003.
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="flex items-center gap-1 text-slate-400"><i data-lucide="shield" class="w-3.5 h-3.5 text-cyan-400"></i> GST & IEC Registered</span>
+          <span>•</span>
+          <span>ISO 9001:2015 Compliant</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FLOATING QUICK WHATSAPP CTA -->
+  <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20an%20urgent%20quote%20for%20industrial%20belts." target="_blank" onmouseenter="playHoverSound()" class="btn-sheen-sweep fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black px-5 py-3.5 rounded-full shadow-2xl shadow-emerald-500/40 transition transform hover:scale-105 active:scale-95">
+    <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+    <span class="hidden sm:inline text-xs font-black">WhatsApp RFQ</span>
+  </a>
+
+  <!-- =========================================================================
+       HIGH-MOTION GSAP + CANVAS + 3D TILT JAVASCRIPT ENGINE
+       ========================================================================= -->
+  <script>
+    lucide.createIcons();
+
+    // 1. Scroll Progress Bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+
+    // 2. Mouse Cursor Spotlight & 3D Tilt calculation
+    const heroCard = document.getElementById('hero-tilt-card');
+    window.addEventListener('mousemove', (e) => {
+      document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
+      document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
+
+      // 3D Tilt for Hero Card
+      if (heroCard) {
+        const rect = heroCard.getBoundingClientRect();
+        const cardX = e.clientX - rect.left - rect.width / 2;
+        const cardY = e.clientY - rect.top - rect.height / 2;
+        const rotX = -(cardY / rect.height) * 12;
+        const rotY = (cardX / rect.width) * 12;
+        heroCard.style.transform = `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale3d(1.02, 1.02, 1.02)`;
+      }
+    });
+
+    window.addEventListener('mouseleave', () => {
+      if (heroCard) {
+        heroCard.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+      }
+    });
+
+    // 3. 3D Tilt on all Tilt Cards
+    document.querySelectorAll('.tilt-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        const rotX = -(y / rect.height) * 10;
+        const rotY = (x / rect.width) * 10;
+        card.style.transform = `perspective(800px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-6px)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = `perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0)`;
+      });
+    });
+
+    // 4. Scroll Reveal with Intersection Observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+    // 5. Interactive Particle Canvas
+    const canvas = document.getElementById('interactive-particle-canvas');
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      let particles = [];
+      function resizeCanvas() {
+        canvas.width = canvas.parentElement.offsetWidth;
+        canvas.height = canvas.parentElement.offsetHeight;
+      }
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+
+      class Particle {
+        constructor() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.radius = Math.random() * 2 + 0.6;
+          this.vx = (Math.random() - 0.5) * 0.4;
+          this.vy = (Math.random() - 0.5) * 0.4;
+          this.alpha = Math.random() * 0.6 + 0.2;
+          this.color = Math.random() > 0.4 ? 'rgba(0, 198, 255,' : (Math.random() > 0.5 ? 'rgba(255, 138, 37,' : 'rgba(124, 92, 255,');
+        }
+        update() {
+          this.x += this.vx;
+          this.y += this.vy;
+          if (this.x < 0) this.x = canvas.width;
+          if (this.x > canvas.width) this.x = 0;
+          if (this.y < 0) this.y = canvas.height;
+          if (this.y > canvas.height) this.y = 0;
+        }
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+          ctx.fillStyle = `${this.color} ${this.alpha})`;
+          ctx.fill();
+        }
+      }
+
+      for (let i = 0; i < 45; i++) {
+        particles.push(new Particle());
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 90) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = `rgba(0, 198, 255, ${0.15 * (1 - dist / 90)})`;
+              ctx.lineWidth = 0.6;
+              ctx.stroke();
+            }
+          }
+        }
+        particles.forEach(p => { p.update(); p.draw(); });
+        requestAnimationFrame(animate);
+      }
+      animate();
+    }
+
+    // 6. Procedural Web Audio Engine
+    let audioCtx = null;
+    let isSoundOn = false;
+    let ambientOsc = null;
+    let ambientGain = null;
+
+    function initAudioContext() {
+      if (!audioCtx) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new AudioContext();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+    }
+
+    function toggleAudioEngine() {
+      initAudioContext();
+      isSoundOn = !isSoundOn;
+      const soundBtn = document.getElementById('sound-toggle-btn');
+      const soundIconBox = document.getElementById('sound-icon-box');
+      const soundBars = document.getElementById('sound-bars');
+
+      if (isSoundOn) {
+        soundIconBox.innerHTML = `
+          <i data-lucide="volume-2" class="w-3.5 h-3.5 text-cyan-400"></i>
+          <span class="font-mono text-[10px] uppercase font-bold text-cyan-300">Audio: ON</span>
+        `;
+        soundBars.classList.remove('hidden');
+        soundBars.classList.add('flex');
+        startAmbientHum();
+        playSwitchSound(true);
+      } else {
+        soundIconBox.innerHTML = `
+          <i data-lucide="volume-x" class="w-3.5 h-3.5 text-slate-400"></i>
+          <span class="font-mono text-[10px] uppercase font-bold text-slate-400">Audio: OFF</span>
+        `;
+        soundBars.classList.add('hidden');
+        soundBars.classList.remove('flex');
+        stopAmbientHum();
+        playSwitchSound(false);
+      }
+      lucide.createIcons();
+    }
+
+    function startAmbientHum() {
+      if (!audioCtx) return;
+      ambientOsc = audioCtx.createOscillator();
+      ambientGain = audioCtx.createGain();
+      ambientOsc.type = 'sine';
+      ambientOsc.frequency.setValueAtTime(55, audioCtx.currentTime);
+      ambientGain.gain.setValueAtTime(0.001, audioCtx.currentTime);
+      ambientGain.gain.exponentialRampToValueAtTime(0.015, audioCtx.currentTime + 2);
+      ambientOsc.connect(ambientGain);
+      ambientGain.connect(audioCtx.destination);
+      ambientOsc.start();
+    }
+
+    function stopAmbientHum() {
+      if (ambientGain && audioCtx) {
+        ambientGain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.5);
+        setTimeout(() => { if (ambientOsc) ambientOsc.stop(); }, 500);
+      }
+    }
+
+    function playHoverSound() {
+      if (!isSoundOn || !audioCtx) return;
+      try {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(1400, audioCtx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(600, audioCtx.currentTime + 0.04);
+        gain.gain.setValueAtTime(0.03, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.04);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.04);
+      } catch(e) {}
+    }
+
+    function playSwitchSound(isTurnOn) {
+      if (!audioCtx) return;
+      try {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        const startFreq = isTurnOn ? 440 : 880;
+        const endFreq = isTurnOn ? 880 : 440;
+        osc.frequency.setValueAtTime(startFreq, audioCtx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(endFreq, audioCtx.currentTime + 0.08);
+        gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.08);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.08);
+      } catch(e) {}
+    }
+
+    // 7. Catalog Switcher & Pitch Calculator
+    function switchViewMode(mode) {
+      const btnWhite = document.getElementById('btn-view-white');
+      const btnInd = document.getElementById('btn-view-ind');
+      const images = document.querySelectorAll('.catalog-img');
+
+      if (mode === 'white') {
+        btnWhite.className = 'px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-gradient-to-r from-cyan-400 to-blue-400 text-slate-950 shadow-md';
+        btnInd.className = 'px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 text-blue-100 hover:text-white';
+        images.forEach(img => {
+          img.style.opacity = '0';
+          setTimeout(() => {
+            img.src = img.getAttribute('data-white');
+            img.style.opacity = '1';
+          }, 120);
+        });
+      } else {
+        btnInd.className = 'px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-gradient-to-r from-cyan-400 to-blue-400 text-slate-950 shadow-md';
+        btnWhite.className = 'px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 text-blue-100 hover:text-white';
+        images.forEach(img => {
+          img.style.opacity = '0';
+          setTimeout(() => {
+            img.src = img.getAttribute('data-ind');
+            img.style.opacity = '1';
+          }, 120);
+        });
+      }
+    }
+
+    function filterCategory(cat, btnElement) {
+      document.querySelectorAll('.cat-filter-btn').forEach(btn => {
+        btn.className = 'cat-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-blue-900/40 hover:bg-blue-900/60 text-white border border-white/20 whitespace-nowrap';
+      });
+      btnElement.className = 'cat-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-blue-900 whitespace-nowrap shadow-md';
+
+      const items = document.querySelectorAll('.product-item');
+      items.forEach(item => {
+        if (cat === 'all' || item.getAttribute('data-category') === cat) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    let currentSelectedPitch = 'HTD 8M Synchronous Timing Belt';
+    function selectPitch(title, pitch, app, widths, material, imgSrc, btn) {
+      document.querySelectorAll('.pitch-btn').forEach(b => {
+        b.className = 'pitch-btn p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 font-bold text-xs text-left border border-slate-700';
+      });
+      btn.className = 'pitch-btn p-3 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 text-slate-950 font-bold text-xs text-left shadow-glow-orange';
+
+      document.getElementById('spec-title').innerText = title;
+      document.getElementById('spec-pitch').innerText = pitch;
+      document.getElementById('spec-app').innerText = app;
+      document.getElementById('spec-widths').innerText = widths;
+      document.getElementById('spec-material').innerText = material;
+      document.getElementById('spec-img').src = imgSrc;
+      currentSelectedPitch = title;
+    }
+
+    function requestSpecQuote() {
+      const msg = `*PITCH / SIZING INQUIRY - M/s Belubeari Exim*%0A` +
+        `⚙️ *Selected Profile:* ${encodeURIComponent(currentSelectedPitch)}%0A` +
+        `📦 *Inquiry:* Please share current stock availability, slitting width options, and wholesale prices for Mumbai dispatch.`;
+      window.open(`https://wa.me/919967384878?text=${msg}`, '_blank');
+    }
+
+    function openRfqModal(productName) {
+      document.getElementById('rfq-section').scrollIntoView({ behavior: 'smooth' });
+      const select = document.getElementById('rfq-product');
+      for (let i = 0; i < select.options.length; i++) {
+        if (select.options[i].text.toLowerCase().includes(productName.toLowerCase()) || productName.toLowerCase().includes(select.options[i].text.toLowerCase())) {
+          select.selectedIndex = i;
+          break;
+        }
+      }
+      document.getElementById('rfq-name').focus();
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('rfq-name').value;
+      const phone = document.getElementById('rfq-phone').value;
+      const product = document.getElementById('rfq-product').value;
+      const qty = document.getElementById('rfq-qty').value;
+      const notes = document.getElementById('rfq-notes').value;
+
+      const message = `*NEW RFQ WHOLESALE INQUIRY - M/s Belubeari Exim*%0A` +
+        `👤 *Name/Company:* ${encodeURIComponent(name)}%0A` +
+        `📞 *Contact Number:* ${encodeURIComponent(phone)}%0A` +
+        `⚙️ *Product:* ${encodeURIComponent(product)}%0A` +
+        `📦 *Quantity/City:* ${encodeURIComponent(qty || 'As per requirement')}%0A` +
+        `📝 *Dimensions/Specs:* ${encodeURIComponent(notes || 'Please share standard pricing and catalog')}`;
+
+      window.open(`https://wa.me/919967384878?text=${message}`, '_blank');
+    }
+  </script>
+</body>
+</html>
