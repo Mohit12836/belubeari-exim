@@ -804,16 +804,16 @@
           </p>
         </div>
 
-        <!-- Mode Toggle Switcher -->
+        <!-- Mode Toggle Switcher (Default: Client Warehouse Stock In-Action) -->
         <div class="flex flex-wrap items-center gap-3">
           <div class="inline-flex items-center p-1 rounded-xl bg-slate-900/60 backdrop-blur-md border border-white/20 shadow-lg">
-            <button id="btn-view-white" onclick="switchViewMode('white'); playHoverSound();" class="px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-gradient-to-r from-cyan-400 to-blue-400 text-slate-950 shadow-md">
-              <i data-lucide="sun" class="w-3.5 h-3.5"></i>
-              <span>Studio Catalog</span>
-            </button>
-            <button id="btn-view-ind" onclick="switchViewMode('ind'); playHoverSound();" class="px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 text-blue-100 hover:text-white">
+            <button id="btn-view-ind" onclick="switchViewMode('ind'); playHoverSound();" class="px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-gradient-to-r from-cyan-400 to-blue-400 text-slate-950 shadow-md">
               <i data-lucide="factory" class="w-3.5 h-3.5"></i>
-              <span>Plant In-Action</span>
+              <span>Live Stock Photos</span>
+            </button>
+            <button id="btn-view-white" onclick="switchViewMode('white'); playHoverSound();" class="px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 text-blue-100 hover:text-white">
+              <i data-lucide="sun" class="w-3.5 h-3.5"></i>
+              <span>Studio Specs</span>
             </button>
           </div>
         </div>
@@ -838,19 +838,22 @@
         </button>
       </div>
 
-      <!-- 10 Product Cards Grid -->
+      <!-- 10 Product Cards Grid (FEATURING CLIENT ORIGINAL IMAGES AS DEFAULT) -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="product-grid">
 
-        <!-- 1. PVC Conveyor Belts -->
+        <!-- 1. PVC Conveyor Belts (Client Original Image: Green Cleated Conveyor) -->
         <div class="tilt-card bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl flex flex-col product-item reveal-on-scroll" data-category="conveyor" onmouseenter="playHoverSound()">
-          <div class="relative bg-slate-100 h-52 flex items-center justify-center p-3 overflow-hidden border-b border-slate-200">
-            <img class="catalog-img w-full h-full object-contain" 
+          <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200">
+            <img class="catalog-img w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
                  data-white="assets/products/white_bg/01_white_conveyor_belt_roll.jpg" 
-                 data-ind="assets/products/industrial_env/01_conveyor_belts_pvc_cleated.jpg" 
-                 src="assets/products/white_bg/01_white_conveyor_belt_roll.jpg" 
+                 data-ind="CLIENT NE DI MAGES/public/images/products/pvc-green-cleated-conveyor.jpg" 
+                 src="CLIENT NE DI MAGES/public/images/products/pvc-green-cleated-conveyor.jpg" 
                  alt="PVC Conveyor Belts">
-            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono px-2 py-0.5 rounded shadow-sm">
+            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-md z-10">
               CONVEYOR_01
+            </span>
+            <span class="absolute bottom-2 right-2 bg-slate-900/80 backdrop-blur-md text-cyan-300 text-[9px] font-mono px-2 py-0.5 rounded border border-cyan-500/30 z-10">
+              ORIGINAL STOCK
             </span>
           </div>
           <div class="p-5 flex-1 flex flex-col justify-between">
@@ -859,6 +862,10 @@
               <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
                 Chevron, rough-top, corrugated sidewall, and plain conveyor rolls. 1-ply to 4-ply high-tensile fabric carcass.
               </p>
+              <div class="mt-3 flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-600">
+                <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">2mm – 12mm</span>
+                <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">Cold/Hot Spliced</span>
+              </div>
             </div>
             <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between font-mono">
               <span class="text-xs font-bold text-emerald-600 flex items-center gap-1">
@@ -871,24 +878,31 @@
           </div>
         </div>
 
-        <!-- 2. PU Timing Belts -->
+        <!-- 2. PU Timing Belts (Client Original Image: Gates PowerGrip) -->
         <div class="tilt-card bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl flex flex-col product-item reveal-on-scroll" data-category="timing" onmouseenter="playHoverSound()">
-          <div class="relative bg-slate-100 h-52 flex items-center justify-center p-3 overflow-hidden border-b border-slate-200">
-            <img class="catalog-img w-full h-full object-contain" 
+          <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200">
+            <img class="catalog-img w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
                  data-white="assets/products/white_bg/02_white_pu_timing_belt.jpg" 
-                 data-ind="assets/products/industrial_env/02_pu_timing_belts_steel_cord.jpg" 
-                 src="assets/products/white_bg/02_white_pu_timing_belt.jpg" 
+                 data-ind="CLIENT NE DI MAGES/public/images/products/timing-belt-gates-powergrip.jpg" 
+                 src="CLIENT NE DI MAGES/public/images/products/timing-belt-gates-powergrip.jpg" 
                  alt="PU Timing Belts">
-            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono px-2 py-0.5 rounded shadow-sm">
+            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-md z-10">
               SYNCHRONOUS_02
+            </span>
+            <span class="absolute bottom-2 right-2 bg-slate-900/80 backdrop-blur-md text-cyan-300 text-[9px] font-mono px-2 py-0.5 rounded border border-cyan-500/30 z-10">
+              GATES POWERGRIP
             </span>
           </div>
           <div class="p-5 flex-1 flex flex-col justify-between">
             <div>
               <h3 class="text-base font-bold text-slate-900 font-heading">PU Steel-Cord Timing Belts</h3>
               <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
-                T5, T10, AT5, AT10, HTD 5M, 8M, 14M, and STD pitches. Thermoplastic polyurethane with reinforced steel wire cords.
+                T5, T10, AT5, AT10, HTD 5M, 8M, 14M, and STD pitches. Thermoplastic polyurethane with reinforced steel/Kevlar wire cords.
               </p>
+              <div class="mt-3 flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-600">
+                <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">Zero Slip</span>
+                <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">CNC & SMT</span>
+              </div>
             </div>
             <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between font-mono">
               <span class="text-xs font-bold text-emerald-600 flex items-center gap-1">
@@ -901,16 +915,19 @@
           </div>
         </div>
 
-        <!-- 3. Raw-Edge Cogged V-Belts -->
+        <!-- 3. Raw-Edge Cogged V-Belts (Client Original Image: Mitsuboshi Timing & V-Belts) -->
         <div class="tilt-card bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl flex flex-col product-item reveal-on-scroll" data-category="vbelt" onmouseenter="playHoverSound()">
-          <div class="relative bg-slate-100 h-52 flex items-center justify-center p-3 overflow-hidden border-b border-slate-200">
-            <img class="catalog-img w-full h-full object-contain" 
+          <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200">
+            <img class="catalog-img w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
                  data-white="assets/products/white_bg/03_white_v_belts_set.jpg" 
-                 data-ind="assets/products/industrial_env/03_v_belts_cogged_wedge.jpg" 
-                 src="assets/products/white_bg/03_white_v_belts_set.jpg" 
+                 data-ind="CLIENT NE DI MAGES/public/images/products/timing-and-v-belts-mitsuboshi.jpg" 
+                 src="CLIENT NE DI MAGES/public/images/products/timing-and-v-belts-mitsuboshi.jpg" 
                  alt="V-Belts">
-            <span class="absolute top-3 left-3 bg-orange-500 text-white text-[10px] font-mono px-2 py-0.5 rounded shadow-sm">
+            <span class="absolute top-3 left-3 bg-orange-500 text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-md z-10">
               V_BELT_03
+            </span>
+            <span class="absolute bottom-2 right-2 bg-slate-900/80 backdrop-blur-md text-amber-300 text-[9px] font-mono px-2 py-0.5 rounded border border-amber-500/30 z-10">
+              MITSUBOSHI SET
             </span>
           </div>
           <div class="p-5 flex-1 flex flex-col justify-between">
@@ -919,6 +936,10 @@
               <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
                 Sections A, B, C, SPA, SPB, SPC, 3V, 5V, 8V, and banded sets. High heat and oil resistant synthetic rubber for heavy motors.
               </p>
+              <div class="mt-3 flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-600">
+                <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">High Torque</span>
+                <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">Matched Sets</span>
+              </div>
             </div>
             <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between font-mono">
               <span class="text-xs font-bold text-emerald-600 flex items-center gap-1">
@@ -931,16 +952,19 @@
           </div>
         </div>
 
-        <!-- 4. Precision Ball Bearings -->
+        <!-- 4. Precision Ball Bearings (Client Original Image: Precision Bearings) -->
         <div class="tilt-card bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl flex flex-col product-item reveal-on-scroll" data-category="bearing" onmouseenter="playHoverSound()">
-          <div class="relative bg-slate-100 h-52 flex items-center justify-center p-3 overflow-hidden border-b border-slate-200">
-            <img class="catalog-img w-full h-full object-contain" 
+          <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200">
+            <img class="catalog-img w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
                  data-white="assets/products/white_bg/04_white_ball_bearings.jpg" 
-                 data-ind="assets/products/industrial_env/04_deep_groove_ball_bearings.jpg" 
-                 src="assets/products/white_bg/04_white_ball_bearings.jpg" 
+                 data-ind="CLIENT NE DI MAGES/public/images/products/precision-ball-roller-bearings.jpg" 
+                 src="CLIENT NE DI MAGES/public/images/products/precision-ball-roller-bearings.jpg" 
                  alt="Precision Ball Bearings">
-            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono px-2 py-0.5 rounded shadow-sm">
+            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-md z-10">
               BEARINGS_04
+            </span>
+            <span class="absolute bottom-2 right-2 bg-slate-900/80 backdrop-blur-md text-cyan-300 text-[9px] font-mono px-2 py-0.5 rounded border border-cyan-500/30 z-10">
+              PRECISION ROLLER
             </span>
           </div>
           <div class="p-5 flex-1 flex flex-col justify-between">
@@ -949,6 +973,10 @@
               <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
                 6000, 6200, 6300 series, cylindrical roller and taper roller bearings. Chrome steel with 2RS rubber seals and C3 clearance.
               </p>
+              <div class="mt-3 flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-600">
+                <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">High RPM</span>
+                <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">Heavy Load</span>
+              </div>
             </div>
             <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between font-mono">
               <span class="text-xs font-bold text-emerald-600 flex items-center gap-1">
@@ -961,16 +989,19 @@
           </div>
         </div>
 
-        <!-- 5. Pillow Block Bearings -->
+        <!-- 5. Pillow Block Bearings (Client Original Image: Pillow Block Units) -->
         <div class="tilt-card bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl flex flex-col product-item reveal-on-scroll" data-category="bearing" onmouseenter="playHoverSound()">
-          <div class="relative bg-slate-100 h-52 flex items-center justify-center p-3 overflow-hidden border-b border-slate-200">
-            <img class="catalog-img w-full h-full object-contain" 
+          <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200">
+            <img class="catalog-img w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
                  data-white="assets/products/white_bg/05_white_pillow_block.jpg" 
-                 data-ind="assets/products/industrial_env/05_pillow_block_mounted_units.jpg" 
-                 src="assets/products/white_bg/05_white_pillow_block.jpg" 
+                 data-ind="CLIENT NE DI MAGES/public/images/products/pillow-block-units.jpg" 
+                 src="CLIENT NE DI MAGES/public/images/products/pillow-block-units.jpg" 
                  alt="Pillow Block Units">
-            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono px-2 py-0.5 rounded shadow-sm">
+            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-md z-10">
               MOUNTED_05
+            </span>
+            <span class="absolute bottom-2 right-2 bg-slate-900/80 backdrop-blur-md text-emerald-300 text-[9px] font-mono px-2 py-0.5 rounded border border-emerald-500/30 z-10">
+              UCP / UCF UNITS
             </span>
           </div>
           <div class="p-5 flex-1 flex flex-col justify-between">
@@ -979,6 +1010,10 @@
               <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
                 UCP, UCF, UCFL 200 & 300 series. Solid cast-iron housings with self-aligning bearing inserts, grease nipples and set screws.
               </p>
+              <div class="mt-3 flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-600">
+                <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">Self-Aligning</span>
+                <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">All Shafts</span>
+              </div>
             </div>
             <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between font-mono">
               <span class="text-xs font-bold text-emerald-600 flex items-center gap-1">
@@ -993,14 +1028,17 @@
 
         <!-- 6. CNC Timing Pulleys -->
         <div class="tilt-card bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl flex flex-col product-item reveal-on-scroll" data-category="timing" onmouseenter="playHoverSound()">
-          <div class="relative bg-slate-100 h-52 flex items-center justify-center p-3 overflow-hidden border-b border-slate-200">
-            <img class="catalog-img w-full h-full object-contain" 
+          <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200">
+            <img class="catalog-img w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
                  data-white="assets/products/white_bg/06_white_timing_pulleys.jpg" 
                  data-ind="assets/products/industrial_env/06_timing_pulleys_taper_lock.jpg" 
-                 src="assets/products/white_bg/06_white_timing_pulleys.jpg" 
+                 src="assets/products/industrial_env/06_timing_pulleys_taper_lock.jpg" 
                  alt="Timing Pulleys">
-            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono px-2 py-0.5 rounded shadow-sm">
+            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-md z-10">
               PULLEYS_06
+            </span>
+            <span class="absolute bottom-2 right-2 bg-slate-900/80 backdrop-blur-md text-cyan-300 text-[9px] font-mono px-2 py-0.5 rounded border border-cyan-500/30 z-10">
+              CNC TAPER-LOCK
             </span>
           </div>
           <div class="p-5 flex-1 flex flex-col justify-between">
@@ -1009,6 +1047,10 @@
               <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
                 Precision toothed aluminum & alloy steel pulleys with taper-lock bushings. Compatible with HTD 3M, 5M, 8M, 14M, XL, L drives.
               </p>
+              <div class="mt-3 flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-600">
+                <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">CNC Machined</span>
+                <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">Taper-Lock</span>
+              </div>
             </div>
             <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between font-mono">
               <span class="text-xs font-bold text-emerald-600 flex items-center gap-1">
@@ -1021,16 +1063,19 @@
           </div>
         </div>
 
-        <!-- 7. Flat Transmission Belts -->
+        <!-- 7. Flat Transmission Belts (Client Original Image: Nitta Poly Belts) -->
         <div class="tilt-card bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl flex flex-col product-item reveal-on-scroll" data-category="vbelt" onmouseenter="playHoverSound()">
-          <div class="relative bg-slate-100 h-52 flex items-center justify-center p-3 overflow-hidden border-b border-slate-200">
-            <img class="catalog-img w-full h-full object-contain" 
+          <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200">
+            <img class="catalog-img w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
                  data-white="assets/products/white_bg/07_white_flat_transmission_belts.jpg" 
-                 data-ind="assets/products/industrial_env/07_flat_transmission_belts.jpg" 
-                 src="assets/products/white_bg/07_white_flat_transmission_belts.jpg" 
+                 data-ind="CLIENT NE DI MAGES/public/images/products/nitta-poly-belts.jpg" 
+                 src="CLIENT NE DI MAGES/public/images/products/nitta-poly-belts.jpg" 
                  alt="Flat Belts">
-            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono px-2 py-0.5 rounded shadow-sm">
+            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-md z-10">
               HIGH_SPEED_07
+            </span>
+            <span class="absolute bottom-2 right-2 bg-slate-900/80 backdrop-blur-md text-cyan-300 text-[9px] font-mono px-2 py-0.5 rounded border border-cyan-500/30 z-10">
+              NITTA POLY BELTS
             </span>
           </div>
           <div class="p-5 flex-1 flex flex-col justify-between">
@@ -1039,6 +1084,10 @@
               <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
                 Polyamide tension-core sandwich belts for textile ring frames, flour mills, carton folders, paper converting, and printing presses.
               </p>
+              <div class="mt-3 flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-600">
+                <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">Up to 80 m/s</span>
+                <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">Anti-Static</span>
+              </div>
             </div>
             <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between font-mono">
               <span class="text-xs font-bold text-emerald-600 flex items-center gap-1">
@@ -1051,16 +1100,19 @@
           </div>
         </div>
 
-        <!-- 8. Linatex Coated Belts -->
+        <!-- 8. Linatex & SMT Automation Belts (Client Original Image: SMT Automation Conveyor) -->
         <div class="tilt-card bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl flex flex-col product-item reveal-on-scroll" data-category="timing" onmouseenter="playHoverSound()">
-          <div class="relative bg-slate-100 h-52 flex items-center justify-center p-3 overflow-hidden border-b border-slate-200">
-            <img class="catalog-img w-full h-full object-contain" 
+          <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200">
+            <img class="catalog-img w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
                  data-white="assets/products/white_bg/08_white_linatex_coated_belts.jpg" 
-                 data-ind="assets/products/industrial_env/08_linatex_coated_vacuum_belts.jpg" 
-                 src="assets/products/white_bg/08_white_linatex_coated_belts.jpg" 
+                 data-ind="CLIENT NE DI MAGES/public/images/products/smt-automation-conveyor.jpg" 
+                 src="CLIENT NE DI MAGES/public/images/products/smt-automation-conveyor.jpg" 
                  alt="Linatex Belts">
-            <span class="absolute top-3 left-3 bg-orange-500 text-white text-[10px] font-mono px-2 py-0.5 rounded shadow-sm">
+            <span class="absolute top-3 left-3 bg-orange-500 text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-md z-10">
               SPECIAL_08
+            </span>
+            <span class="absolute bottom-2 right-2 bg-slate-900/80 backdrop-blur-md text-orange-300 text-[9px] font-mono px-2 py-0.5 rounded border border-orange-500/30 z-10">
+              SMT AUTOMATION
             </span>
           </div>
           <div class="p-5 flex-1 flex flex-col justify-between">
@@ -1069,6 +1121,10 @@
               <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
                 Haul-off caterpillar belts with red Linatex high-friction coating, yellow sponge, and CNC milled vacuum holes for packaging machines.
               </p>
+              <div class="mt-3 flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-600">
+                <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">Red Linatex</span>
+                <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">Vacuum Holes</span>
+              </div>
             </div>
             <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between font-mono">
               <span class="text-xs font-bold text-emerald-600 flex items-center gap-1">
@@ -1081,16 +1137,19 @@
           </div>
         </div>
 
-        <!-- 9. Food-Grade PU Conveyor Belts -->
+        <!-- 9. Food-Grade PU Conveyor Belts (Client Original Image: PU Food Grade Blue) -->
         <div class="tilt-card bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl flex flex-col product-item reveal-on-scroll" data-category="conveyor" onmouseenter="playHoverSound()">
-          <div class="relative bg-slate-100 h-52 flex items-center justify-center p-3 overflow-hidden border-b border-slate-200">
-            <img class="catalog-img w-full h-full object-contain" 
+          <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200">
+            <img class="catalog-img w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
                  data-white="assets/products/white_bg/10_white_food_grade_pu_belts.jpg" 
-                 data-ind="assets/client_processed/food-grade-pu-conveyor-belts-poster.jpg" 
-                 src="assets/products/white_bg/10_white_food_grade_pu_belts.jpg" 
+                 data-ind="CLIENT NE DI MAGES/public/images/products/pu-food-grade-conveyor-belt.jpg" 
+                 src="CLIENT NE DI MAGES/public/images/products/pu-food-grade-conveyor-belt.jpg" 
                  alt="Food Grade PU Belts">
-            <span class="absolute top-3 left-3 bg-cyan-500 text-slate-950 font-bold text-[10px] font-mono px-2 py-0.5 rounded shadow-sm">
+            <span class="absolute top-3 left-3 bg-cyan-500 text-slate-950 font-bold text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-md z-10">
               FDA_FOOD_09
+            </span>
+            <span class="absolute bottom-2 right-2 bg-slate-900/80 backdrop-blur-md text-cyan-300 text-[9px] font-mono px-2 py-0.5 rounded border border-cyan-500/30 z-10">
+              FDA FOOD GRADE
             </span>
           </div>
           <div class="p-5 flex-1 flex flex-col justify-between">
@@ -1099,6 +1158,10 @@
               <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
                 FDA/EU compliant oil and grease-resistant Polyurethane belts for biscuits, confectionery, meat processing, and pharma tablet cooling lines.
               </p>
+              <div class="mt-3 flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-600">
+                <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">FDA Compliant</span>
+                <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">Blue & White</span>
+              </div>
             </div>
             <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between font-mono">
               <span class="text-xs font-bold text-emerald-600 flex items-center gap-1">
@@ -1111,30 +1174,37 @@
           </div>
         </div>
 
-        <!-- 10. Oil Seals & Viton O-Rings -->
+        <!-- 10. Textile Cots, Aprons & Seals (Client Original Image: Textile Cots & Aprons) -->
         <div class="tilt-card bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl flex flex-col product-item reveal-on-scroll" data-category="bearing" onmouseenter="playHoverSound()">
-          <div class="relative bg-slate-100 h-52 flex items-center justify-center p-3 overflow-hidden border-b border-slate-200">
-            <img class="catalog-img w-full h-full object-contain" 
+          <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-slate-200">
+            <img class="catalog-img w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
                  data-white="assets/products/white_bg/09_white_oil_seals_orings.jpg" 
-                 data-ind="assets/products/industrial_env/09_oil_seals_viton_orings.jpg" 
-                 src="assets/products/white_bg/09_white_oil_seals_orings.jpg" 
-                 alt="Oil Seals and O-Rings">
-            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono px-2 py-0.5 rounded shadow-sm">
-              SEALING_10
+                 data-ind="CLIENT NE DI MAGES/public/images/products/textile-cots-and-aprons.jpg" 
+                 src="CLIENT NE DI MAGES/public/images/products/textile-cots-and-aprons.jpg" 
+                 alt="Textile Cots and Aprons">
+            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-md z-10">
+              TEXTILE_10
+            </span>
+            <span class="absolute bottom-2 right-2 bg-slate-900/80 backdrop-blur-md text-cyan-300 text-[9px] font-mono px-2 py-0.5 rounded border border-cyan-500/30 z-10">
+              COTS & APRONS
             </span>
           </div>
           <div class="p-5 flex-1 flex flex-col justify-between">
             <div>
-              <h3 class="text-base font-bold text-slate-900 font-heading">High-Temp Oil Seals & Viton O-Rings</h3>
+              <h3 class="text-base font-bold text-slate-900 font-heading">Textile Cots, Aprons & Special Rubber Strips</h3>
               <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
-                Rotary shaft oil seals (TC, TG4, SC), hydraulic pneumatic seals, and chemical-resistant Viton / Silicone / NBR O-rings for machinery gearboxes.
+                Synthetic rubber cots & aprons for spinning frames, emery roller coverings, viton oil seals, and custom industrial profiles.
               </p>
+              <div class="mt-3 flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-600">
+                <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">Textile Mills</span>
+                <span class="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">Emery Strips</span>
+              </div>
             </div>
             <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between font-mono">
               <span class="text-xs font-bold text-emerald-600 flex items-center gap-1">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Metric Stock
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Genuine Stock
               </span>
-              <button onclick="openRfqModal('High-Temp Oil Seals & Viton O-Rings'); playHoverSound();" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+              <button onclick="openRfqModal('Textile Cots, Aprons & Special Rubber Strips'); playHoverSound();" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
                 Quote &rarr;
               </button>
             </div>
