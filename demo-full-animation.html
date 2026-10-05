@@ -407,28 +407,28 @@
   <div id="progress-bar"></div>
   <div id="cursor-spotlight"></div>
 
-  <!-- 1. TOP TELEMETRY STRIP -->
-  <aside aria-label="Logistics status" class="bg-[#051326] border-b border-cyan-500/30 text-xs py-2 px-4 font-mono tracking-wide relative z-20 text-white shadow-md">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
-      <div class="flex items-center gap-2.5 truncate">
+  <!-- 1. TOP TELEMETRY STRIP (100% AUTO-FIT RESPONSIVE) -->
+  <aside aria-label="Logistics status" class="bg-[#051326] border-b border-cyan-500/30 text-xs py-2 px-3 sm:px-4 font-mono tracking-wide relative z-40 text-white shadow-md">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-y-2 gap-x-3">
+      <div class="flex items-center gap-2 min-w-0 max-w-full">
         <span class="inline-flex items-center justify-center bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 p-1 rounded-full shrink-0 shadow-glow-cyan">
           <i data-lucide="zap" class="w-3 h-3 fill-current"></i>
         </span>
-        <span class="truncate text-slate-200 text-[11px] sm:text-xs">
-          <strong class="text-cyan-300 font-bold">[CINEMATIC SHOWROOM EDITION]</strong> 10,000+ SKUs Ready • Direct Import • Same-Day Dispatch Hub
+        <span class="truncate text-slate-200 text-[10px] sm:text-xs">
+          <strong class="text-cyan-300 font-bold">[CINEMATIC SHOWROOM]</strong> 10,000+ SKUs Ready • Direct Import • Same-Day Dispatch Hub
         </span>
       </div>
 
-      <div class="flex items-center gap-4 text-[11px] shrink-0">
+      <div class="flex items-center gap-2.5 sm:gap-4 text-[10px] sm:text-[11px] shrink-0 ml-auto">
         <span class="hidden md:flex items-center gap-1.5 text-slate-300 font-medium">
           <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i> ISO 9001:2015 Sourcing
         </span>
         
         <!-- SOUND TOGGLE (DEFAULT OFF) -->
-        <button id="sound-toggle-btn" onclick="toggleAudioEngine()" class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-900/90 border border-cyan-500/40 text-cyan-300 hover:text-white transition hover:border-cyan-400 shadow-sm" title="Toggle Ambient Soundscape">
+        <button id="sound-toggle-btn" onclick="toggleAudioEngine()" class="flex items-center gap-1 px-2 py-0.5 rounded-lg bg-slate-900/90 border border-cyan-500/40 text-cyan-300 hover:text-white transition hover:border-cyan-400 shadow-sm" title="Toggle Ambient Soundscape">
           <span id="sound-icon-box" class="flex items-center gap-1">
-            <i data-lucide="volume-x" class="w-3.5 h-3.5 text-slate-400"></i>
-            <span class="font-mono text-[10px] uppercase font-bold text-slate-400">Audio: OFF</span>
+            <i data-lucide="volume-x" class="w-3 h-3 text-slate-400"></i>
+            <span class="font-mono text-[9px] sm:text-[10px] uppercase font-bold text-slate-400">Audio: OFF</span>
           </span>
           <div id="sound-bars" class="hidden items-center gap-0.5 ml-1">
             <div class="sound-bar"></div>
@@ -437,36 +437,36 @@
           </div>
         </button>
 
-        <a href="#rfq-section" onmouseenter="playHoverSound()" class="btn-sheen-sweep bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-slate-950 px-3.5 py-1 rounded-lg text-[11px] font-black uppercase tracking-wider transition shadow-glow-orange">
-          Instant RFQ &rarr;
+        <a href="#rfq-section" onmouseenter="playHoverSound()" class="btn-sheen-sweep bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-slate-950 px-2.5 sm:px-3.5 py-0.5 sm:py-1 rounded-lg text-[10px] sm:text-[11px] font-black uppercase tracking-wider transition shadow-glow-orange shrink-0">
+          Quick RFQ &rarr;
         </a>
       </div>
     </div>
   </aside>
 
-  <!-- 2. MAIN HEADER -->
-  <header class="sticky top-0 z-50 bg-[#081B33]/90 backdrop-blur-2xl border-b border-cyan-500/20 shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+  <!-- 2. MAIN HEADER (100% FLUID AUTO-FIT + MOBILE DRAWER) -->
+  <header class="sticky top-0 z-50 bg-[#081B33]/95 backdrop-blur-2xl border-b border-cyan-500/20 shadow-lg">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
       
-      <!-- Brand Logo -->
-      <a href="#" onmouseenter="playHoverSound()" class="flex items-center gap-3.5 shrink-0 group">
-        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-400 via-blue-600 to-violet-600 flex items-center justify-center text-white font-black text-xl font-heading shadow-glow-cyan border border-cyan-300/40 group-hover:scale-105 transition">
+      <!-- Brand Logo (Fluid Scaling) -->
+      <a href="#" onmouseenter="playHoverSound()" class="flex items-center gap-2.5 sm:gap-3.5 shrink-0 group">
+        <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-cyan-400 via-blue-600 to-violet-600 flex items-center justify-center text-white font-black text-base sm:text-xl font-heading shadow-glow-cyan border border-cyan-300/40 group-hover:scale-105 transition shrink-0">
           BE
         </div>
-        <div>
-          <div class="text-xl sm:text-2xl font-extrabold tracking-tight font-heading text-white leading-none">
+        <div class="min-w-0">
+          <div class="text-base sm:text-xl lg:text-2xl font-extrabold tracking-tight font-heading text-white leading-tight truncate">
             M/s Belubeari Exim
           </div>
-          <div class="text-[11px] text-cyan-300 font-semibold tracking-wider uppercase mt-1 flex items-center gap-2">
-            <span>High-Motion Technology Showroom</span>
+          <div class="text-[10px] sm:text-[11px] text-cyan-300 font-semibold tracking-wider uppercase flex items-center gap-1.5 truncate">
+            <span>High-Motion Showroom</span>
             <span class="text-slate-500">•</span>
-            <span class="font-mono text-[10px] text-amber-400">SYS_ID: 400003</span>
+            <span class="font-mono text-[9px] sm:text-[10px] text-amber-400">MUMBAI</span>
           </div>
         </div>
       </a>
 
-      <!-- Navigation Links -->
-      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-200">
+      <!-- Desktop Navigation Links (Large Screens) -->
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-xs xl:text-sm font-semibold text-slate-200">
         <a href="#categories-section" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Categories</a>
         <a href="#products-showcase" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">10 Product Lines</a>
         <a href="#spec-finder" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Pitch Calculator</a>
@@ -475,18 +475,56 @@
         <a href="#mumbai-hub" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Mumbai Hub</a>
       </nav>
 
-      <!-- Action Buttons -->
-      <div class="flex items-center gap-3 shrink-0">
-        <a href="tel:+919967384878" onmouseenter="playHoverSound()" class="hidden sm:inline-flex items-center gap-2 text-xs font-bold text-slate-200 hover:text-white px-3.5 py-2 rounded-xl bg-slate-900/90 border border-slate-700 transition hover:border-cyan-400">
+      <!-- Action Buttons + Mobile Toggle -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <a href="tel:+919967384878" onmouseenter="playHoverSound()" class="hidden md:inline-flex items-center gap-2 text-xs font-bold text-slate-200 hover:text-white px-3 py-2 rounded-xl bg-slate-900/90 border border-slate-700 transition hover:border-cyan-400">
           <i data-lucide="phone" class="w-3.5 h-3.5 text-cyan-400"></i>
           <span class="font-mono">+91 99673 84878</span>
         </a>
-        <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote%20for%20Industrial%20Belts." target="_blank" onmouseenter="playHoverSound()" class="btn-sheen-sweep inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-black text-xs sm:text-sm px-4.5 py-2.5 rounded-xl shadow-md shadow-emerald-500/25 transition transform hover:scale-[1.02] active:scale-[0.98]">
+        <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote%20for%20Industrial%20Belts." target="_blank" onmouseenter="playHoverSound()" class="btn-sheen-sweep inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-black text-xs sm:text-sm px-3 sm:px-4.5 py-2 sm:py-2.5 rounded-xl shadow-md shadow-emerald-500/25 transition transform hover:scale-[1.02] active:scale-[0.98]">
           <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
-          <span>WhatsApp RFQ</span>
+          <span class="hidden xs:inline">WhatsApp RFQ</span>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-toggle" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-slate-900/90 border border-slate-700 text-slate-200 hover:text-cyan-300 hover:border-cyan-400 transition" aria-label="Toggle Navigation Menu">
+          <i id="mobile-menu-icon" data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Slide-Down Navigation Drawer -->
+    <div id="mobile-menu-drawer" class="hidden lg:hidden bg-[#081B33]/98 backdrop-blur-2xl border-b border-cyan-500/30 px-4 pt-3 pb-6 space-y-3 transition-all duration-300">
+      <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-200 pt-1">
+        <a href="#categories-section" onclick="toggleMobileMenu()" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="layers" class="w-4 h-4 text-cyan-400"></i> Categories
+        </a>
+        <a href="#products-showcase" onclick="toggleMobileMenu()" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="boxes" class="w-4 h-4 text-blue-400"></i> 10 Products
+        </a>
+        <a href="#spec-finder" onclick="toggleMobileMenu()" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="cpu" class="w-4 h-4 text-orange-400"></i> Calculator
+        </a>
+        <a href="#industries" onclick="toggleMobileMenu()" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="globe-2" class="w-4 h-4 text-violet-400"></i> Industries
+        </a>
+        <a href="#fabrication" onclick="toggleMobileMenu()" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="wrench" class="w-4 h-4 text-emerald-400"></i> Workshop
+        </a>
+        <a href="#mumbai-hub" onclick="toggleMobileMenu()" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-400">
+          <i data-lucide="map-pin" class="w-4 h-4 text-sky-400"></i> Mumbai Hub
         </a>
       </div>
 
+      <div class="pt-2 flex items-center gap-2 border-t border-slate-800">
+        <a href="tel:+919967384878" class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs font-bold text-slate-200">
+          <i data-lucide="phone" class="w-4 h-4 text-cyan-400"></i> Call: +91 99673 84878
+        </a>
+        <a href="#rfq-section" onclick="toggleMobileMenu()" class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-400 text-xs font-bold text-slate-950">
+          <i data-lucide="file-text" class="w-4 h-4"></i> Get Quote
+        </a>
+      </div>
     </div>
   </header>
 
@@ -1962,6 +2000,19 @@
         `📝 *Dimensions/Specs:* ${encodeURIComponent(notes || 'Please share standard pricing and catalog')}`;
 
       window.open(`https://wa.me/919967384878?text=${message}`, '_blank');
+    }
+
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobile-menu-drawer');
+      const icon = document.getElementById('mobile-menu-icon');
+      if (drawer.classList.contains('hidden')) {
+        drawer.classList.remove('hidden');
+        if (icon) icon.setAttribute('data-lucide', 'x');
+      } else {
+        drawer.classList.add('hidden');
+        if (icon) icon.setAttribute('data-lucide', 'menu');
+      }
+      lucide.createIcons();
     }
   </script>
 </body>
