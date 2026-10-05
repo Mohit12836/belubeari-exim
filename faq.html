@@ -150,7 +150,7 @@
     }
   </style>
 </head>
-<body class="selection:bg-cyan-400 selection:text-slate-950 flex flex-col min-h-screen">
+<body class="selection:bg-cyan-400 selection:text-slate-950 flex flex-col min-h-screen pb-16 lg:pb-0">
 
   <!-- 1. TOP TELEMETRY STRIP -->
   <aside aria-label="Logistics status" class="bg-[#051326] border-b border-cyan-500/30 text-xs py-2 px-3 sm:px-4 font-mono tracking-wide relative z-40 text-white shadow-md">
@@ -598,5 +598,34 @@
       });
     }
   </script>
+
+  <!-- NATIVE MOBILE BOTTOM APP NAVIGATION -->
+  <nav aria-label="Mobile Navigation" class="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-t border-slate-200 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] py-1.5 px-3">
+    <div class="grid grid-cols-5 gap-1 text-center items-center">
+      <a href="index.html" class="flex flex-col items-center justify-center py-1 text-slate-600 hover:text-blue-600 font-medium">
+        <i data-lucide="home" class="w-5 h-5 mb-0.5"></i>
+        <span class="text-[10px]">Home</span>
+      </a>
+      <a href="products.html" class="flex flex-col items-center justify-center py-1 text-slate-600 hover:text-blue-600 font-medium">
+        <i data-lucide="boxes" class="w-5 h-5 mb-0.5"></i>
+        <span class="text-[10px]">Products</span>
+      </a>
+      <a href="contact.html#enquiry-form" class="flex flex-col items-center justify-center py-1 text-orange-600 hover:text-orange-700 font-bold">
+        <div class="w-9 h-9 -mt-5 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-white flex items-center justify-center shadow-lg border-2 border-white">
+          <i data-lucide="file-text" class="w-4 h-4"></i>
+        </div>
+        <span class="text-[10px] mt-0.5">RFQ</span>
+      </a>
+      <a href="gallery.html" class="flex flex-col items-center justify-center py-1 text-slate-600 hover:text-blue-600 font-medium">
+        <i data-lucide="image" class="w-5 h-5 mb-0.5"></i>
+        <span class="text-[10px]">Gallery</span>
+      </a>
+      <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote." target="_blank" class="flex flex-col items-center justify-center py-1 text-emerald-600 font-bold">
+        <i data-lucide="message-circle" class="w-5 h-5 mb-0.5 fill-current"></i>
+        <span class="text-[10px]">WhatsApp</span>
+      </a>
+    </div>
+  </nav>
+
 </body>
 </html>

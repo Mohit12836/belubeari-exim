@@ -145,7 +145,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRequirement }) => {
           <div>
             <span className="block text-xs font-mono uppercase tracking-wider text-white/50">Motion & Supply</span>
             <span className="text-sm sm:text-base font-bold text-[#FFAC00] mt-0.5 block">Pan-India Dispatch</span>
-            <span className="text-[11px] text-white/60">Surat Engineering Desk</span>
+            <span className="text-[11px] text-white/60">Mumbai Engineering Desk</span>
           </div>
         </div>
       </motion.div>

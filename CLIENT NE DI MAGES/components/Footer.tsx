@@ -135,7 +135,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRequirement }) => {
             <div className="space-y-3 text-xs text-white/60">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#FFAC00] mt-0.5 shrink-0" />
-                <span>Ring Road, Surat - 395 003, Gujarat, India</span>
+                <span>Flat No. 8, 261/63 Yusuf Meherali Road, Masjid Bunder, Mumbai – 400 003, India</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#FFAC00] shrink-0" />
@@ -163,7 +163,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRequirement }) => {
 
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
-          <p>© {new Date().getFullYear()} Belubeari Exim. All rights reserved. Power Transmission & Industrial Conveyor Solutions.</p>
+          <p>© {new Date().getFullYear()} Belubeari Exim. All rights reserved. Power Transmission & Industrial Conveyor Solutions, Mumbai & Pan-India.</p>
           
           <button
             onClick={scrollToTop}
