@@ -370,60 +370,47 @@
 </head>
 <body class="selection:bg-cyan-400 selection:text-slate-950 flex flex-col min-h-screen">
 
-  <!-- 1. TOP TELEMETRY & LOGISTICS STRIP (100% AUTO-FIT RESPONSIVE) -->
-  <aside aria-label="Logistics status" class="bg-[#051326] border-b border-cyan-500/30 text-xs py-2 px-3 sm:px-4 font-mono tracking-wide relative z-40 text-white shadow-md">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-y-2 gap-x-3">
+  <!-- 1. TOP ANNOUNCEMENT STRIP (BUSINESS TRUST FOCUSED) -->
+  <aside aria-label="Quick benefits" class="bg-gradient-to-r from-[#031020] via-[#0B2240] to-[#031020] border-b border-cyan-500/30 text-xs py-2 px-3 sm:px-4 font-sans tracking-wide relative z-40 text-white shadow-md">
+    <div class="fluid-container flex flex-wrap items-center justify-between gap-y-1.5 gap-x-3">
       <div class="flex items-center gap-2 min-w-0 max-w-full">
-        <span class="inline-flex items-center justify-center bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 p-1 rounded-full shrink-0 shadow-glow-cyan">
-          <i data-lucide="zap" class="w-3 h-3 fill-current"></i>
+        <span class="inline-flex items-center justify-center bg-emerald-500 text-slate-950 p-1 rounded-full shrink-0 shadow-sm animate-pulse">
+          <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
         </span>
-        <span class="truncate text-slate-200 text-[10px] sm:text-xs">
-          <strong class="text-cyan-300 font-bold">[MUMBAI HUB]</strong> 10,000+ SKUs Stock Ready • 24-Hr Pan-India Transport
+        <span class="truncate text-slate-100 text-[11px] sm:text-xs font-semibold">
+          <strong class="text-amber-400 font-extrabold">MUMBAI HUB:</strong> Direct Stockist of Timing Belts, Conveyor Belts & Precision Bearings
         </span>
       </div>
 
-      <div class="flex items-center gap-2.5 sm:gap-4 text-[10px] sm:text-[11px] shrink-0 ml-auto">
-        <span class="hidden md:flex items-center gap-1.5 text-slate-300 font-medium">
-          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i> ISO 9001:2015
+      <div class="flex items-center gap-3 text-[10px] sm:text-xs shrink-0 ml-auto font-mono">
+        <span class="hidden md:flex items-center gap-1 text-emerald-400 font-bold">
+          <i data-lucide="truck" class="w-3.5 h-3.5"></i> Same-Day Pan-India Dispatch
         </span>
-        
-        <!-- SOUND TOGGLE -->
-        <button id="sound-toggle-btn" onclick="toggleAudioEngine()" class="flex items-center gap-1 px-2 py-0.5 rounded-lg bg-slate-900/90 border border-cyan-500/40 text-cyan-300 hover:text-white transition hover:border-cyan-400 shadow-sm" title="Toggle Soundscape">
-          <span id="sound-icon-box" class="flex items-center gap-1">
-            <i data-lucide="volume-x" class="w-3 h-3 text-slate-400"></i>
-            <span class="font-mono text-[9px] sm:text-[10px] uppercase font-bold text-slate-400">Sound: OFF</span>
-          </span>
-          <div id="sound-bars" class="hidden items-center gap-0.5 ml-1">
-            <div class="sound-bar"></div>
-            <div class="sound-bar"></div>
-            <div class="sound-bar"></div>
-          </div>
-        </button>
-
-        <a href="#rfq-section" onmouseenter="playHoverSound()" class="btn-sheen bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-slate-950 px-2.5 sm:px-3.5 py-0.5 sm:py-1 rounded-lg text-[10px] sm:text-[11px] font-black uppercase tracking-wider transition shadow-glow-orange shrink-0">
-          Quick RFQ &rarr;
+        <span class="hidden sm:inline text-slate-600">|</span>
+        <a href="tel:+919967384878" class="text-cyan-300 hover:text-white font-bold flex items-center gap-1">
+          <i data-lucide="phone-call" class="w-3 h-3 text-cyan-400"></i> +91 99673 84878
         </a>
       </div>
     </div>
   </aside>
 
-  <!-- 2. MAIN HEADER (100% FLUID AUTO-FIT + MOBILE DRAWER) -->
-  <header class="sticky top-0 z-50 bg-[#081B33]/95 backdrop-blur-2xl border-b border-cyan-500/20 shadow-lg">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
+  <!-- 2. MAIN APP HEADER (SLEEK & TOUCH-OPTIMIZED) -->
+  <header class="sticky top-0 z-50 bg-[#081B33]/98 backdrop-blur-2xl border-b border-cyan-500/20 shadow-xl">
+    <div class="fluid-container h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
       
       <!-- Brand Logo (Fluid Scaling) -->
-      <a href="#" onmouseenter="playHoverSound()" class="flex items-center gap-2.5 sm:gap-3.5 shrink-0 group">
-        <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-cyan-400 via-blue-600 to-violet-600 flex items-center justify-center text-white font-black text-base sm:text-xl font-heading shadow-glow-cyan border border-cyan-300/40 group-hover:scale-105 transition shrink-0">
+      <a href="index.html" class="flex items-center gap-2.5 sm:gap-3.5 shrink-0 group">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-cyan-400 via-blue-600 to-indigo-600 flex items-center justify-center text-white font-black text-lg sm:text-xl font-heading shadow-glow-cyan border border-cyan-300/40 group-hover:scale-105 transition shrink-0">
           BE
         </div>
         <div class="min-w-0">
           <div class="text-base sm:text-xl lg:text-2xl font-extrabold tracking-tight font-heading text-white leading-tight truncate">
             M/s Belubeari Exim
           </div>
-          <div class="text-[10px] sm:text-[11px] text-cyan-300 font-semibold tracking-wider uppercase flex items-center gap-1.5 truncate">
-            <span>Precision Belting</span>
+          <div class="text-[10px] sm:text-[11px] text-cyan-300 font-bold tracking-wider uppercase flex items-center gap-1.5 truncate">
+            <span>Masjid Bunder</span>
             <span class="text-slate-500">•</span>
-            <span class="font-mono text-[9px] sm:text-[10px] text-amber-400">MUMBAI</span>
+            <span class="text-amber-400 font-mono">Mumbai</span>
           </div>
         </div>
       </a>
@@ -431,24 +418,24 @@
       <!-- Desktop Navigation Links (Large Screens) -->
       <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-xs xl:text-sm font-semibold text-slate-200">
         <a href="index.html" class="text-cyan-400 font-bold border-b-2 border-cyan-400 pb-0.5">Home</a>
-        <a href="about.html" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">About Us</a>
-        <a href="products.html" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Products</a>
-        <a href="gallery.html" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Gallery</a>
-        <a href="services.html" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Services</a>
-        <a href="brands.html" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Brands</a>
-        <a href="faq.html" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">FAQ</a>
-        <a href="contact.html" onmouseenter="playHoverSound()" class="hover:text-cyan-300 transition-colors">Contact</a>
+        <a href="about.html" class="hover:text-cyan-300 transition-colors">About Us</a>
+        <a href="products.html" class="hover:text-cyan-300 transition-colors">Products</a>
+        <a href="gallery.html" class="hover:text-cyan-300 transition-colors">Gallery</a>
+        <a href="services.html" class="hover:text-cyan-300 transition-colors">Services</a>
+        <a href="brands.html" class="hover:text-cyan-300 transition-colors">Brands</a>
+        <a href="faq.html" class="hover:text-cyan-300 transition-colors">FAQ</a>
+        <a href="contact.html" class="hover:text-cyan-300 transition-colors">Contact</a>
       </nav>
 
       <!-- Action Buttons + Mobile Toggle -->
       <div class="flex items-center gap-2 sm:gap-3 shrink-0">
-        <a href="tel:+919967384878" onmouseenter="playHoverSound()" class="hidden md:inline-flex items-center gap-2 text-xs font-bold text-slate-200 hover:text-white px-3 py-2 rounded-xl bg-slate-900/90 border border-slate-700 transition hover:border-cyan-400">
+        <a href="tel:+919967384878" class="hidden sm:inline-flex items-center gap-2 text-xs font-bold text-slate-200 hover:text-white px-3 py-2 rounded-xl bg-slate-900/90 border border-slate-700 transition hover:border-cyan-400">
           <i data-lucide="phone" class="w-3.5 h-3.5 text-cyan-400"></i>
           <span class="font-mono">+91 99673 84878</span>
         </a>
-        <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote%20for%20Industrial%20Belts." target="_blank" onmouseenter="playHoverSound()" class="btn-sheen inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-black text-xs sm:text-sm px-3 sm:px-4.5 py-2 sm:py-2.5 rounded-xl shadow-md shadow-emerald-500/25 transition transform hover:scale-[1.02] active:scale-[0.98]">
+        <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote%20for%20Industrial%20Belts." target="_blank" class="btn-sheen inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-black text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl shadow-md shadow-emerald-500/25 transition transform hover:scale-[1.02] active:scale-[0.98]">
           <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
-          <span class="hidden xs:inline">WhatsApp RFQ</span>
+          <span>WhatsApp RFQ</span>
         </a>
 
         <!-- Mobile Hamburger Button -->
@@ -500,134 +487,138 @@
   </header>
 
   <!-- =========================================================================
-       SECTION 1 — HERO (DEEP NAVY + ELECTRIC BLUE + CYAN + VIOLET + ORANGE)
-       This is the only strongly dark section (~20% of page)
+       SECTION 1 — HERO (APP-GRADE CLARITY & HIGH-CONVERSION B2B SHOWROOM)
        ========================================================================= -->
-  <section id="hero-stage" class="relative bg-[#081B33] text-white pt-16 pb-24 border-b border-cyan-500/20 overflow-hidden technical-grid-hero">
+  <section id="hero-stage" class="relative bg-gradient-to-b from-[#081B33] via-[#0B2240] to-[#081B33] text-white pt-6 sm:pt-12 lg:pt-16 pb-14 sm:pb-20 border-b border-cyan-500/20 overflow-hidden">
     
-    <!-- 5 Huge Independent Animated Gradient Mesh Blobs (Breathing Motion) -->
+    <!-- Ambient Dynamic Glow Blobs -->
     <div class="hero-gradient-viewport">
       <div class="blob-electric-blue"></div>
       <div class="blob-cyan"></div>
-      <div class="blob-violet"></div>
       <div class="blob-orange"></div>
       <div class="hero-light-sweep"></div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="fluid-container relative z-10">
       
-      <!-- Coordinate Header Bar -->
-      <div class="flex items-center justify-between text-[11px] font-mono text-cyan-300 mb-6 pb-2 border-b border-cyan-500/25">
-        <div class="flex items-center gap-3">
-          <span class="flex items-center gap-1.5"><i data-lucide="crosshair" class="w-3.5 h-3.5 text-cyan-400"></i> GRID_POS: 18.9536° N, 72.8361° E</span>
-          <span class="text-slate-500">|</span>
-          <span class="text-slate-200 font-semibold">HUB: YUSUF MEHERALI ROAD</span>
+      <!-- Trust Strip (Replaces geeky GPS coordinates with Real Business Trust) -->
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6 pb-2.5 border-b border-cyan-500/20 text-xs">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="inline-flex items-center gap-1.5 bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-bold">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Direct Stockist & Importer
+          </span>
+          <span class="text-slate-400 text-xs hidden sm:inline">•</span>
+          <span class="text-slate-200 font-semibold text-[11px] sm:text-xs">Yusuf Meherali Road, Masjid Bunder, Mumbai</span>
         </div>
-        <div class="hidden sm:flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-orange-400 animate-ping"></span>
-          <span class="text-orange-400 font-bold">ALL 10 PRODUCT LINES READY FOR DISPATCH</span>
+        <div class="flex items-center gap-1.5 text-amber-400 font-bold text-[10px] sm:text-xs font-mono ml-auto">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-amber-400"></i> 100% Genuine Industrial Quality
         </div>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
         
-        <!-- Left: Choreographed 3-Line Headline & Value Proposition -->
-        <div class="lg:col-span-7 space-y-4 sm:space-y-6 text-left">
+        <!-- Left: Headline + Value Proposition + Fast App CTAs -->
+        <div class="lg:col-span-7 space-y-4 sm:space-y-5 text-left">
           
-          <div class="hero-stagger-1 inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-gradient-to-r from-blue-600/30 via-cyan-500/20 to-orange-500/20 border border-cyan-400/40 text-cyan-300 text-[11px] sm:text-xs font-extrabold uppercase tracking-wider backdrop-blur-md shadow-glow-cyan max-w-full">
-            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping shrink-0"></span>
-            <span class="truncate">Mumbai's Direct Import & Wholesale Stockist</span>
+          <!-- Category Quick Pills -->
+          <div class="flex flex-wrap items-center gap-1.5 sm:gap-2">
+            <span class="px-2.5 py-1 rounded-lg bg-blue-600/30 border border-blue-400/40 text-cyan-200 text-[10px] sm:text-xs font-bold">
+              ⚙️ Timing Belts
+            </span>
+            <span class="px-2.5 py-1 rounded-lg bg-emerald-600/30 border border-emerald-400/40 text-emerald-200 text-[10px] sm:text-xs font-bold">
+              🔄 Conveyor Belts
+            </span>
+            <span class="px-2.5 py-1 rounded-lg bg-amber-600/30 border border-amber-400/40 text-amber-200 text-[10px] sm:text-xs font-bold">
+              ⭕ Bearings & Linear
+            </span>
+            <span class="px-2.5 py-1 rounded-lg bg-purple-600/30 border border-purple-400/40 text-purple-200 text-[10px] sm:text-xs font-bold">
+              🛡️ Rubber Seals
+            </span>
           </div>
 
-          <!-- Staggered 3-Line Headline -->
-          <div class="space-y-0.5 sm:space-y-1">
-            <div class="hero-stagger-1 text-2xl xs:text-3xl sm:text-4xl lg:text-[44px] font-bold font-heading text-slate-200 tracking-tight leading-tight">
-              The Right Belt.
-            </div>
-            <div class="hero-stagger-2 text-2xl xs:text-3xl sm:text-4xl lg:text-[44px] font-bold font-heading text-white tracking-tight leading-tight">
-              The Right Bearing.
-            </div>
-            <div class="hero-stagger-3 text-3xl xs:text-4xl sm:text-5xl lg:text-[54px] font-extrabold font-heading tracking-tight leading-[1.1]">
-              <span class="gradient-text-vibrant drop-shadow-[0_0_35px_rgba(0,198,255,0.45)]">
-                The Right Solution.
+          <!-- Bold High-Contrast Headline -->
+          <div class="space-y-1">
+            <h1 class="fluid-hero-title font-heading font-extrabold tracking-tight text-white leading-tight">
+              The Right Belt. The Right Bearing.<br>
+              <span class="bg-gradient-to-r from-cyan-400 via-sky-300 to-amber-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(0,198,255,0.4)]">
+                The Right Industrial Solution.
               </span>
-            </div>
+            </h1>
           </div>
 
-          <!-- Measurement Line Draw -->
-          <div class="h-0.5 w-full max-w-lg bg-slate-800 rounded-full measurement-line"></div>
-
-          <p class="hero-stagger-2 text-slate-200 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl font-normal">
-            Direct stockists of FDA Food-Grade PU Conveyor Belts, Steel-Cord Synchronous Timing Belts, Raw-Edge Cogged V-Belts, CNC Pulleys, and SKF/Asahi equivalent mounted bearings. Ready inventory in Masjid Bunder, Mumbai.
+          <p class="text-slate-200 text-xs sm:text-sm lg:text-base leading-relaxed max-w-2xl font-normal">
+            Direct warehouse stockist of <strong>FDA Food-Grade PU Conveyors</strong>, <strong>Steel-Cord Synchronous Timing Belts</strong>, <strong>Raw-Edge V-Belts</strong>, and <strong>SKF/Asahi Equivalent Mounted Bearings</strong> in Masjid Bunder, Mumbai.
           </p>
 
-          <!-- 3 Precision Metric Cards with Glowing Border (Adaptive Grid) -->
-          <div class="hero-stagger-3 grid grid-cols-3 gap-2 sm:gap-3.5 pt-1 max-w-xl">
-            <div class="bg-[#0B2240]/80 backdrop-blur-md p-2.5 sm:p-4 rounded-xl text-left border-l-2 sm:border-l-4 border-l-cyan-400 border border-cyan-500/20 shadow-md">
-              <div class="text-base xs:text-xl sm:text-3xl font-extrabold font-heading text-white truncate">10,000+</div>
-              <div class="text-[9px] xs:text-[10px] sm:text-xs text-cyan-300 font-semibold mt-0.5 leading-tight">SKUs In Stock</div>
-            </div>
-            <div class="bg-[#0B2240]/80 backdrop-blur-md p-2.5 sm:p-4 rounded-xl text-left border-l-2 sm:border-l-4 border-l-orange-400 border border-orange-500/20 shadow-md">
-              <div class="text-base xs:text-xl sm:text-3xl font-extrabold font-heading text-orange-400 truncate">Same-Day</div>
-              <div class="text-[9px] xs:text-[10px] sm:text-xs text-slate-200 font-semibold mt-0.5 leading-tight">Pan-India Dispatch</div>
-            </div>
-            <div class="bg-[#0B2240]/80 backdrop-blur-md p-2.5 sm:p-4 rounded-xl text-left border-l-2 sm:border-l-4 border-l-violet-400 border border-violet-500/20 shadow-md">
-              <div class="text-base xs:text-xl sm:text-3xl font-extrabold font-heading text-violet-300 truncate">Custom</div>
-              <div class="text-[9px] xs:text-[10px] sm:text-xs text-slate-200 font-semibold mt-0.5 leading-tight">Splicing & Cleats</div>
-            </div>
+          <!-- High-Converting App Action Buttons (Visible Instantly) -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3.5 pt-1">
+            <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20quick%20quote%20for%20Industrial%20Belts%20/%20Bearings." target="_blank" class="btn-sheen btn-touch flex items-center justify-center gap-2.5 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black text-sm sm:text-base px-6 py-3.5 rounded-xl shadow-lg shadow-emerald-500/30 transition transform hover:scale-[1.02] active:scale-[0.98]">
+              <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+              <span>Send Photo on WhatsApp &rarr;</span>
+            </a>
+            
+            <a href="tel:+919967384878" class="btn-touch flex items-center justify-center gap-2 bg-slate-900/90 hover:bg-slate-800 text-white font-bold text-sm sm:text-base px-5 py-3.5 rounded-xl border border-slate-700 hover:border-cyan-400 transition">
+              <i data-lucide="phone-call" class="w-4 h-4 text-cyan-400"></i>
+              <span>Call: +91 99673 84878</span>
+            </a>
           </div>
 
-          <!-- CTAs (Adaptive Stack on Mobile, Flex on Desktop) -->
-          <div class="hero-stagger-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2">
-            <a href="#rfq-section" onmouseenter="playHoverSound()" class="btn-sheen inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-400 hover:to-amber-400 text-slate-950 font-black text-sm px-6 py-3.5 sm:py-4 rounded-xl shadow-glow-orange transition transform hover:scale-[1.02] active:scale-[0.98]">
-              <i data-lucide="file-text" class="w-4 h-4"></i>
-              <span>Get Wholesale Price Quote</span>
-            </a>
-            <a href="#spec-finder" onmouseenter="playHoverSound()" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600/40 to-cyan-500/30 hover:bg-blue-600/60 text-white font-bold text-sm px-5 py-3.5 sm:py-4 rounded-xl border border-cyan-400/40 hover:border-cyan-300 transition shadow-lg backdrop-blur-md">
-              <i data-lucide="sliders" class="w-4 h-4 text-cyan-300"></i>
-              <span>Interactive Spec Finder</span>
-            </a>
+          <!-- 3 Key Metric Badges (Clean Auto-Wrap Grid) -->
+          <div class="grid grid-cols-3 gap-2 sm:gap-3 pt-2 max-w-xl">
+            <div class="bg-[#05162B]/90 p-2 sm:p-3 rounded-xl border border-cyan-500/30 text-left">
+              <div class="text-sm xs:text-base sm:text-2xl font-black font-heading text-white">10,000+</div>
+              <div class="text-[9px] xs:text-[10px] sm:text-xs text-cyan-300 font-semibold mt-0.5">SKUs In Stock</div>
+            </div>
+            <div class="bg-[#05162B]/90 p-2 sm:p-3 rounded-xl border border-amber-500/30 text-left">
+              <div class="text-sm xs:text-base sm:text-2xl font-black font-heading text-amber-400">Same-Day</div>
+              <div class="text-[9px] xs:text-[10px] sm:text-xs text-slate-200 font-semibold mt-0.5">Pan-India Dispatch</div>
+            </div>
+            <div class="bg-[#05162B]/90 p-2 sm:p-3 rounded-xl border border-indigo-500/30 text-left">
+              <div class="text-sm xs:text-base sm:text-2xl font-black font-heading text-indigo-300">Custom</div>
+              <div class="text-[9px] xs:text-[10px] sm:text-xs text-slate-200 font-semibold mt-0.5">Slit & Spliced</div>
+            </div>
           </div>
 
         </div>
 
-        <!-- Right: Cinematic Product Stage -->
-        <div class="lg:col-span-5 relative mt-4 lg:mt-0">
-          <div class="hero-card-pop hero-parallax-box bg-[#0B2240]/90 backdrop-blur-xl p-3 sm:p-3.5 rounded-2xl border border-cyan-400/30 shadow-glow-blue group">
+        <!-- Right: Real Product Visual Showcase Card -->
+        <div class="lg:col-span-5 relative mt-2 lg:mt-0">
+          <div class="bg-[#0B2240]/90 backdrop-blur-xl p-3 sm:p-4 rounded-2xl border-2 border-cyan-500/40 shadow-2xl shadow-blue-950/60 group">
             
-            <div class="relative h-64 sm:h-80 lg:h-96 w-full bg-[#051326] rounded-xl flex items-center justify-center overflow-hidden border border-cyan-500/40">
-              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,198,255,0.3)_0%,_rgba(255,138,37,0.15)_50%,_transparent_75%)] pointer-events-none"></div>
-
-              <img id="hero-feature-img" src="assets/client_processed/gates-powergrip-gt4-heavy-duty-timing-belt.jpg" alt="Gates PowerGrip GT4 & Conveyor Belts at Belubeari Exim" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 relative z-10" loading="eager">
-              <div class="absolute inset-0 bg-gradient-to-t from-[#051326] via-[#051326]/20 to-transparent z-10"></div>
+            <div class="relative h-56 sm:h-72 lg:h-84 w-full bg-slate-950 rounded-xl flex items-center justify-center overflow-hidden border border-cyan-500/30">
+              <img id="hero-feature-img" src="assets/client_processed/gates-powergrip-gt4-heavy-duty-timing-belt.jpg" alt="Industrial Timing Belts at Belubeari Exim" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="eager">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent"></div>
               
-              <!-- Reticle Badge -->
-              <div class="absolute top-3 left-3 px-2.5 sm:px-3 py-1 rounded-lg bg-slate-900/90 border border-cyan-400/50 text-[9px] sm:text-[10px] font-mono text-cyan-300 flex items-center gap-1.5 backdrop-blur-md z-20 shadow-md">
-                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping"></span>
-                <span>PROFILE: GT4-8M-HEAVY</span>
+              <!-- Floating Quality Tag -->
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-slate-900/90 border border-cyan-400/50 text-[10px] font-mono text-cyan-300 flex items-center gap-1.5 shadow-md">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>ORIGINAL WAREHOUSE STOCK</span>
+              </div>
+
+              <!-- Price Tag Float -->
+              <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 text-[10px] font-black uppercase tracking-wider shadow-lg">
+                Direct Wholesale Rates
               </div>
             </div>
             
-            <div class="p-3 sm:p-4 text-left">
-              <div class="flex items-center justify-between mb-1.5">
-                <span class="px-2.5 py-0.5 rounded bg-gradient-to-r from-orange-500 to-amber-500 text-slate-950 font-black text-[9px] sm:text-[10px] uppercase tracking-wider shadow-sm">
-                  Ready Stock in Mumbai
+            <div class="pt-3 text-left">
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-xs font-bold text-cyan-300 font-mono">
+                  TIMING & V-BELTS • CONVEYOR SOLUTIONS
                 </span>
-                <span class="text-[10px] sm:text-[11px] font-bold text-cyan-300 flex items-center gap-1 font-mono">
-                  DISPATCH: TODAY
+                <span class="text-[10px] text-emerald-400 font-bold bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/30">
+                  Ready in Mumbai
                 </span>
               </div>
-              <h3 class="text-sm sm:text-base lg:text-lg font-bold font-heading text-white">
-                PU Steel-Cord Timing Belts & Cleated Conveyors
+              <h3 class="text-sm sm:text-base font-bold font-heading text-white">
+                Gates, Mitsuboshi & Nitta Equivalent Industrial Power Transmission
               </h3>
-              <p class="text-xs text-slate-300 mt-1 line-clamp-2">
-                HTD 8M/14M, T5, T10, AT10, and custom vulcanized sidewall conveyor rolls tailored in our Mumbai workshop.
-              </p>
-              <div class="mt-3 flex items-center justify-between text-xs pt-2 border-t border-slate-700/80 font-mono">
-                <span class="text-cyan-300 font-semibold text-[10px] sm:text-xs">WIDTHS: 10mm TO 2000mm</span>
-                <button onclick="openRfqModal('PU Steel-Cord Timing Belts'); playHoverSound();" class="text-orange-400 hover:text-orange-300 font-bold flex items-center gap-1 text-xs">
-                  Inquire Now &rarr;
-                </button>
+              
+              <div class="mt-3 pt-2.5 border-t border-slate-700/80 flex items-center justify-between">
+                <span class="text-[11px] text-slate-300">Sizes: 3M, 5M, 8M, 14M, T5, T10, A/B/C</span>
+                <a href="products.html" class="text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1">
+                  View Catalog &rarr;
+                </a>
               </div>
             </div>
 
