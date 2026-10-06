@@ -220,9 +220,181 @@
       background: #CBD5E1;
       border-radius: 9999px;
     }
+
+    /* ==========================================================================
+       UIVERSE.IO PRELOADER ANIMATIONS (BY NAWSOME)
+       ========================================================================== */
+    .pl {
+      display: block;
+      width: 6.5em;
+      height: 6.5em;
+    }
+
+    .pl__arrows,
+    .pl__ring-rotate,
+    .pl__ring-stroke,
+    .pl__tick {
+      animation-duration: 2s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    .pl__arrows {
+      animation-name: arrows42;
+      transform: rotate(45deg);
+      transform-origin: 16px 52px;
+    }
+
+    .pl__ring-rotate,
+    .pl__ring-stroke {
+      transform-origin: 80px 80px;
+    }
+
+    .pl__ring-rotate {
+      animation-name: ringRotate42;
+    }
+
+    .pl__ring-stroke {
+      animation-name: ringStroke42;
+      transform: rotate(-45deg);
+    }
+
+    .pl__tick {
+      animation-name: tick42;
+    }
+
+    .pl__tick:nth-child(2) {
+      animation-delay: -1.75s;
+    }
+
+    .pl__tick:nth-child(3) {
+      animation-delay: -1.5s;
+    }
+
+    .pl__tick:nth-child(4) {
+      animation-delay: -1.25s;
+    }
+
+    .pl__tick:nth-child(5) {
+      animation-delay: -1s;
+    }
+
+    .pl__tick:nth-child(6) {
+      animation-delay: -0.75s;
+    }
+
+    .pl__tick:nth-child(7) {
+      animation-delay: -0.5s;
+    }
+
+    .pl__tick:nth-child(8) {
+      animation-delay: -0.25s;
+    }
+
+    /* Animations */
+    @keyframes arrows42 {
+      from {
+        transform: rotate(45deg);
+      }
+      to {
+        transform: rotate(405deg);
+      }
+    }
+
+    @keyframes ringRotate42 {
+      from {
+        transform: rotate(0);
+      }
+      to {
+        transform: rotate(720deg);
+      }
+    }
+
+    @keyframes ringStroke42 {
+      from,
+      to {
+        stroke-dashoffset: 452;
+        transform: rotate(-45deg);
+      }
+      50% {
+        stroke-dashoffset: 169.5;
+        transform: rotate(-180deg);
+      }
+    }
+
+    @keyframes tick42 {
+      from,
+      3%,
+      47%,
+      to {
+        stroke-dashoffset: -12;
+      }
+      14%,
+      36% {
+        stroke-dashoffset: 0;
+      }
+    }
   </style>
 </head>
 <body class="selection:bg-amber-100 selection:text-amber-950 flex flex-col min-h-screen pb-16 lg:pb-0">
+
+  <!-- =========================================================================
+       0. FULL-SCREEN SITE PRELOADER (UIVERSE INDUSTRIAL ANIMATION)
+       ========================================================================= -->
+  <div id="site-preloader" class="fixed inset-0 z-[99999] bg-[#07111E] flex flex-col items-center justify-center transition-all duration-500 select-none">
+    
+    <!-- Ambient Backdrop Glow -->
+    <div class="absolute w-72 h-72 rounded-full bg-amber-500/10 blur-3xl pointer-events-none"></div>
+
+    <!-- Center Uiverse Loader Container -->
+    <div class="relative flex flex-col items-center justify-center z-10 space-y-4 sm:space-y-5">
+      
+      <!-- SVG Animated Preloader -->
+      <svg class="pl" viewBox="0 0 160 160" width="110" height="110" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="pl-amber-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FBBF24" />
+            <stop offset="100%" stop-color="#D97706" />
+          </linearGradient>
+        </defs>
+
+        <!-- Rotating Ring -->
+        <g class="pl__ring-rotate">
+          <circle class="pl__ring-stroke" cx="80" cy="80" r="72" fill="none" stroke="url(#pl-amber-grad)" stroke-width="11" stroke-dasharray="452.39 452.39" stroke-dashoffset="452" stroke-linecap="round" />
+        </g>
+
+        <!-- Arrows -->
+        <g class="pl__arrows" fill="none" stroke="#F59E0B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="10,48 16,52 22,46" />
+          <polyline points="150,112 144,108 138,114" />
+        </g>
+
+        <!-- 8 Surrounding Ticks -->
+        <g stroke="#F59E0B" stroke-width="3.5" stroke-linecap="round">
+          <line class="pl__tick" x1="80" y1="8" x2="80" y2="18" stroke-dasharray="12 12" stroke-dashoffset="-12" />
+          <line class="pl__tick" x1="80" y1="8" x2="80" y2="18" stroke-dasharray="12 12" stroke-dashoffset="-12" transform="rotate(45, 80, 80)" />
+          <line class="pl__tick" x1="80" y1="8" x2="80" y2="18" stroke-dasharray="12 12" stroke-dashoffset="-12" transform="rotate(90, 80, 80)" />
+          <line class="pl__tick" x1="80" y1="8" x2="80" y2="18" stroke-dasharray="12 12" stroke-dashoffset="-12" transform="rotate(135, 80, 80)" />
+          <line class="pl__tick" x1="80" y1="8" x2="80" y2="18" stroke-dasharray="12 12" stroke-dashoffset="-12" transform="rotate(180, 80, 80)" />
+          <line class="pl__tick" x1="80" y1="8" x2="80" y2="18" stroke-dasharray="12 12" stroke-dashoffset="-12" transform="rotate(225, 80, 80)" />
+          <line class="pl__tick" x1="80" y1="8" x2="80" y2="18" stroke-dasharray="12 12" stroke-dashoffset="-12" transform="rotate(270, 80, 80)" />
+          <line class="pl__tick" x1="80" y1="8" x2="80" y2="18" stroke-dasharray="12 12" stroke-dashoffset="-12" transform="rotate(315, 80, 80)" />
+        </g>
+      </svg>
+
+      <!-- Brand Info & Loading Status -->
+      <div class="text-center space-y-1">
+        <div class="text-white font-heading font-extrabold text-sm sm:text-base tracking-wider">
+          M/S BELUBEARI EXIM
+        </div>
+        <div class="text-amber-400 font-mono text-[10px] sm:text-xs font-semibold tracking-widest uppercase flex items-center justify-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping"></span>
+          <span>Loading Industrial Hub...</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
   <!-- =========================================================================
        1. AMAZON-GRADE INDUSTRIAL HEADER (WITH SMART SEARCH & FAST JUMPS)
@@ -355,8 +527,8 @@
        ========================================================================= -->
   <section id="hero-carousel-section" class="relative w-full bg-[#07111E] overflow-hidden select-none border-b border-slate-800">
     
-    <!-- Cover Container: Fluid Auto-Fit across Mobile (30-35vh) and Desktop Panoramic -->
-    <div class="relative w-full h-[220px] sm:h-[320px] md:h-[400px] lg:h-[480px] xl:h-[540px] max-h-[85vh] overflow-hidden bg-[#07111E]">
+    <!-- Cover Container: Fluid Auto-Fit across Mobile (30-35vh) and Desktop Panoramic (85-95vh) -->
+    <div class="relative w-full h-[30vh] sm:h-[35vh] md:h-[60vh] lg:h-[85vh] xl:h-[92vh] min-h-[220px] max-h-[100vh] overflow-hidden bg-[#07111E]">
       
       <!-- Slide 1: Built for Tomorrow (Belts, Bearings, Conveyors, Linear) -->
       <div class="fb-slide active" data-index="0">
@@ -1205,6 +1377,27 @@
         }
       }, { passive: true });
     }
+
+    // ==========================================
+    // SITE PRELOADER DISMISSAL
+    // ==========================================
+    function hidePreloader() {
+      const preloader = document.getElementById('site-preloader');
+      if (preloader) {
+        preloader.style.opacity = '0';
+        preloader.style.pointerEvents = 'none';
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 500);
+      }
+    }
+
+    window.addEventListener('load', () => {
+      setTimeout(hidePreloader, 400);
+    });
+
+    // Safety timeout fallback (3 seconds max)
+    setTimeout(hidePreloader, 3000);
   </script>
 
 </body>
