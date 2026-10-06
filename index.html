@@ -176,36 +176,11 @@
 </head>
 <body class="selection:bg-amber-100 selection:text-amber-950 flex flex-col min-h-screen pb-16 lg:pb-0">
 
-  <!-- 1. TOP TELEMETRY STRIP (MINIMALIST & CLEAN) -->
-  <aside aria-label="Quick contact & address" class="bg-[#0B1B33] text-slate-300 text-xs py-2 px-3 sm:px-4 font-sans relative z-40 border-b border-slate-800">
-    <div class="fluid-container flex flex-wrap items-center justify-between gap-y-1 gap-x-4">
-      <div class="flex items-center gap-2 min-w-0 max-w-full text-xs">
-        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-400 shrink-0"></i>
-        <span class="truncate text-slate-200 font-medium">Masjid Bunder, Mumbai: 261/263 Yusuf Meherali Road</span>
-        <span class="hidden md:inline text-emerald-400 font-bold bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/30 text-[11px]">SAME-DAY PAN-INDIA DISPATCH</span>
-      </div>
-
-      <div class="flex items-center gap-3 sm:gap-4 text-xs shrink-0 ml-auto font-medium">
-        <a href="tel:+919967384878" class="text-white hover:text-amber-400 flex items-center gap-1.5 font-bold transition">
-          <i data-lucide="phone" class="w-3.5 h-3.5 text-amber-400"></i> <span class="font-mono">+91 99673 84878</span>
-        </a>
-        <span class="text-slate-600 hidden sm:inline">|</span>
-        <a href="mailto:sales@belubeariexim.com" class="text-slate-300 hover:text-white hidden md:flex items-center gap-1.5 transition">
-          <i data-lucide="mail" class="w-3.5 h-3.5 text-slate-400"></i> sales@belubeariexim.com
-        </a>
-        <span class="text-slate-600 hidden sm:inline">|</span>
-        <a href="products.html" class="text-slate-300 hover:text-white hidden sm:flex items-center gap-1.5 transition">
-          <i data-lucide="book-open" class="w-3.5 h-3.5 text-amber-400"></i> Product Catalog
-        </a>
-      </div>
-    </div>
-  </aside>
-
-  <!-- 2. MAIN HEADER (1 CLEAN LINE + MOBILE DRAWER) -->
-  <header class="sticky top-0 z-50 bg-white/98 backdrop-blur-md border-b border-slate-200 shadow-xs">
+  <!-- 1. MAIN EXECUTIVE HEADER (CLEAN WHITE, ZERO CLUTTER) -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs">
     <div class="fluid-container py-3 sm:py-3.5 flex items-center justify-between gap-4">
       
-      <!-- Brand Logo -->
+      <!-- Brand Logo & Identity -->
       <a href="index.html" class="flex items-center gap-3 shrink-0 group">
         <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#0B1B33] flex items-center justify-center text-white font-black text-lg font-heading shadow-sm group-hover:bg-slate-800 transition shrink-0 border border-slate-700">
           BE
@@ -233,10 +208,10 @@
         <a href="contact.html" class="hover:text-amber-600 transition-colors">Contact</a>
       </nav>
 
-      <!-- Fast Actions (Call, WhatsApp, Get Quote & Mobile Hamburger) -->
+      <!-- Fast Action Buttons -->
       <div class="flex items-center gap-2 sm:gap-3 shrink-0">
         
-        <!-- Direct Call Action -->
+        <!-- Direct Phone Link -->
         <a href="tel:+919967384878" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200 transition text-xs font-bold font-mono" title="Call Warehouse">
           <i data-lucide="phone" class="w-3.5 h-3.5 text-[#0B1B33]"></i>
           <span>+91 99673 84878</span>
@@ -249,7 +224,7 @@
         </a>
 
         <!-- Primary Get Quote Button -->
-        <a href="contact.html#enquiry-form" class="hidden md:inline-flex items-center gap-1.5 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs sm:text-sm px-4 py-2 rounded-lg shadow-sm transition">
+        <a href="contact.html#enquiry-form" class="hidden md:inline-flex items-center gap-1.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs sm:text-sm px-4 py-2 rounded-lg shadow-sm transition">
           <span>Get Quote</span>
           <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </a>
@@ -295,7 +270,7 @@
         <a href="tel:+919967384878" class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg bg-slate-100 border border-slate-300 text-xs font-bold text-slate-800">
           <i data-lucide="phone" class="w-4 h-4 text-[#0B1B33]"></i> Call +91 99673 84878
         </a>
-        <a href="contact.html#enquiry-form" class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-xs font-bold text-white shadow-sm">
+        <a href="contact.html#enquiry-form" class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-xs font-bold text-slate-950 shadow-sm">
           <i data-lucide="file-text" class="w-4 h-4"></i> Get Quote
         </a>
       </div>
@@ -303,41 +278,41 @@
   </header>
 
   <!-- =========================================================================
-       SECTION 1 — CINEMATIC POWER TRANSMISSION HERO COVER SHOWCASE
+       SECTION 1 — CINEMATIC FULL-SCREEN COVER SHOWCASE
        ========================================================================= -->
-  <section id="hero-stage" class="relative bg-gradient-to-b from-[#08101E] via-[#0B172A] to-[#0E1E38] text-white pt-8 sm:pt-14 pb-12 sm:pb-18 border-b border-slate-800 overflow-hidden">
+  <section id="hero-stage" class="relative bg-gradient-to-b from-[#071224] via-[#0B1B33] to-[#0A192F] text-white pt-8 sm:pt-12 pb-12 sm:pb-16 border-b border-slate-800 overflow-hidden">
     
-    <!-- Ambient Depth Blur Fields & Blueprint Grid -->
-    <div class="absolute top-0 right-0 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-gradient-to-bl from-blue-600/20 via-amber-500/10 to-transparent rounded-full blur-[90px] pointer-events-none"></div>
-    <div class="absolute bottom-0 left-0 w-[280px] sm:w-[450px] h-[280px] sm:h-[450px] bg-gradient-to-tr from-amber-500/15 via-blue-500/10 to-transparent rounded-full blur-[80px] pointer-events-none"></div>
-    <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none"></div>
+    <!-- Ambient Depth Background Lighting & Blueprint Grid -->
+    <div class="absolute top-0 right-0 w-[320px] sm:w-[550px] h-[320px] sm:h-[550px] bg-gradient-to-bl from-blue-500/15 via-amber-500/10 to-transparent rounded-full blur-[80px] pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[260px] sm:w-[420px] h-[260px] sm:h-[420px] bg-gradient-to-tr from-amber-500/12 via-blue-600/10 to-transparent rounded-full blur-[70px] pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none opacity-40"></div>
 
     <div class="fluid-container relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
-        <!-- Left: Power Transmission Headline, Spec Narrative & Tactile CTAs -->
+        <!-- Left Column: Master B2B Positioning & High-Conversion CTAs -->
         <div class="lg:col-span-7 space-y-4 sm:space-y-6 text-left">
           
-          <!-- Live Telemetry Eyebrow -->
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-bold text-slate-200 backdrop-blur-md shadow-inner">
+          <!-- Live Telemetry Eyebrow Pill -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-bold text-slate-200 backdrop-blur-md shadow-inner">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span class="text-amber-400 font-mono">POWER TRANSMISSION</span>
+            <span class="text-amber-400 font-mono tracking-wide">POWER TRANSMISSION</span>
             <span class="text-slate-500">•</span>
             <span>MASJID BUNDER MUMBAI HUB</span>
           </div>
 
-          <!-- Bold Master Headline -->
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-white leading-[1.14] tracking-tight">
-            High-Torque Transmission.<br>
-            <span class="text-amber-400">Zero-Slip Reliability.</span>
+          <!-- Bold, Authority Master Headline -->
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-white leading-[1.12] tracking-tight">
+            Direct Importer & Stockist of <br class="hidden sm:inline">
+            <span class="text-amber-400">Industrial Belts</span> & Bearings
           </h1>
 
-          <!-- Technical Spec Narrative -->
-          <p class="text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl font-normal">
-            Direct Mumbai warehouse stockist of <strong>HTD 3M, 5M, 8M, 14M Timing Belts</strong>, Steel-Cord Polyurethane (PU), Raw-Edge Cogged V-Belts, and FDA Food-Grade Conveyors for heavy industrial drives.
+          <!-- Crisp B2B Spec Description -->
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl font-normal">
+            Ready wholesale inventory of <strong>HTD/GT4 Timing Belts</strong>, FDA Food-Grade PU Conveyors, Raw-Edge Cogged V-Belts, and Mounted Ball Bearings for immediate Pan-India dispatch from our Mumbai warehouse.
           </p>
 
-          <!-- 4-Box Telemetry Advantage Grid -->
+          <!-- 4 Clean Telemetry Bento Boxes -->
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 pt-1">
             <div class="bg-slate-900/80 backdrop-blur-md p-3 rounded-xl border border-slate-700/70 flex items-center gap-2.5">
               <i data-lucide="package" class="w-5 h-5 text-amber-400 shrink-0"></i>
@@ -347,17 +322,17 @@
               </div>
             </div>
             <div class="bg-slate-900/80 backdrop-blur-md p-3 rounded-xl border border-slate-700/70 flex items-center gap-2.5">
-              <i data-lucide="shield-check" class="w-5 h-5 text-emerald-400 shrink-0"></i>
+              <i data-lucide="truck" class="w-5 h-5 text-emerald-400 shrink-0"></i>
               <div class="min-w-0">
-                <div class="text-xs font-bold text-white leading-tight">100% Genuine</div>
-                <div class="text-[11px] text-slate-400">ISO Standard</div>
+                <div class="text-xs font-bold text-white leading-tight">Same-Day</div>
+                <div class="text-[11px] text-slate-400">Pan-India Dispatch</div>
               </div>
             </div>
             <div class="bg-slate-900/80 backdrop-blur-md p-3 rounded-xl border border-slate-700/70 flex items-center gap-2.5">
-              <i data-lucide="zap" class="w-5 h-5 text-amber-400 shrink-0"></i>
+              <i data-lucide="shield-check" class="w-5 h-5 text-amber-400 shrink-0"></i>
               <div class="min-w-0">
-                <div class="text-xs font-bold text-white leading-tight">Fast RFQ</div>
-                <div class="text-[11px] text-slate-400">15-Min Response</div>
+                <div class="text-xs font-bold text-white leading-tight">100% Genuine</div>
+                <div class="text-[11px] text-slate-400">ISO Standard</div>
               </div>
             </div>
             <div class="bg-slate-900/80 backdrop-blur-md p-3 rounded-xl border border-slate-700/70 flex items-center gap-2.5">
@@ -369,7 +344,7 @@
             </div>
           </div>
 
-          <!-- Dual Tactile CTAs -->
+          <!-- Dual Tactile Action CTAs -->
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
             <a href="contact.html#enquiry-form" class="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-slate-950 font-extrabold text-sm sm:text-base px-6 py-3.5 rounded-xl shadow-md shadow-amber-500/20 transition transform hover:scale-[1.02] active:scale-[0.98]">
               <i data-lucide="file-text" class="w-4 h-4"></i>
@@ -385,27 +360,28 @@
 
         </div>
 
-        <!-- Right: Cinematic Mechanical Hero Showcase (Interactive Switcher) -->
+        <!-- Right Column: Interactive Luxury Cover Showcase -->
         <div class="lg:col-span-5 relative mt-2 lg:mt-0">
           <div class="bg-slate-900/90 rounded-2xl sm:rounded-3xl p-4 sm:p-6 border border-slate-700/80 shadow-2xl backdrop-blur-xl text-left relative overflow-hidden">
             
-            <!-- Top Light Rim -->
+            <!-- Top Light Rim Accent -->
             <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-slate-400/40 to-transparent"></div>
 
-            <!-- Switcher Tabs -->
-            <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-800">
-              <div class="text-xs font-bold text-slate-200 flex items-center gap-1.5">
+            <!-- Switcher Tabs (4 Categories) -->
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-800 gap-1 flex-wrap sm:flex-nowrap">
+              <div class="text-xs font-bold text-slate-200 flex items-center gap-1.5 shrink-0">
                 <i data-lucide="layers" class="w-4 h-4 text-amber-400"></i>
-                <span>Power Transmission Focus</span>
+                <span class="hidden sm:inline">Product Focus</span>
               </div>
-              <div class="flex items-center gap-1">
-                <button onclick="switchHeroShowcase('timing')" id="hero-tab-timing" class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-amber-500 text-slate-950 transition">Timing Belts</button>
-                <button onclick="switchHeroShowcase('conveyor')" id="hero-tab-conveyor" class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">Conveyor</button>
-                <button onclick="switchHeroShowcase('bearings')" id="hero-tab-bearings" class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">Bearings</button>
+              <div class="flex items-center gap-1 overflow-x-auto custom-scrollbar pb-1 sm:pb-0">
+                <button onclick="switchHeroShowcase('timing')" id="hero-tab-timing" class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-amber-500 text-slate-950 transition whitespace-nowrap">Timing Belts</button>
+                <button onclick="switchHeroShowcase('conveyor')" id="hero-tab-conveyor" class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition whitespace-nowrap">Conveyor</button>
+                <button onclick="switchHeroShowcase('bearings')" id="hero-tab-bearings" class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition whitespace-nowrap">Bearings</button>
+                <button onclick="switchHeroShowcase('linear')" id="hero-tab-linear" class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition whitespace-nowrap">Linear Motion</button>
               </div>
             </div>
 
-            <!-- Crisp Contained Product Image -->
+            <!-- Crisp Contained Product Image with Sheen Animation -->
             <div class="hero-img-box aspect-[4/3] rounded-xl overflow-hidden bg-white p-3 border border-slate-700 flex items-center justify-center relative shadow-inner">
               <img id="hero-product-img" src="assets/client_processed/gates-powergrip-gt4-heavy-duty-timing-belt.jpg" alt="Industrial Timing Belts and Power Transmission" class="w-full h-full object-contain transition-opacity duration-300">
               <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-slate-900/90 border border-slate-700 text-[10px] font-mono text-amber-400 font-bold z-10">
@@ -1054,7 +1030,7 @@
       window.open(`https://wa.me/919967384878?text=${message}`, '_blank');
     }
 
-    // Hero Product Switcher
+    // Hero Product Switcher Data
     const heroShowcaseData = {
       timing: {
         title: 'High-Torque GT4 / HTD Timing Belts',
@@ -1072,24 +1048,36 @@
       },
       bearings: {
         title: 'Industrial Bearings & UCP Pillow Blocks',
-        desc: 'Cast iron mounted units, deep groove ball bearings, and precision CNC linear guide rails.',
+        desc: 'Cast iron mounted units, deep groove ball bearings, and needle roller bearings.',
         img: 'assets/client_processed/industrial-bearings-pillow-blocks-needle-roller.jpg',
         wa: 'Bearings and Pillow Blocks',
         status: '● Heavy Duty'
+      },
+      linear: {
+        title: 'Precision Linear Guides & CNC Blocks',
+        desc: 'High-rigidity profile rails, recirculating ball carriages, and pillow blocks for automation.',
+        img: 'assets/products/white_bg/05_white_pillow_block.jpg',
+        wa: 'Linear Motion & Guides',
+        status: '● Zero Backlash'
       }
     };
 
-    function switchHeroShowcase(key) {
+    const heroKeys = ['timing', 'conveyor', 'bearings', 'linear'];
+    let heroAutoInterval = null;
+    let heroIsPaused = false;
+
+    function switchHeroShowcase(key, manual = false) {
+      if (manual) heroIsPaused = true;
       const item = heroShowcaseData[key];
       if (!item) return;
 
-      ['timing', 'conveyor', 'bearings'].forEach(k => {
+      heroKeys.forEach(k => {
         const tab = document.getElementById(`hero-tab-${k}`);
         if (tab) {
           if (k === key) {
-            tab.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold bg-amber-500 text-slate-950 transition';
+            tab.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold bg-amber-500 text-slate-950 transition whitespace-nowrap shadow-xs';
           } else {
-            tab.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition';
+            tab.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition whitespace-nowrap';
           }
         }
       });
@@ -1106,6 +1094,25 @@
           img.style.opacity = '1';
         }, 120);
       }
+    }
+
+    // Auto-cycle showcase smoothly
+    let currentHeroIndex = 0;
+    function startHeroShowcaseAutoCycle() {
+      heroAutoInterval = setInterval(() => {
+        if (!heroIsPaused) {
+          currentHeroIndex = (currentHeroIndex + 1) % heroKeys.length;
+          switchHeroShowcase(heroKeys[currentHeroIndex]);
+        }
+      }, 5000);
+    }
+    startHeroShowcaseAutoCycle();
+
+    const heroStageEl = document.getElementById('hero-stage');
+    if (heroStageEl) {
+      heroStageEl.addEventListener('mouseenter', () => { heroIsPaused = true; });
+      heroStageEl.addEventListener('mouseleave', () => { heroIsPaused = false; });
+      heroStageEl.addEventListener('touchstart', () => { heroIsPaused = true; }, { passive: true });
     }
   </script>
 
