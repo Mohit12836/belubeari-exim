@@ -370,51 +370,47 @@
 </head>
 <body class="selection:bg-cyan-400 selection:text-slate-950 flex flex-col min-h-screen pb-16 lg:pb-0">
 
-  <!-- 1. TOP TELEMETRY STRIP (DARK NAVY / AMAZON LOGISTICS BAR) -->
-  <aside aria-label="Quick contact & address" class="bg-[#051326] border-b border-slate-800/80 text-xs py-1.5 px-3 sm:px-4 font-sans relative z-40 text-slate-300">
+  <!-- 1. TOP TELEMETRY STRIP (VISIBLE ON TABLET & PC, HIDDEN ON COMPACT MOBILE TO SAVE VIEWPORT) -->
+  <aside aria-label="Quick contact & address" class="hidden sm:block bg-[#051326] border-b border-slate-800/80 text-xs py-1.5 px-3 sm:px-4 font-sans relative z-40 text-slate-300">
     <div class="fluid-container flex flex-wrap items-center justify-between gap-y-1 gap-x-4">
       <div class="flex items-center gap-2 min-w-0 max-w-full text-[11px] sm:text-xs">
         <i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-400 shrink-0"></i>
         <span class="truncate text-slate-200 font-medium">Masjid Bunder, Mumbai: 261/263 Yusuf Meherali Road</span>
-        <span class="hidden md:inline text-emerald-400 font-bold bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/30 text-[10px]">● SAME-DAY DISPATCH</span>
+        <span class="text-emerald-400 font-bold bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/30 text-[10px]">● SAME-DAY PAN-INDIA DISPATCH</span>
       </div>
 
       <div class="flex items-center gap-3 sm:gap-4 text-[11px] sm:text-xs shrink-0 ml-auto font-medium">
         <a href="tel:+919967384878" class="text-cyan-300 hover:text-white flex items-center gap-1 font-bold">
           <i data-lucide="phone" class="w-3 h-3 text-cyan-400"></i> +91 99673 84878
         </a>
-        <span class="text-slate-700 hidden sm:inline">|</span>
+        <span class="text-slate-700">|</span>
         <a href="mailto:sales@belubeariexim.com" class="text-slate-300 hover:text-white hidden md:flex items-center gap-1">
           <i data-lucide="mail" class="w-3 h-3 text-cyan-400"></i> sales@belubeariexim.com
         </a>
-        <span class="text-slate-700 hidden sm:inline">|</span>
-        <a href="products.html" class="text-slate-300 hover:text-white hidden sm:flex items-center gap-1">
+        <span class="text-slate-700 hidden md:inline">|</span>
+        <a href="products.html" class="text-slate-300 hover:text-white flex items-center gap-1">
           <i data-lucide="book-open" class="w-3 h-3 text-amber-400"></i> Catalog
-        </a>
-        <span class="text-slate-700 hidden sm:inline">|</span>
-        <a href="assets/products.zip" class="text-slate-300 hover:text-white hidden lg:flex items-center gap-1">
-          <i data-lucide="download" class="w-3 h-3 text-emerald-400"></i> Download PDF
         </a>
       </div>
     </div>
   </aside>
 
-  <!-- 2. MAIN AMAZON-APP GRADE HEADER WITH COLORFUL SIDE AURA -->
-  <header class="sticky top-0 z-50 bg-white/98 backdrop-blur-xl border-b border-slate-200/90 shadow-md">
+  <!-- 2. MAIN AMAZON-APP GRADE HEADER (ROW 1: BRAND & ACTIONS | ROW 2: SEARCH & PHOTO RFQ) -->
+  <header class="sticky top-0 z-50 bg-white/98 backdrop-blur-xl border-b border-slate-200/90 shadow-sm">
     
     <!-- Top Row: Logo, Nav, Fast Actions -->
-    <div class="fluid-container py-2.5 sm:py-3.5 flex items-center justify-between gap-2 sm:gap-6">
+    <div class="fluid-container py-2 sm:py-3 flex items-center justify-between gap-2 sm:gap-6">
       
       <!-- Brand Logo -->
       <a href="index.html" class="flex items-center gap-2 sm:gap-3 shrink-0 group">
-        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-400 flex items-center justify-center text-white font-black text-lg sm:text-xl font-heading shadow-md shadow-blue-500/25 border border-blue-400/40 group-hover:scale-105 transition shrink-0">
+        <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-400 flex items-center justify-center text-white font-black text-base sm:text-xl font-heading shadow-md shadow-blue-500/25 border border-blue-400/40 group-hover:scale-105 transition shrink-0">
           BE
         </div>
         <div class="min-w-0">
-          <div class="text-base sm:text-xl lg:text-2xl font-black tracking-tight font-heading text-slate-900 leading-tight truncate">
+          <div class="text-sm sm:text-lg lg:text-xl font-black tracking-tight font-heading text-slate-900 leading-tight truncate">
             M/s Belubeari Exim
           </div>
-          <div class="text-[10px] sm:text-[11px] text-blue-700 font-bold tracking-wider uppercase flex items-center gap-1.5 truncate">
+          <div class="text-[9px] sm:text-[11px] text-blue-700 font-bold tracking-wider uppercase flex items-center gap-1.5 truncate">
             <span>Masjid Bunder</span>
             <span class="text-slate-400">•</span>
             <span class="text-orange-600 font-mono font-extrabold">Mumbai</span>
@@ -426,38 +422,30 @@
       <nav class="hidden lg:flex items-center gap-5 xl:gap-6 text-xs xl:text-sm font-bold text-slate-700">
         <a href="index.html" class="text-blue-600 font-extrabold border-b-2 border-blue-600 pb-0.5">Home</a>
         <a href="about.html" class="hover:text-blue-600 transition-colors">About Us</a>
-        <div class="relative group cursor-pointer flex items-center gap-1 hover:text-blue-600 transition-colors">
-          <a href="products.html">Products</a>
-          <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
-        </div>
+        <a href="products.html" class="hover:text-blue-600 transition-colors">Products</a>
         <a href="services.html" class="hover:text-blue-600 transition-colors">Services</a>
         <a href="gallery.html" class="hover:text-blue-600 transition-colors">Gallery</a>
         <a href="faq.html" class="hover:text-blue-600 transition-colors">FAQ</a>
         <a href="contact.html" class="hover:text-blue-600 transition-colors">Contact</a>
       </nav>
 
-      <!-- Desktop Search Bar & Action Buttons -->
-      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+      <!-- Fast Actions (Call, WhatsApp & Mobile Toggle) -->
+      <div class="flex items-center gap-1.5 sm:gap-3 shrink-0">
         
-        <!-- Search bar (Desktop) -->
-        <div class="hidden xl:flex items-center gap-2 px-3.5 py-2 rounded-full bg-slate-100/90 border border-slate-300/80 text-xs text-slate-700 w-56 focus-within:border-blue-500 focus-within:bg-white focus-within:ring-2 focus-within:ring-blue-100 transition">
-          <i data-lucide="search" class="w-4 h-4 text-slate-400"></i>
-          <input type="text" placeholder="Search 10,000+ SKUs..." class="bg-transparent border-none outline-none w-full text-xs text-slate-800 placeholder-slate-400">
-        </div>
-
-        <!-- Phone Call Quick Action (Mobile/Desktop) -->
-        <a href="tel:+919967384878" class="p-2 sm:px-3.5 sm:py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200 flex items-center gap-1.5 transition text-xs font-bold" title="Call Warehouse">
+        <!-- Phone Call Action -->
+        <a href="tel:+919967384878" class="p-2 sm:px-3 sm:py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200 flex items-center gap-1.5 transition text-xs font-bold" title="Call Warehouse">
           <i data-lucide="phone" class="w-4 h-4 text-blue-600"></i>
-          <span class="hidden sm:inline font-mono">+91 99673 84878</span>
+          <span class="hidden md:inline font-mono">+91 99673 84878</span>
         </a>
 
-        <!-- WhatsApp Button with Pulsing Badge (Amazon-style fast action) -->
-        <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote%20for%20Industrial%20Belts." target="_blank" class="btn-sheen inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs sm:text-sm px-3.5 sm:px-4.5 py-2 sm:py-2.5 rounded-xl shadow-md shadow-emerald-600/25 transition transform hover:scale-[1.02] active:scale-[0.98]">
+        <!-- WhatsApp RFQ Button -->
+        <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote%20for%20Industrial%20Belts." target="_blank" class="btn-sheen inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl shadow-md shadow-emerald-600/25 transition transform hover:scale-[1.02] active:scale-[0.98]">
           <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
-          <span>WhatsApp</span>
+          <span class="hidden xs:inline">WhatsApp</span>
+          <span class="xs:hidden">RFQ</span>
         </a>
 
-        <!-- Orange CTA Button (Desktop) -->
+        <!-- Desktop Get Quote CTA -->
         <a href="contact.html#enquiry-form" class="hidden md:inline-flex items-center gap-1.5 bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-amber-600 text-white font-extrabold text-xs sm:text-sm px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl shadow-md shadow-orange-500/25 transition">
           <span>Get Quote</span>
           <i data-lucide="arrow-right" class="w-4 h-4"></i>
@@ -471,33 +459,36 @@
 
     </div>
 
-    <!-- AMAZON-STYLE MOBILE SEARCH BAR & DELIVERY LOCATION BAR (VISIBLE ON MOBILE/TABLET) -->
-    <div class="lg:hidden px-3 pb-3 pt-0 space-y-2 border-t border-slate-100 bg-gradient-to-b from-white to-slate-50/80">
-      
-      <!-- Amazon Iconic Search Bar with Camera/Photo RFQ Icon -->
-      <div class="relative flex items-center bg-white rounded-xl border-2 border-slate-300 shadow-sm focus-within:border-blue-600 focus-within:ring-2 focus-within:ring-blue-100 overflow-hidden">
-        <div class="pl-3 pr-2 text-slate-400 flex items-center">
+    <!-- AMAZON-STYLE SEARCH BAR WITH EMBEDDED PHOTO RFQ (ALWAYS VISIBLE & AUTO-FIT) -->
+    <div class="fluid-container pb-2.5 pt-0.5">
+      <div class="relative flex items-center bg-slate-100/90 hover:bg-slate-100 focus-within:bg-white rounded-xl border border-slate-300 focus-within:border-blue-600 focus-within:ring-2 focus-within:ring-blue-100 transition shadow-inner">
+        <div class="pl-3 pr-2 text-slate-400 flex items-center shrink-0">
           <i data-lucide="search" class="w-4 h-4 text-blue-600"></i>
         </div>
-        <input type="text" placeholder="Search 10,000+ Belts, Bearings, Conveyor SKUs..." class="w-full py-2.5 text-xs text-slate-800 placeholder-slate-400 bg-transparent border-none outline-none font-medium">
-        <div class="flex items-center gap-1.5 pr-2">
-          <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20have%20an%20old%20belt/bearing%20photo%20to%20identify." target="_blank" class="p-1.5 rounded-lg bg-blue-50 text-blue-600 hover:bg-blue-100 transition" title="Search by Photo">
-            <i data-lucide="camera" class="w-4 h-4"></i>
+        <input type="text" id="main-product-search" placeholder="Search 10,000+ Timing Belts, Conveyors, Bearings, V-Belts..." class="w-full py-2 sm:py-2.5 text-xs sm:text-sm text-slate-900 placeholder-slate-400 bg-transparent border-none outline-none font-medium">
+        <div class="flex items-center gap-1.5 pr-2 shrink-0">
+          <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20have%20an%20old%20belt/bearing%20photo%20to%20identify." target="_blank" class="flex items-center gap-1 px-2 py-1 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200/80 transition text-[11px] font-bold" title="Send Photo of old part on WhatsApp">
+            <i data-lucide="camera" class="w-3.5 h-3.5 text-blue-600"></i>
+            <span class="hidden sm:inline">Photo Match</span>
           </a>
         </div>
       </div>
+    </div>
 
-      <!-- Location Delivery Bar (Amazon App Style) -->
-      <div class="flex items-center justify-between text-[11px] text-slate-700 bg-blue-50/70 border border-blue-200/70 rounded-lg px-2.5 py-1 font-medium">
+    <!-- AMAZON-STYLE LOCATION & DISPATCH STRIP -->
+    <div class="bg-gradient-to-r from-blue-50/90 via-slate-50 to-blue-50/90 border-t border-slate-200/80 py-1 px-3 sm:px-4 text-[11px] sm:text-xs text-slate-700">
+      <div class="fluid-container flex items-center justify-between gap-2">
         <div class="flex items-center gap-1.5 truncate">
           <i data-lucide="map-pin" class="w-3.5 h-3.5 text-orange-500 shrink-0"></i>
-          <span class="truncate">Deliver to: <strong>Mumbai & All India</strong></span>
+          <span class="truncate">Deliver to: <strong class="text-slate-900">Mumbai 400003 & Pan-India</strong> • Same-Day Dispatch</span>
         </div>
-        <span class="text-emerald-700 font-bold font-mono text-[10px] shrink-0 bg-emerald-100 px-1.5 py-0.5 rounded">
-          ⚡ Ready Stock
-        </span>
+        <div class="flex items-center gap-2 shrink-0 font-mono text-[10px] font-bold">
+          <span class="text-emerald-700 bg-emerald-100/90 border border-emerald-300 px-2 py-0.5 rounded-full flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            10,000+ SKUs
+          </span>
+        </div>
       </div>
-
     </div>
 
     <!-- Mobile Slide-Down Drawer -->
@@ -531,7 +522,7 @@
 
       <div class="pt-2 flex items-center gap-2 border-t border-slate-200">
         <a href="tel:+919967384878" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-slate-100 border border-slate-300 text-xs font-bold text-slate-800">
-          <i data-lucide="phone" class="w-4 h-4 text-blue-600"></i> Call: +91 99673 84878
+          <i data-lucide="phone" class="w-4 h-4 text-blue-600"></i> Call Warehouse
         </a>
         <a href="contact.html#enquiry-form" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-xs font-bold text-white shadow-sm">
           <i data-lucide="file-text" class="w-4 h-4"></i> Get Quote
@@ -541,49 +532,49 @@
   </header>
 
   <!-- =========================================================================
-       AMAZON-STYLE HORIZONTAL CATEGORY STRIP (APP BUBBLES ON MOBILE)
+       AMAZON-STYLE HORIZONTAL CATEGORY STRIP (TOUCH CAROUSEL)
        ========================================================================= -->
-  <div class="bg-white border-b border-slate-200/80 shadow-sm py-2.5 overflow-x-auto custom-scrollbar">
-    <div class="fluid-container flex items-center gap-2.5 sm:gap-4 min-w-max">
+  <div class="bg-white border-b border-slate-200/80 shadow-sm py-2 overflow-x-auto custom-scrollbar">
+    <div class="fluid-container flex items-center gap-2 sm:gap-3 min-w-max">
       
       <!-- Category Bubble 1: Timing Belts -->
-      <a href="products.html#timing-belts" class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-50 to-amber-50 hover:from-orange-100 hover:to-amber-100 border border-orange-200/80 text-xs font-bold text-slate-800 transition shrink-0 group">
-        <span class="w-6 h-6 rounded-full bg-gradient-to-br from-orange-500 to-amber-500 text-white flex items-center justify-center text-[11px] shadow-sm">⚙️</span>
+      <a href="products.html#timing-belts" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-orange-50 hover:bg-orange-100 border border-orange-200 text-xs font-bold text-slate-800 transition shrink-0 group">
+        <span class="w-5 h-5 rounded-full bg-orange-500 text-white flex items-center justify-center text-[10px]">⚙️</span>
         <span>Timing Belts</span>
         <span class="text-[9px] font-mono bg-orange-500 text-white px-1.5 py-0.2 rounded-full font-extrabold">HTD/PU</span>
       </a>
 
       <!-- Category Bubble 2: Conveyor Belts -->
-      <a href="products.html#conveyor-belts" class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-blue-50 to-cyan-50 hover:from-blue-100 hover:to-cyan-100 border border-blue-200/80 text-xs font-bold text-slate-800 transition shrink-0 group">
-        <span class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 text-white flex items-center justify-center text-[11px] shadow-sm">🔄</span>
+      <a href="products.html#conveyor-belts" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-50 hover:bg-blue-100 border border-blue-200 text-xs font-bold text-slate-800 transition shrink-0 group">
+        <span class="w-5 h-5 rounded-full bg-blue-600 text-white flex items-center justify-center text-[10px]">🔄</span>
         <span>Conveyor Belts</span>
-        <span class="text-[9px] font-mono bg-blue-600 text-white px-1.5 py-0.2 rounded-full font-extrabold">FDA/PVC</span>
+        <span class="text-[9px] font-mono bg-blue-600 text-white px-1.5 py-0.2 rounded-full font-extrabold">FDA PU</span>
       </a>
 
       <!-- Category Bubble 3: V-Belts -->
-      <a href="products.html#v-belts" class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-emerald-50 to-teal-50 hover:from-emerald-100 hover:to-teal-100 border border-emerald-200/80 text-xs font-bold text-slate-800 transition shrink-0 group">
-        <span class="w-6 h-6 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 text-white flex items-center justify-center text-[11px] shadow-sm">📦</span>
+      <a href="products.html#v-belts" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-xs font-bold text-slate-800 transition shrink-0 group">
+        <span class="w-5 h-5 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[10px]">📦</span>
         <span>V-Belts</span>
         <span class="text-[9px] font-mono bg-emerald-600 text-white px-1.5 py-0.2 rounded-full font-extrabold">Raw Edge</span>
       </a>
 
       <!-- Category Bubble 4: Bearings -->
-      <a href="products.html#bearings" class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-purple-50 to-indigo-50 hover:from-purple-100 hover:to-indigo-100 border border-purple-200/80 text-xs font-bold text-slate-800 transition shrink-0 group">
-        <span class="w-6 h-6 rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 text-white flex items-center justify-center text-[11px] shadow-sm">⭕</span>
+      <a href="products.html#bearings" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-purple-50 hover:bg-purple-100 border border-purple-200 text-xs font-bold text-slate-800 transition shrink-0 group">
+        <span class="w-5 h-5 rounded-full bg-purple-600 text-white flex items-center justify-center text-[10px]">⭕</span>
         <span>Bearings & Blocks</span>
-        <span class="text-[9px] font-mono bg-purple-600 text-white px-1.5 py-0.2 rounded-full font-extrabold">UCP/6200</span>
+        <span class="text-[9px] font-mono bg-purple-600 text-white px-1.5 py-0.2 rounded-full font-extrabold">UCP</span>
       </a>
 
       <!-- Category Bubble 5: Linear Motion -->
-      <a href="products.html#linear-motion" class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-sky-50 to-blue-50 hover:from-sky-100 hover:to-blue-100 border border-sky-200/80 text-xs font-bold text-slate-800 transition shrink-0 group">
-        <span class="w-6 h-6 rounded-full bg-gradient-to-br from-sky-500 to-blue-600 text-white flex items-center justify-center text-[11px] shadow-sm">📐</span>
+      <a href="products.html#linear-motion" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-sky-50 hover:bg-sky-100 border border-sky-200 text-xs font-bold text-slate-800 transition shrink-0 group">
+        <span class="w-5 h-5 rounded-full bg-sky-500 text-white flex items-center justify-center text-[10px]">📐</span>
         <span>Linear Guides</span>
         <span class="text-[9px] font-mono bg-sky-600 text-white px-1.5 py-0.2 rounded-full font-extrabold">CNC</span>
       </a>
 
       <!-- Category Bubble 6: Seals & Components -->
-      <a href="products.html#seals-components" class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-amber-50 to-yellow-50 hover:from-amber-100 hover:to-yellow-100 border border-amber-200/80 text-xs font-bold text-slate-800 transition shrink-0 group">
-        <span class="w-6 h-6 rounded-full bg-gradient-to-br from-amber-500 to-orange-500 text-white flex items-center justify-center text-[11px] shadow-sm">🛡️</span>
+      <a href="products.html#seals-components" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-50 hover:bg-amber-100 border border-amber-200 text-xs font-bold text-slate-800 transition shrink-0 group">
+        <span class="w-5 h-5 rounded-full bg-amber-500 text-white flex items-center justify-center text-[10px]">🛡️</span>
         <span>Oil Seals & Rings</span>
         <span class="text-[9px] font-mono bg-amber-600 text-white px-1.5 py-0.2 rounded-full font-extrabold">Viton</span>
       </a>
@@ -592,147 +583,259 @@
   </div>
 
   <!-- =========================================================================
-       SECTION 1 — HERO SECTION (COLORFUL SIDE AURA + AMAZON-GRADE APP DEPTH)
+       SECTION 1 — HERO SECTION: AMAZON-STYLE DYNAMIC PRODUCT BANNER SLIDER
        ========================================================================= -->
-  <section id="hero-stage" class="relative bg-gradient-to-b from-[#F0F6FF] via-[#E8F2FD] to-[#F7FAFC] text-slate-900 pt-6 sm:pt-10 lg:pt-14 pb-10 sm:pb-16 border-b border-slate-200 overflow-hidden">
+  <section id="hero-stage" class="relative bg-gradient-to-b from-[#F0F6FF] via-[#E8F2FD] to-[#F7FAFC] text-slate-900 pt-4 sm:pt-6 pb-8 sm:pb-12 border-b border-slate-200 overflow-hidden">
     
-    <!-- Dynamic Multi-Stop Gradient Aura on One Side (Electric Cyan + Royal Blue Glow) -->
-    <div class="absolute top-0 right-0 w-[350px] sm:w-[650px] h-[350px] sm:h-[650px] bg-gradient-to-bl from-cyan-400/25 via-blue-500/20 to-transparent rounded-full blur-[90px] sm:blur-[130px] pointer-events-none"></div>
-    <div class="absolute bottom-0 left-0 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-gradient-to-tr from-amber-300/20 via-orange-400/15 to-transparent rounded-full blur-[80px] sm:blur-[110px] pointer-events-none"></div>
+    <!-- Dynamic Ambient Lighting Background -->
+    <div class="absolute top-0 right-0 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-gradient-to-bl from-cyan-400/20 via-blue-500/15 to-transparent rounded-full blur-[80px] pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[250px] sm:w-[450px] h-[250px] sm:h-[450px] bg-gradient-to-tr from-amber-300/15 via-orange-400/10 to-transparent rounded-full blur-[70px] pointer-events-none"></div>
 
     <div class="fluid-container relative z-10">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
+      <!-- HERO SLIDER WRAPPER -->
+      <div id="hero-slider-container" class="relative rounded-2xl sm:rounded-3xl bg-white border border-slate-200/90 shadow-lg sm:shadow-xl overflow-hidden">
         
-        <!-- Left: Tag + Headline + Subtext + 4 Badges + Dual Buttons -->
-        <div class="lg:col-span-6 xl:col-span-7 space-y-3.5 sm:space-y-5 text-left">
+        <!-- SLIDES TRACK -->
+        <div id="hero-slides-track" class="flex transition-transform duration-500 ease-out will-change-transform">
           
-          <!-- Category Tag & Live Dispatch Badge -->
-          <div class="flex flex-wrap items-center gap-2">
-            <span class="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-extrabold font-mono uppercase tracking-wider text-blue-700 bg-blue-100/90 border border-blue-300/80 px-3 py-1 rounded-full shadow-sm">
-              <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-              POWER TRANSMISSION • CONVEYOR • BEARINGS
-            </span>
-            <span class="inline-flex items-center gap-1 text-[10px] sm:text-xs font-bold font-mono text-emerald-800 bg-emerald-100/90 border border-emerald-300 px-2.5 py-1 rounded-full">
-              🚚 Same-Day Pan-India Dispatch
-            </span>
+          <!-- SLIDE 1: INDUSTRIAL TIMING BELTS -->
+          <div class="w-full shrink-0 p-4 sm:p-7 lg:p-9 bg-gradient-to-br from-white via-blue-50/40 to-slate-50">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-center">
+              
+              <!-- Content Column -->
+              <div class="lg:col-span-7 space-y-2.5 sm:space-y-4 text-left">
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-extrabold font-mono uppercase tracking-wider text-blue-700 bg-blue-100 border border-blue-300 px-2.5 py-0.5 rounded-full">
+                    <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                    SYNCHRONOUS POWER TRANSMISSION
+                  </span>
+                  <span class="inline-flex items-center gap-1 text-[10px] sm:text-xs font-bold font-mono text-emerald-800 bg-emerald-100 border border-emerald-300 px-2 py-0.5 rounded-full">
+                    ⚡ Ready Mumbai Stock
+                  </span>
+                </div>
+
+                <h1 class="text-xl sm:text-3xl lg:text-4xl font-heading font-black tracking-tight text-slate-900 leading-tight">
+                  High-Torque <span class="text-blue-600">Industrial Timing Belts</span>
+                </h1>
+
+                <p class="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed font-medium">
+                  Direct stockist of <strong>HTD 3M, 5M, 8M, 14M</strong>, Steel-Cord Polyurethane (PU), and Rubber Cogged Timing Belts for Precision CNC, Robotics & Textile Machinery.
+                </p>
+
+                <!-- Spec Chips -->
+                <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-0.5">
+                  <span class="px-2 py-1 rounded-md bg-white border border-slate-200 text-[11px] font-mono font-bold text-slate-800 shadow-2xs">HTD 8M / 14M</span>
+                  <span class="px-2 py-1 rounded-md bg-white border border-slate-200 text-[11px] font-mono font-bold text-slate-800 shadow-2xs">Steel-Cord PU</span>
+                  <span class="px-2 py-1 rounded-md bg-white border border-slate-200 text-[11px] font-mono font-bold text-slate-800 shadow-2xs">Zero Backlash</span>
+                  <span class="px-2 py-1 rounded-md bg-white border border-slate-200 text-[11px] font-mono font-bold text-slate-800 shadow-2xs">Gates / Bando Compatible</span>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 pt-2">
+                  <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote%20for%20Timing%20Belts." target="_blank" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-extrabold text-xs sm:text-sm px-5 py-2.5 sm:py-3 rounded-xl shadow-md shadow-orange-500/25 transition">
+                    <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
+                    <span>Get Instant WhatsApp Quote</span>
+                  </a>
+                  <a href="tel:+919967384878" class="inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs sm:text-sm px-4 py-2.5 sm:py-3 rounded-xl border border-slate-200 transition">
+                    <i data-lucide="phone" class="w-4 h-4 text-blue-600"></i>
+                    <span>Call +91 99673 84878</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Product Image Column (Clean Container, No Clutter) -->
+              <div class="lg:col-span-5 flex items-center justify-center">
+                <div class="w-full max-w-sm rounded-2xl bg-white p-3 border border-slate-200 shadow-sm">
+                  <div class="aspect-[4/3] rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center">
+                    <img src="assets/client_processed/gates-powergrip-gt4-heavy-duty-timing-belt.jpg" alt="Industrial Timing Belts" class="w-full h-full object-contain p-2">
+                  </div>
+                  <div class="mt-2 flex items-center justify-between text-[11px] text-slate-500 font-mono">
+                    <span>Part: GT4 / HTD Synchronous</span>
+                    <span class="text-emerald-600 font-bold">● In Stock</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
 
-          <!-- Main Bold Headline with Colorful Gradients -->
-          <h1 class="fluid-hero-title font-heading font-extrabold tracking-tight text-slate-900 leading-[1.12]">
-            Reliable Components for a<br>
-            <span class="text-blue-600 drop-shadow-[0_2px_15px_rgba(22,119,255,0.25)]">Stronger</span> 
-            <span class="bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 bg-clip-text text-transparent drop-shadow-[0_2px_15px_rgba(255,122,0,0.25)]">Industry.</span>
-          </h1>
+          <!-- SLIDE 2: PU & PVC CONVEYOR BELTS -->
+          <div class="w-full shrink-0 p-4 sm:p-7 lg:p-9 bg-gradient-to-br from-white via-cyan-50/40 to-slate-50">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-center">
+              
+              <!-- Content Column -->
+              <div class="lg:col-span-7 space-y-2.5 sm:space-y-4 text-left">
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-extrabold font-mono uppercase tracking-wider text-cyan-800 bg-cyan-100 border border-cyan-300 px-2.5 py-0.5 rounded-full">
+                    <span class="w-2 h-2 rounded-full bg-cyan-600 animate-pulse"></span>
+                    FDA FOOD-GRADE & BULK HANDLING
+                  </span>
+                  <span class="inline-flex items-center gap-1 text-[10px] sm:text-xs font-bold font-mono text-emerald-800 bg-emerald-100 border border-emerald-300 px-2 py-0.5 rounded-full">
+                    🌿 Hygienic & Cleated
+                  </span>
+                </div>
 
-          <!-- Subtext -->
-          <p class="text-slate-600 text-xs sm:text-base lg:text-lg leading-relaxed max-w-2xl font-medium">
-            Direct Mumbai warehouse stockist of <strong>FDA Food-Grade PU Conveyors</strong>, <strong>Steel-Cord Timing Belts</strong>, <strong>Raw-Edge V-Belts</strong>, and <strong>Pillow Block Bearings</strong>.
-          </p>
+                <h2 class="text-xl sm:text-3xl lg:text-4xl font-heading font-black tracking-tight text-slate-900 leading-tight">
+                  Custom <span class="text-cyan-700">PU & PVC Conveyor Belts</span>
+                </h2>
 
-          <!-- AMAZON-STYLE 4-BOX APP SHORTCUT GRID (TOUCH-OPTIMIZED) -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5 pt-1">
-            <div class="bg-white/90 backdrop-blur-md p-2.5 sm:p-3 rounded-xl border border-slate-200/90 shadow-sm flex items-center gap-2 hover:border-blue-400 transition">
-              <span class="text-lg">⚙️</span>
-              <div>
-                <div class="text-xs font-bold text-slate-900 leading-tight">10,000+ SKUs</div>
-                <div class="text-[10px] text-slate-500">Ready in Stock</div>
+                <p class="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed font-medium">
+                  Endless vulcanized, cleated, sidewall incline, and diamond-top conveyor belts engineered for Food Processing, Pharmaceuticals, Packaging, and Industrial Automation.
+                </p>
+
+                <!-- Spec Chips -->
+                <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-0.5">
+                  <span class="px-2 py-1 rounded-md bg-white border border-slate-200 text-[11px] font-mono font-bold text-slate-800 shadow-2xs">FDA Certified PU</span>
+                  <span class="px-2 py-1 rounded-md bg-white border border-slate-200 text-[11px] font-mono font-bold text-slate-800 shadow-2xs">Oil & Grease Proof</span>
+                  <span class="px-2 py-1 rounded-md bg-white border border-slate-200 text-[11px] font-mono font-bold text-slate-800 shadow-2xs">T-Cleats & Sidewalls</span>
+                  <span class="px-2 py-1 rounded-md bg-white border border-slate-200 text-[11px] font-mono font-bold text-slate-800 shadow-2xs">Custom Widths</span>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 pt-2">
+                  <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote%20for%20Conveyor%20Belts." target="_blank" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-extrabold text-xs sm:text-sm px-5 py-2.5 sm:py-3 rounded-xl shadow-md shadow-orange-500/25 transition">
+                    <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
+                    <span>Get Instant WhatsApp Quote</span>
+                  </a>
+                  <a href="tel:+919967384878" class="inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs sm:text-sm px-4 py-2.5 sm:py-3 rounded-xl border border-slate-200 transition">
+                    <i data-lucide="phone" class="w-4 h-4 text-blue-600"></i>
+                    <span>Call +91 99673 84878</span>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div class="bg-white/90 backdrop-blur-md p-2.5 sm:p-3 rounded-xl border border-slate-200/90 shadow-sm flex items-center gap-2 hover:border-emerald-400 transition">
-              <span class="text-lg">🛡️</span>
-              <div>
-                <div class="text-xs font-bold text-slate-900 leading-tight">100% Genuine</div>
-                <div class="text-[10px] text-slate-500">ISO Certified</div>
+
+              <!-- Product Image Column -->
+              <div class="lg:col-span-5 flex items-center justify-center">
+                <div class="w-full max-w-sm rounded-2xl bg-white p-3 border border-slate-200 shadow-sm">
+                  <div class="aspect-[4/3] rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center">
+                    <img src="assets/client_processed/food-grade-pu-conveyor-belts-poster.jpg" alt="Food Grade PU Conveyor Belts" class="w-full h-full object-contain p-2">
+                  </div>
+                  <div class="mt-2 flex items-center justify-between text-[11px] text-slate-500 font-mono">
+                    <span>Type: Food-Grade PU / PVC</span>
+                    <span class="text-emerald-600 font-bold">● Custom Cut Available</span>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="bg-white/90 backdrop-blur-md p-2.5 sm:p-3 rounded-xl border border-slate-200/90 shadow-sm flex items-center gap-2 hover:border-amber-400 transition">
-              <span class="text-lg">⚡</span>
-              <div>
-                <div class="text-xs font-bold text-slate-900 leading-tight">Fast RFQ</div>
-                <div class="text-[10px] text-slate-500">5-Min Response</div>
-              </div>
-            </div>
-            <div class="bg-white/90 backdrop-blur-md p-2.5 sm:p-3 rounded-xl border border-slate-200/90 shadow-sm flex items-center gap-2 hover:border-purple-400 transition">
-              <span class="text-lg">📷</span>
-              <div>
-                <div class="text-xs font-bold text-slate-900 leading-tight">Photo Match</div>
-                <div class="text-[10px] text-slate-500">Send Old Part</div>
-              </div>
+
             </div>
           </div>
 
-          <!-- Action Buttons (Orange Primary + White Secondary) -->
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 pt-2">
-            <a href="contact.html#enquiry-form" class="btn-touch inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-amber-600 text-white font-black text-sm sm:text-base px-7 py-3.5 rounded-xl shadow-lg shadow-orange-500/25 transition transform hover:scale-[1.02] active:scale-[0.98]">
-              <i data-lucide="file-text" class="w-4 h-4"></i>
-              <span>Send Your Requirement</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-            
-            <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote%20for%20Industrial%20Belts%20/%20Bearings." target="_blank" class="btn-touch inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm sm:text-base px-6 py-3.5 rounded-xl shadow-md shadow-emerald-600/20 transition">
-              <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
-              <span>WhatsApp Photo RFQ</span>
-            </a>
+          <!-- SLIDE 3: BEARINGS & LINEAR MOTION -->
+          <div class="w-full shrink-0 p-4 sm:p-7 lg:p-9 bg-gradient-to-br from-white via-purple-50/40 to-slate-50">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-center">
+              
+              <!-- Content Column -->
+              <div class="lg:col-span-7 space-y-2.5 sm:space-y-4 text-left">
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-extrabold font-mono uppercase tracking-wider text-purple-800 bg-purple-100 border border-purple-300 px-2.5 py-0.5 rounded-full">
+                    <span class="w-2 h-2 rounded-full bg-purple-600 animate-pulse"></span>
+                    HEAVY-DUTY INDUSTRIAL ROTATION
+                  </span>
+                  <span class="inline-flex items-center gap-1 text-[10px] sm:text-xs font-bold font-mono text-emerald-800 bg-emerald-100 border border-emerald-300 px-2 py-0.5 rounded-full">
+                    ⭕ 100% Genuine Certified
+                  </span>
+                </div>
+
+                <h2 class="text-xl sm:text-3xl lg:text-4xl font-heading font-black tracking-tight text-slate-900 leading-tight">
+                  Industrial <span class="text-purple-700">Bearings & Pillow Blocks</span>
+                </h2>
+
+                <p class="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed font-medium">
+                  Complete range of <strong>UCP Pillow Blocks, Deep Groove Ball Bearings, Needle Rollers</strong>, and Linear Motion Guide Rails for heavy industrial machinery.
+                </p>
+
+                <!-- Spec Chips -->
+                <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-0.5">
+                  <span class="px-2 py-1 rounded-md bg-white border border-slate-200 text-[11px] font-mono font-bold text-slate-800 shadow-2xs">UCP 204 to 212</span>
+                  <span class="px-2 py-1 rounded-md bg-white border border-slate-200 text-[11px] font-mono font-bold text-slate-800 shadow-2xs">Deep Groove 6000-6300</span>
+                  <span class="px-2 py-1 rounded-md bg-white border border-slate-200 text-[11px] font-mono font-bold text-slate-800 shadow-2xs">Linear Motion Rails</span>
+                  <span class="px-2 py-1 rounded-md bg-white border border-slate-200 text-[11px] font-mono font-bold text-slate-800 shadow-2xs">Cast Iron Housing</span>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 pt-2">
+                  <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote%20for%20Bearings." target="_blank" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-extrabold text-xs sm:text-sm px-5 py-2.5 sm:py-3 rounded-xl shadow-md shadow-orange-500/25 transition">
+                    <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
+                    <span>Get Instant WhatsApp Quote</span>
+                  </a>
+                  <a href="tel:+919967384878" class="inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs sm:text-sm px-4 py-2.5 sm:py-3 rounded-xl border border-slate-200 transition">
+                    <i data-lucide="phone" class="w-4 h-4 text-blue-600"></i>
+                    <span>Call +91 99673 84878</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Product Image Column -->
+              <div class="lg:col-span-5 flex items-center justify-center">
+                <div class="w-full max-w-sm rounded-2xl bg-white p-3 border border-slate-200 shadow-sm">
+                  <div class="aspect-[4/3] rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center">
+                    <img src="assets/client_processed/industrial-bearings-pillow-blocks-needle-roller.jpg" alt="Industrial Bearings and Pillow Blocks" class="w-full h-full object-contain p-2">
+                  </div>
+                  <div class="mt-2 flex items-center justify-between text-[11px] text-slate-500 font-mono">
+                    <span>Range: Pillow Blocks & Bearings</span>
+                    <span class="text-emerald-600 font-bold">● Ready Dispatch</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
 
         </div>
 
-        <!-- Right: 3D Product Composition with Colorful Lighting Halo -->
-        <div class="lg:col-span-6 xl:col-span-5 relative mt-2 lg:mt-0">
-          
-          <div class="relative bg-gradient-to-tr from-white/95 via-blue-50/90 to-cyan-50/90 rounded-3xl p-3.5 sm:p-5 border-2 border-blue-200/80 shadow-2xl shadow-blue-900/15">
-            
-            <!-- Hero 3D Composition Image -->
-            <div class="relative rounded-2xl overflow-hidden bg-slate-900 aspect-[4/3] flex items-center justify-center border border-slate-200/60 shadow-inner">
-              <img src="assets/hero_showcase_3d.jpg" alt="Industrial Belts, Bearings, and Conveyor Components" class="w-full h-full object-cover rounded-2xl">
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-transparent"></div>
-              
-              <!-- Floating Quality Tag -->
-              <div class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-lg bg-slate-900/90 border border-cyan-400/50 text-[10px] font-mono text-cyan-300 flex items-center gap-1.5 shadow-md backdrop-blur-md">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>MUMBAI WAREHOUSE STOCK</span>
-              </div>
-            </div>
-
-            <!-- Floating Pill 1: Power Transmission (Top Left) -->
-            <div class="absolute -top-3 left-4 sm:left-6 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-blue-300 shadow-lg text-[11px] sm:text-xs font-bold text-slate-800 flex items-center gap-1.5">
-              <span class="w-2 h-2 rounded-full bg-blue-600"></span>
-              <span>Power Transmission</span>
-            </div>
-
-            <!-- Floating Pill 2: Conveyor Solutions (Top Right) -->
-            <div class="absolute top-6 -right-2 sm:-right-4 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-emerald-300 shadow-lg text-[11px] sm:text-xs font-bold text-slate-800 flex items-center gap-1.5">
-              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-              <span>Conveyor Solutions</span>
-            </div>
-
-            <!-- Floating Pill 3: Bearings for Smooth Motion (Bottom Left) -->
-            <div class="absolute bottom-6 -left-2 sm:-left-4 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-orange-300 shadow-lg text-[11px] sm:text-xs font-bold text-slate-800 flex items-center gap-1.5">
-              <span class="w-2 h-2 rounded-full bg-orange-500"></span>
-              <span>Bearings for Smooth Motion</span>
-            </div>
-
-            <!-- Floating Checklist Card (Bottom Right) -->
-            <div class="absolute -bottom-4 right-2 sm:right-4 bg-white/98 backdrop-blur-xl border border-slate-200 p-3 sm:p-3.5 rounded-2xl shadow-xl text-left">
-              <div class="text-[10px] font-mono font-bold text-blue-600 uppercase tracking-wider mb-1.5 flex items-center gap-1">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-blue-600"></i>
-                AVAILABLE IN STOCK
-              </div>
-              <ul class="text-[11px] sm:text-xs font-semibold text-slate-800 space-y-1">
-                <li class="flex items-center gap-1.5"><span class="text-emerald-500">✔</span> Timing Belts</li>
-                <li class="flex items-center gap-1.5"><span class="text-emerald-500">✔</span> Conveyor Belts</li>
-                <li class="flex items-center gap-1.5"><span class="text-emerald-500">✔</span> Bearings & Blocks</li>
-                <li class="flex items-center gap-1.5"><span class="text-emerald-500">✔</span> Linear Motion</li>
-                <li class="flex items-center gap-1.5"><span class="text-emerald-500">✔</span> Seals & Components</li>
-              </ul>
-            </div>
-
+        <!-- SLIDER CONTROLS (ARROWS & PAGINATION DOTS) -->
+        <div class="absolute bottom-3 right-4 sm:right-6 flex items-center gap-2 z-20">
+          <button onclick="prevSlide()" class="w-8 h-8 rounded-full bg-white/90 hover:bg-white text-slate-800 border border-slate-300 shadow-md flex items-center justify-center transition active:scale-95" aria-label="Previous Slide">
+            <i data-lucide="chevron-left" class="w-4 h-4"></i>
+          </button>
+          <div class="flex items-center gap-1.5 px-2 py-1 rounded-full bg-white/80 backdrop-blur-md border border-slate-200 shadow-xs">
+            <button onclick="goToSlide(0)" class="slider-dot w-2.5 h-2.5 rounded-full bg-blue-600 transition-all duration-300" aria-label="Slide 1"></button>
+            <button onclick="goToSlide(1)" class="slider-dot w-2.5 h-2.5 rounded-full bg-slate-300 hover:bg-slate-400 transition-all duration-300" aria-label="Slide 2"></button>
+            <button onclick="goToSlide(2)" class="slider-dot w-2.5 h-2.5 rounded-full bg-slate-300 hover:bg-slate-400 transition-all duration-300" aria-label="Slide 3"></button>
           </div>
-
+          <button onclick="nextSlide()" class="w-8 h-8 rounded-full bg-white/90 hover:bg-white text-slate-800 border border-slate-300 shadow-md flex items-center justify-center transition active:scale-95" aria-label="Next Slide">
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
         </div>
 
       </div>
+
+      <!-- AMAZON-STYLE 4-BOX QUICK ADVANTAGE BENTO (FLUID AUTO-FIT, ZERO OVERFLOW) -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 pt-3 sm:pt-4">
+        <div class="bg-white p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs flex items-center gap-2.5 hover:border-blue-400 transition">
+          <span class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-base sm:text-lg shrink-0">⚙️</span>
+          <div class="min-w-0">
+            <div class="text-xs sm:text-sm font-bold text-slate-900 leading-tight truncate">10,000+ SKUs</div>
+            <div class="text-[10px] sm:text-[11px] text-slate-500 truncate">Ready Mumbai Stock</div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs flex items-center gap-2.5 hover:border-emerald-400 transition">
+          <span class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-base sm:text-lg shrink-0">🛡️</span>
+          <div class="min-w-0">
+            <div class="text-xs sm:text-sm font-bold text-slate-900 leading-tight truncate">100% Genuine</div>
+            <div class="text-[10px] sm:text-[11px] text-slate-500 truncate">ISO & OEM Standard</div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs flex items-center gap-2.5 hover:border-amber-400 transition">
+          <span class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-base sm:text-lg shrink-0">📄</span>
+          <div class="min-w-0">
+            <div class="text-xs sm:text-sm font-bold text-slate-900 leading-tight truncate">Instant GST RFQ</div>
+            <div class="text-[10px] sm:text-[11px] text-slate-500 truncate">5-Minute Response</div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs flex items-center gap-2.5 hover:border-purple-400 transition">
+          <span class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-base sm:text-lg shrink-0">📷</span>
+          <div class="min-w-0">
+            <div class="text-xs sm:text-sm font-bold text-slate-900 leading-tight truncate">Photo Part Match</div>
+            <div class="text-[10px] sm:text-[11px] text-slate-500 truncate">Send Old Part Photo</div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -2207,6 +2310,92 @@
       }
       lucide.createIcons();
     }
+
+    // =========================================================================
+    // AMAZON HERO BANNER SLIDER CONTROLLER
+    // =========================================================================
+    let currentSlide = 0;
+    const totalSlides = 3;
+    let autoSlideInterval = null;
+
+    function updateSliderPosition() {
+      const track = document.getElementById('hero-slides-track');
+      const dots = document.querySelectorAll('.slider-dot');
+      if (track) {
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+      }
+      dots.forEach((dot, index) => {
+        if (index === currentSlide) {
+          dot.className = 'slider-dot w-6 h-2.5 rounded-full bg-blue-600 transition-all duration-300';
+        } else {
+          dot.className = 'slider-dot w-2.5 h-2.5 rounded-full bg-slate-300 hover:bg-slate-400 transition-all duration-300';
+        }
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateSliderPosition();
+      resetAutoSlide();
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateSliderPosition();
+      resetAutoSlide();
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      updateSliderPosition();
+      resetAutoSlide();
+    }
+
+    function startAutoSlide() {
+      if (autoSlideInterval) clearInterval(autoSlideInterval);
+      autoSlideInterval = setInterval(() => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSliderPosition();
+      }, 4500);
+    }
+
+    function resetAutoSlide() {
+      startAutoSlide();
+    }
+
+    // Touch Swipe Detection for Mobile
+    const sliderBox = document.getElementById('hero-slider-container');
+    if (sliderBox) {
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      sliderBox.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      sliderBox.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 45) {
+          nextSlide(); // swipe left -> next
+        } else if (touchEndX - touchStartX > 45) {
+          prevSlide(); // swipe right -> prev
+        }
+      }, { passive: true });
+
+      sliderBox.addEventListener('mouseenter', () => {
+        if (autoSlideInterval) clearInterval(autoSlideInterval);
+      });
+      sliderBox.addEventListener('mouseleave', () => {
+        startAutoSlide();
+      });
+    }
+
+    // Init slider and icons on load
+    document.addEventListener('DOMContentLoaded', () => {
+      updateSliderPosition();
+      startAutoSlide();
+      if (window.lucide) lucide.createIcons();
+    });
   </script>
 
   <!-- =========================================================================
