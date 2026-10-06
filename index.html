@@ -44,7 +44,7 @@
 
   <style>
     /* ==========================================================================
-       CLEAN PREMIUM B2B RESPONSIVE STYLES (3 COLORS: NAVY + AMBER + WHITE/GREY)
+       CLEAN PREMIUM B2B RESPONSIVE STYLES & DISTINCT IMAGE ANIMATION ENGINE
        ========================================================================== */
     *, *::before, *::after {
       box-sizing: border-box;
@@ -67,6 +67,12 @@
       scroll-behavior: smooth;
     }
 
+    img, video, svg {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
     .font-heading { font-family: 'Space Grotesk', sans-serif; }
     .font-mono { font-family: 'JetBrains Mono', monospace; }
 
@@ -78,16 +84,84 @@
       padding-inline: clamp(1rem, 3.5vw, 2rem);
     }
 
-    /* Clean Card Hover */
-    .clean-card {
-      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    /* 1. HERO MECHANICAL FLOAT ANIMATION */
+    .hero-img-box {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
     }
-    @media (hover: hover) and (pointer: fine) {
-      .clean-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 24px -6px rgba(11, 27, 51, 0.09);
-        border-color: #CBD5E1;
-      }
+    .hero-img-box:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.35);
+    }
+    .hero-img-box::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 50%;
+      height: 200%;
+      background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      transform: rotate(25deg);
+      pointer-events: none;
+      transition: none;
+    }
+    .hero-img-box:hover::after {
+      animation: heroSheenSweep 0.85s ease-in-out forwards;
+    }
+    @keyframes heroSheenSweep {
+      0% { left: -60%; }
+      100% { left: 140%; }
+    }
+
+    /* 2. CATEGORY TILES ELASTIC ZOOM & TILT */
+    .category-card {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+    .category-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 32px -6px rgba(11, 27, 51, 0.12);
+      border-color: #F59E0B;
+    }
+    .category-card .cat-img {
+      transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .category-card:hover .cat-img {
+      transform: scale(1.12) rotate(-2deg);
+    }
+
+    /* 3. INDUSTRIES CINEMATIC SLOW PAN & ZOOM */
+    .industry-card {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+    }
+    .industry-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 36px -8px rgba(11, 27, 51, 0.14);
+    }
+    .industry-card .ind-img {
+      transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1), filter 0.7s ease;
+    }
+    .industry-card:hover .ind-img {
+      transform: scale(1.15);
+      filter: contrast(1.06) brightness(1.04);
+    }
+
+    /* 4. WORKSHOP SHIMMER & ELEVATION */
+    .workshop-card {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+    .workshop-card:hover {
+      transform: translateY(-5px) scale(1.01);
+      box-shadow: 0 18px 36px -8px rgba(11, 27, 51, 0.1);
+      border-color: #CBD5E1;
+    }
+    .workshop-card .ws-img {
+      transition: transform 0.5s ease-out;
+    }
+    .workshop-card:hover .ws-img {
+      transform: scale(1.06);
     }
 
     /* Custom Scrollbar for Category Strips */
@@ -332,9 +406,9 @@
             </div>
 
             <!-- Crisp Contained Product Image -->
-            <div class="aspect-[4/3] rounded-xl overflow-hidden bg-white p-3 border border-slate-700 flex items-center justify-center relative shadow-inner">
+            <div class="hero-img-box aspect-[4/3] rounded-xl overflow-hidden bg-white p-3 border border-slate-700 flex items-center justify-center relative shadow-inner">
               <img id="hero-product-img" src="assets/client_processed/gates-powergrip-gt4-heavy-duty-timing-belt.jpg" alt="Industrial Timing Belts and Power Transmission" class="w-full h-full object-contain transition-opacity duration-300">
-              <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-slate-900/90 border border-slate-700 text-[10px] font-mono text-amber-400 font-bold">
+              <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-slate-900/90 border border-slate-700 text-[10px] font-mono text-amber-400 font-bold z-10">
                 MUMBAI STOCK READY
               </div>
             </div>
@@ -392,9 +466,9 @@
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
         
         <!-- Tile 1: Timing Belts -->
-        <a href="products.html#timing-belts" class="clean-card group bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200 shadow-xs flex flex-col justify-between">
+        <a href="products.html#timing-belts" class="category-card group bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200 shadow-xs flex flex-col justify-between">
           <div class="w-full aspect-square rounded-lg bg-slate-50 overflow-hidden mb-3 flex items-center justify-center p-2 border border-slate-100">
-            <img src="assets/products/white_bg/02_white_pu_timing_belt.jpg" alt="Timing Belts" loading="lazy" class="w-full h-full object-contain group-hover:scale-105 transition duration-300">
+            <img src="assets/products/white_bg/02_white_pu_timing_belt.jpg" alt="Timing Belts" loading="lazy" class="cat-img w-full h-full object-contain">
           </div>
           <div>
             <h3 class="text-xs sm:text-sm font-bold text-slate-900 font-heading leading-tight group-hover:text-amber-600 transition">Timing Belts</h3>
@@ -408,9 +482,9 @@
         </a>
 
         <!-- Tile 2: V-Belts -->
-        <a href="products.html#v-belts" class="clean-card group bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200 shadow-xs flex flex-col justify-between">
+        <a href="products.html#v-belts" class="category-card group bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200 shadow-xs flex flex-col justify-between">
           <div class="w-full aspect-square rounded-lg bg-slate-50 overflow-hidden mb-3 flex items-center justify-center p-2 border border-slate-100">
-            <img src="assets/products/white_bg/03_white_v_belts_set.jpg" alt="V-Belts" loading="lazy" class="w-full h-full object-contain group-hover:scale-105 transition duration-300">
+            <img src="assets/products/white_bg/03_white_v_belts_set.jpg" alt="V-Belts" loading="lazy" class="cat-img w-full h-full object-contain">
           </div>
           <div>
             <h3 class="text-xs sm:text-sm font-bold text-slate-900 font-heading leading-tight group-hover:text-amber-600 transition">V-Belts</h3>
@@ -424,9 +498,9 @@
         </a>
 
         <!-- Tile 3: Conveyor Belts -->
-        <a href="products.html#conveyor-belts" class="clean-card group bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200 shadow-xs flex flex-col justify-between">
+        <a href="products.html#conveyor-belts" class="category-card group bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200 shadow-xs flex flex-col justify-between">
           <div class="w-full aspect-square rounded-lg bg-slate-50 overflow-hidden mb-3 flex items-center justify-center p-2 border border-slate-100">
-            <img src="assets/products/white_bg/01_white_conveyor_belt_roll.jpg" alt="Conveyor Belts" loading="lazy" class="w-full h-full object-contain group-hover:scale-105 transition duration-300">
+            <img src="assets/products/white_bg/01_white_conveyor_belt_roll.jpg" alt="Conveyor Belts" loading="lazy" class="cat-img w-full h-full object-contain">
           </div>
           <div>
             <h3 class="text-xs sm:text-sm font-bold text-slate-900 font-heading leading-tight group-hover:text-amber-600 transition">Conveyor Belts</h3>
@@ -440,9 +514,9 @@
         </a>
 
         <!-- Tile 4: Bearings -->
-        <a href="products.html#bearings" class="clean-card group bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200 shadow-xs flex flex-col justify-between">
+        <a href="products.html#bearings" class="category-card group bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200 shadow-xs flex flex-col justify-between">
           <div class="w-full aspect-square rounded-lg bg-slate-50 overflow-hidden mb-3 flex items-center justify-center p-2 border border-slate-100">
-            <img src="assets/products/white_bg/04_white_ball_bearings.jpg" alt="Bearings" loading="lazy" class="w-full h-full object-contain group-hover:scale-105 transition duration-300">
+            <img src="assets/products/white_bg/04_white_ball_bearings.jpg" alt="Bearings" loading="lazy" class="cat-img w-full h-full object-contain">
           </div>
           <div>
             <h3 class="text-xs sm:text-sm font-bold text-slate-900 font-heading leading-tight group-hover:text-amber-600 transition">Bearings</h3>
@@ -456,9 +530,9 @@
         </a>
 
         <!-- Tile 5: Linear Motion -->
-        <a href="products.html#linear-motion" class="clean-card group bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200 shadow-xs flex flex-col justify-between">
+        <a href="products.html#linear-motion" class="category-card group bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200 shadow-xs flex flex-col justify-between">
           <div class="w-full aspect-square rounded-lg bg-slate-50 overflow-hidden mb-3 flex items-center justify-center p-2 border border-slate-100">
-            <img src="assets/products/white_bg/05_white_pillow_block.jpg" alt="Linear Motion" loading="lazy" class="w-full h-full object-contain group-hover:scale-105 transition duration-300">
+            <img src="assets/products/white_bg/05_white_pillow_block.jpg" alt="Linear Motion" loading="lazy" class="cat-img w-full h-full object-contain">
           </div>
           <div>
             <h3 class="text-xs sm:text-sm font-bold text-slate-900 font-heading leading-tight group-hover:text-amber-600 transition">Linear Motion</h3>
@@ -472,9 +546,9 @@
         </a>
 
         <!-- Tile 6: Seals & Components -->
-        <a href="products.html#seals-components" class="clean-card group bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200 shadow-xs flex flex-col justify-between">
+        <a href="products.html#seals-components" class="category-card group bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200 shadow-xs flex flex-col justify-between">
           <div class="w-full aspect-square rounded-lg bg-slate-50 overflow-hidden mb-3 flex items-center justify-center p-2 border border-slate-100">
-            <img src="assets/products/white_bg/09_white_oil_seals_orings.jpg" alt="Seals and Components" loading="lazy" class="w-full h-full object-contain group-hover:scale-105 transition duration-300">
+            <img src="assets/products/white_bg/09_white_oil_seals_orings.jpg" alt="Seals and Components" loading="lazy" class="cat-img w-full h-full object-contain">
           </div>
           <div>
             <h3 class="text-xs sm:text-sm font-bold text-slate-900 font-heading leading-tight group-hover:text-amber-600 transition">Seals & Rings</h3>
@@ -570,9 +644,9 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
         
         <!-- Industry 1: Packaging -->
-        <div class="clean-card bg-white rounded-xl overflow-hidden border border-slate-200 shadow-xs">
+        <div class="industry-card group bg-white rounded-xl overflow-hidden border border-slate-200 shadow-xs">
           <div class="h-36 overflow-hidden bg-slate-100">
-            <img src="assets/client_processed/gates-powergrip-gt4-heavy-duty-timing-belt.jpg" alt="Packaging Machinery" loading="lazy" class="w-full h-full object-cover">
+            <img src="assets/client_processed/gates-powergrip-gt4-heavy-duty-timing-belt.jpg" alt="Packaging Machinery" loading="lazy" class="ind-img w-full h-full object-cover">
           </div>
           <div class="p-4 text-left">
             <h3 class="font-bold text-sm text-slate-900 font-heading">Packaging Machinery</h3>
@@ -581,9 +655,9 @@
         </div>
 
         <!-- Industry 2: Food Processing -->
-        <div class="clean-card bg-white rounded-xl overflow-hidden border border-slate-200 shadow-xs">
+        <div class="industry-card group bg-white rounded-xl overflow-hidden border border-slate-200 shadow-xs">
           <div class="h-36 overflow-hidden bg-slate-100">
-            <img src="assets/client_processed/food-grade-pu-conveyor-belts-poster.jpg" alt="Food Processing" loading="lazy" class="w-full h-full object-cover">
+            <img src="assets/client_processed/food-grade-pu-conveyor-belts-poster.jpg" alt="Food Processing" loading="lazy" class="ind-img w-full h-full object-cover">
           </div>
           <div class="p-4 text-left">
             <h3 class="font-bold text-sm text-slate-900 font-heading">Food & Beverage</h3>
@@ -592,9 +666,9 @@
         </div>
 
         <!-- Industry 3: Textile -->
-        <div class="clean-card bg-white rounded-xl overflow-hidden border border-slate-200 shadow-xs">
+        <div class="industry-card group bg-white rounded-xl overflow-hidden border border-slate-200 shadow-xs">
           <div class="h-36 overflow-hidden bg-slate-100">
-            <img src="assets/client_processed/msb-kureha-textile-cots-and-aprons.jpg" alt="Textile & Spinning" loading="lazy" class="w-full h-full object-cover">
+            <img src="assets/client_processed/msb-kureha-textile-cots-and-aprons.jpg" alt="Textile & Spinning" loading="lazy" class="ind-img w-full h-full object-cover">
           </div>
           <div class="p-4 text-left">
             <h3 class="font-bold text-sm text-slate-900 font-heading">Textile & Spinning</h3>
@@ -603,9 +677,9 @@
         </div>
 
         <!-- Industry 4: Manufacturing -->
-        <div class="clean-card bg-white rounded-xl overflow-hidden border border-slate-200 shadow-xs">
+        <div class="industry-card group bg-white rounded-xl overflow-hidden border border-slate-200 shadow-xs">
           <div class="h-36 overflow-hidden bg-slate-100">
-            <img src="assets/client_processed/industrial-smt-electronics-robotics-conveyor-line.jpg" alt="Manufacturing & Robotics" loading="lazy" class="w-full h-full object-cover">
+            <img src="assets/client_processed/industrial-smt-electronics-robotics-conveyor-line.jpg" alt="Manufacturing & Robotics" loading="lazy" class="ind-img w-full h-full object-cover">
           </div>
           <div class="p-4 text-left">
             <h3 class="font-bold text-sm text-slate-900 font-heading">Manufacturing & CNC</h3>
@@ -614,9 +688,9 @@
         </div>
 
         <!-- Industry 5: Material Handling -->
-        <div class="clean-card bg-white rounded-xl overflow-hidden border border-slate-200 shadow-xs">
+        <div class="industry-card group bg-white rounded-xl overflow-hidden border border-slate-200 shadow-xs">
           <div class="h-36 overflow-hidden bg-slate-100">
-            <img src="assets/client_processed/pvc-green-cleated-conveyor-belts-collage.jpg" alt="Material Handling" loading="lazy" class="w-full h-full object-cover">
+            <img src="assets/client_processed/pvc-green-cleated-conveyor-belts-collage.jpg" alt="Material Handling" loading="lazy" class="ind-img w-full h-full object-cover">
           </div>
           <div class="p-4 text-left">
             <h3 class="font-bold text-sm text-slate-900 font-heading">Material Handling</h3>
@@ -673,32 +747,40 @@
 
         <!-- Right Workshop Photo Grid -->
         <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="clean-card bg-slate-50 rounded-xl overflow-hidden p-3 border border-slate-200">
-            <img src="assets/client_processed/pvc-green-incline-sidewall-cleated-belt.jpg" alt="Incline Sidewall Cleated Belt" loading="lazy" class="w-full h-40 object-cover rounded-lg">
+          <div class="workshop-card group bg-slate-50 rounded-xl overflow-hidden p-3 border border-slate-200">
+            <div class="overflow-hidden rounded-lg">
+              <img src="assets/client_processed/pvc-green-incline-sidewall-cleated-belt.jpg" alt="Incline Sidewall Cleated Belt" loading="lazy" class="ws-img w-full h-40 object-cover">
+            </div>
             <div class="p-2 text-left">
               <span class="text-slate-900 font-bold text-xs">High-Capacity Sidewall Belts</span>
               <p class="text-xs text-slate-500 mt-0.5">Prevents spillage on steep incline conveyors.</p>
             </div>
           </div>
 
-          <div class="clean-card bg-slate-50 rounded-xl overflow-hidden p-3 border border-slate-200">
-            <img src="assets/client_processed/pu-blue-cleated-conveyor-belt.jpg" alt="Food Grade Cleated Belt" loading="lazy" class="w-full h-40 object-cover rounded-lg">
+          <div class="workshop-card group bg-slate-50 rounded-xl overflow-hidden p-3 border border-slate-200">
+            <div class="overflow-hidden rounded-lg">
+              <img src="assets/client_processed/pu-blue-cleated-conveyor-belt.jpg" alt="Food Grade Cleated Belt" loading="lazy" class="ws-img w-full h-40 object-cover">
+            </div>
             <div class="p-2 text-left">
               <span class="text-slate-900 font-bold text-xs">FDA Food-Grade Cleats</span>
               <p class="text-xs text-slate-500 mt-0.5">High-frequency welded PU cleats for food lines.</p>
             </div>
           </div>
 
-          <div class="clean-card bg-slate-50 rounded-xl overflow-hidden p-3 border border-slate-200">
-            <img src="assets/client_processed/pvc-green-corrugated-sidewall-roll.webp" alt="Corrugated Sidewall Roll" loading="lazy" class="w-full h-40 object-cover rounded-lg">
+          <div class="workshop-card group bg-slate-50 rounded-xl overflow-hidden p-3 border border-slate-200">
+            <div class="overflow-hidden rounded-lg">
+              <img src="assets/client_processed/pvc-green-corrugated-sidewall-roll.webp" alt="Corrugated Sidewall Roll" loading="lazy" class="ws-img w-full h-40 object-cover">
+            </div>
             <div class="p-2 text-left">
               <span class="text-slate-900 font-bold text-xs">Flexible Wave Sidewalls</span>
               <p class="text-xs text-slate-500 mt-0.5">Available in custom heights 40mm to 120mm.</p>
             </div>
           </div>
 
-          <div class="clean-card bg-slate-50 rounded-xl overflow-hidden p-3 border border-slate-200">
-            <img src="assets/client_processed/pu-blue-endless-conveyor-loop.jpg" alt="Endless Loop Belt" loading="lazy" class="w-full h-40 object-cover rounded-lg">
+          <div class="workshop-card group bg-slate-50 rounded-xl overflow-hidden p-3 border border-slate-200">
+            <div class="overflow-hidden rounded-lg">
+              <img src="assets/client_processed/pu-blue-endless-conveyor-loop.jpg" alt="Endless Loop Belt" loading="lazy" class="ws-img w-full h-40 object-cover">
+            </div>
             <div class="p-2 text-left">
               <span class="text-slate-900 font-bold text-xs">Precision Endless Loops</span>
               <p class="text-xs text-slate-500 mt-0.5">Tested for uniform thickness and tensile balance.</p>
