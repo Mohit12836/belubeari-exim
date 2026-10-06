@@ -114,22 +114,50 @@
       100% { left: 140%; }
     }
 
-    /* Amazon-Style Hero Slider */
-    .hero-slide {
-      display: none;
-      animation: fadeInSlide 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    /* Facebook/Cinematic Full-Cover Hero Slider */
+    .fb-hero-container {
+      position: relative;
+      width: 100%;
+      background: #07111E;
+      overflow: hidden;
     }
-    .hero-slide.active {
+    .fb-slide {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .fb-slide.active {
+      opacity: 1;
+      pointer-events: auto;
+      position: relative;
+      z-index: 2;
+    }
+    .fb-slide-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
       display: block;
+      transition: transform 6s cubic-bezier(0.25, 1, 0.5, 1);
+      transform: scale(1.02);
     }
-    @keyframes fadeInSlide {
-      from { opacity: 0; transform: scale(0.99); }
-      to { opacity: 1; transform: scale(1); }
+    .fb-slide.active .fb-slide-img {
+      transform: scale(1);
     }
-    .slider-dot {
+    @media (max-width: 640px) {
+      .fb-slide-img {
+        object-position: 70% center;
+      }
+    }
+    .cover-dot {
       transition: all 0.3s ease;
     }
-    .slider-dot.active {
+    .cover-dot.active {
       background-color: #D97706 !important;
       width: 24px !important;
     }
@@ -323,122 +351,88 @@
   </header>
 
   <!-- =========================================================================
-       2. FACEBOOK-STYLE VIBRANT POP-OUT HERO COVER STAGE (PRISTINE WHITE BG)
+       2. FULL-WIDTH CINEMATIC INDUSTRIAL COVER HERO SHOWCASE (FACEBOOK-STYLE 5-SLIDE)
        ========================================================================= -->
-  <section id="hero-cover-stage" class="relative bg-white text-slate-900 border-b border-slate-200 overflow-hidden py-8 sm:py-14">
+  <section id="hero-carousel-section" class="relative w-full bg-[#07111E] overflow-hidden select-none border-b border-slate-800">
     
-    <!-- Ambient Subtle Floor Pattern -->
-    <div class="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px] opacity-35 pointer-events-none"></div>
-
-    <div class="fluid-container relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-        
-        <!-- Left: Crisp B2B Copy & CTAs -->
-        <div class="lg:col-span-6 text-left space-y-4 sm:space-y-6">
-          
-          <!-- Live Telemetry Pill -->
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-xs font-bold text-amber-900 shadow-xs">
-            <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-            <span class="font-mono text-amber-700 font-bold">DIRECT IMPORTER & STOCKIST</span>
-            <span class="text-slate-300">•</span>
-            <span class="text-slate-700">MUMBAI HUB</span>
-          </div>
-
-          <!-- Master Headline -->
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-[#0B1B33] leading-[1.14] tracking-tight">
-            Industrial Belting, Conveyors & <span class="text-amber-600">Precision Bearings</span>
-          </h1>
-
-          <!-- Description -->
-          <p class="text-slate-600 text-sm sm:text-base leading-relaxed max-w-xl">
-            Direct wholesale stockist at Masjid Bunder, Mumbai. 10,000+ SKUs of high-torque HTD/GT4 timing belts, FDA food-grade PU conveyors, cogged V-belts, and pillow block bearings for immediate Pan-India dispatch.
-          </p>
-
-          <!-- 4 Clean Feature Bento Tags -->
-          <div class="grid grid-cols-2 gap-2.5 sm:gap-3 pt-1">
-            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex items-center gap-2.5 shadow-xs">
-              <i data-lucide="package" class="w-5 h-5 text-amber-600 shrink-0"></i>
-              <div class="min-w-0">
-                <div class="text-xs font-bold text-slate-900">10,000+ SKUs</div>
-                <div class="text-[11px] text-slate-500">Ready in Stock</div>
-              </div>
-            </div>
-            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex items-center gap-2.5 shadow-xs">
-              <i data-lucide="truck" class="w-5 h-5 text-emerald-600 shrink-0"></i>
-              <div class="min-w-0">
-                <div class="text-xs font-bold text-slate-900">Same-Day</div>
-                <div class="text-[11px] text-slate-500">Pan-India Dispatch</div>
-              </div>
-            </div>
-            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex items-center gap-2.5 shadow-xs">
-              <i data-lucide="shield-check" class="w-5 h-5 text-amber-600 shrink-0"></i>
-              <div class="min-w-0">
-                <div class="text-xs font-bold text-slate-900">100% Genuine</div>
-                <div class="text-[11px] text-slate-500">ISO Standard</div>
-              </div>
-            </div>
-            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex items-center gap-2.5 shadow-xs">
-              <i data-lucide="camera" class="w-5 h-5 text-sky-600 shrink-0"></i>
-              <div class="min-w-0">
-                <div class="text-xs font-bold text-slate-900">Photo Match</div>
-                <div class="text-[11px] text-slate-500">Send Old Part</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Dual Tactile Action CTAs -->
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
-            <a href="contact.html#enquiry-form" class="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-slate-950 font-extrabold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-md shadow-amber-500/20 transition transform hover:scale-[1.02] active:scale-[0.98]">
-              <i data-lucide="file-text" class="w-4 h-4"></i>
-              <span>Send Your Requirement</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-            
-            <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote%20for%20Industrial%20Belts%20/%20Bearings." target="_blank" class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-md shadow-emerald-600/20 transition transform hover:scale-[1.02] active:scale-[0.98]">
-              <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
-              <span>WhatsApp Photo RFQ</span>
-            </a>
-          </div>
-
-        </div>
-
-        <!-- Right: 3D Pop-Out Facebook-Style Cover Showcase Card -->
-        <div class="lg:col-span-6 relative mt-4 lg:mt-0">
-          <div class="group relative rounded-2xl sm:rounded-3xl p-2 sm:p-3 bg-gradient-to-b from-slate-100 to-slate-200/80 border border-slate-300 shadow-xl overflow-hidden">
-            
-            <!-- Panoramic High-Res 3D Pop-Out Image -->
-            <div class="aspect-[16/9] w-full rounded-xl sm:rounded-2xl overflow-hidden bg-white relative flex items-center justify-center border border-slate-200 shadow-inner">
-              <img id="main-cover-img" src="assets/hero_cover_white_vibrant.jpg" alt="M/s Belubeari Exim Industrial Belts and Bearings Showcase" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              
-              <!-- Floating Verified Badge -->
-              <div class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-slate-900/90 backdrop-blur-md text-white border border-slate-700 text-[11px] font-bold flex items-center gap-1.5 shadow-lg">
-                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-                <span>MUMBAI READY STOCK</span>
-              </div>
-
-              <!-- Edition Switcher (White Studio / Colorful Edition) -->
-              <div class="absolute bottom-3 right-3 flex items-center gap-1.5 bg-slate-900/85 backdrop-blur-md p-1 rounded-lg border border-slate-700 text-white text-[10px] font-bold">
-                <button onclick="switchCoverEdition('white')" id="btn-cover-white" class="px-2 py-1 rounded bg-amber-500 text-slate-950 transition">White Studio</button>
-                <button onclick="switchCoverEdition('color')" id="btn-cover-color" class="px-2 py-1 rounded text-slate-300 hover:text-white transition">Colorful 3D</button>
-              </div>
-            </div>
-
-            <!-- Bottom Sub-Banner -->
-            <div class="p-2 sm:p-3 flex items-center justify-between text-xs text-slate-700">
-              <div class="flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
-                <span class="font-bold text-slate-900">Timing Belts • Conveyors • V-Belts • Bearings</span>
-              </div>
-              <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote." target="_blank" class="text-amber-700 hover:text-amber-800 font-bold flex items-center gap-1 transition">
-                <span>Direct Quote</span>
-                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-              </a>
-            </div>
-
-          </div>
-        </div>
-
+    <!-- Cover Container: Fluid Auto-Fit across Mobile (30-35vh) and Desktop Panoramic -->
+    <div class="relative w-full h-[220px] sm:h-[320px] md:h-[400px] lg:h-[480px] xl:h-[540px] max-h-[85vh] overflow-hidden bg-[#07111E]">
+      
+      <!-- Slide 1: Built for Tomorrow (Belts, Bearings, Conveyors, Linear) -->
+      <div class="fb-slide active" data-index="0">
+        <a href="products.html" class="block w-full h-full relative cursor-pointer group">
+          <img src="assets/covers/cover_1.png" alt="M/s Belubeari Exim - Built for Tomorrow Power Transmission" class="fb-slide-img" fetchpriority="high">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity"></div>
+        </a>
       </div>
+
+      <!-- Slide 2: Powering Industry (Quality Components, Reliable Supply) -->
+      <div class="fb-slide" data-index="1">
+        <a href="products.html" class="block w-full h-full relative cursor-pointer group">
+          <img src="assets/covers/cover_2.png" alt="Powering Industry - Industrial Belts & Bearings Supply" class="fb-slide-img" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity"></div>
+        </a>
+      </div>
+
+      <!-- Slide 3: Keep Your Industry Moving (Precision Timing Belts & Gears) -->
+      <div class="fb-slide" data-index="2">
+        <a href="products.html" class="block w-full h-full relative cursor-pointer group">
+          <img src="assets/covers/cover_3.png" alt="Keep Your Industry Moving - Precision Power Transmission" class="fb-slide-img" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity"></div>
+        </a>
+      </div>
+
+      <!-- Slide 4: High-Performance Conveyor & Transmission Systems -->
+      <div class="fb-slide" data-index="3">
+        <a href="products.html" class="block w-full h-full relative cursor-pointer group">
+          <img src="assets/covers/cover_4.png" alt="Industrial Conveyor & Belting Solutions" class="fb-slide-img" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity"></div>
+        </a>
+      </div>
+
+      <!-- Slide 5: Premium Bearings & Engineering Components -->
+      <div class="fb-slide" data-index="4">
+        <a href="products.html" class="block w-full h-full relative cursor-pointer group">
+          <img src="assets/covers/cover_5.png" alt="Premium Industrial Bearings & Engineering Supply" class="fb-slide-img" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity"></div>
+        </a>
+      </div>
+
+      <!-- Top Right: Live Slide Counter Badge (e.g. 01 / 05) -->
+      <div class="absolute top-2.5 right-2.5 sm:top-4 sm:right-5 z-20 px-2.5 sm:px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-slate-700/60 text-white font-mono text-[10px] sm:text-xs font-bold tracking-wider shadow-lg flex items-center gap-1.5 pointer-events-none">
+        <span class="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-amber-400 animate-pulse"></span>
+        <span id="hero-slide-counter">01 / 05</span>
+      </div>
+
+      <!-- Bottom Left: Floating CTA Action Bar -->
+      <div class="absolute bottom-2.5 left-2.5 sm:bottom-5 sm:left-6 z-20 flex items-center gap-1.5 sm:gap-3">
+        <a href="products.html" class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2.5 rounded-lg sm:rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-[11px] sm:text-sm shadow-xl transition-all hover:scale-105">
+          <i data-lucide="package" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+          <span>Explore Products</span>
+        </a>
+        <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20saw%20your%20website%20cover%20and%20need%20a%20price%20quote." target="_blank" class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2.5 rounded-lg sm:rounded-xl bg-emerald-600/90 hover:bg-emerald-500 text-white font-bold text-[11px] sm:text-sm backdrop-blur-md border border-emerald-400/40 shadow-xl transition-all hover:scale-105">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+          <span>WhatsApp RFQ</span>
+        </a>
+      </div>
+
+      <!-- Navigation Arrows (Left & Right) -->
+      <button onclick="prevHeroSlide()" class="absolute left-1.5 sm:left-4 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-11 sm:h-11 rounded-full bg-slate-950/70 hover:bg-amber-500 text-white hover:text-slate-950 backdrop-blur-md border border-slate-700/60 flex items-center justify-center transition-all shadow-xl z-20 hover:scale-110 active:scale-95" aria-label="Previous Cover">
+        <i data-lucide="chevron-left" class="w-3.5 h-3.5 sm:w-6 sm:h-6"></i>
+      </button>
+      <button onclick="nextHeroSlide()" class="absolute right-1.5 sm:right-4 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-11 sm:h-11 rounded-full bg-slate-950/70 hover:bg-amber-500 text-white hover:text-slate-950 backdrop-blur-md border border-slate-700/60 flex items-center justify-center transition-all shadow-xl z-20 hover:scale-110 active:scale-95" aria-label="Next Cover">
+        <i data-lucide="chevron-right" class="w-3.5 h-3.5 sm:w-6 sm:h-6"></i>
+      </button>
+
+      <!-- Slider 5-Dot Indicators -->
+      <div class="absolute bottom-2.5 right-2.5 sm:bottom-5 sm:right-6 flex items-center gap-1 sm:gap-2 z-20 bg-slate-950/60 backdrop-blur-md px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-full border border-slate-800">
+        <button onclick="goToHeroSlide(0)" class="cover-dot active w-4 sm:w-6 h-1 sm:h-2 rounded-full bg-amber-500 transition-all" aria-label="Slide 1"></button>
+        <button onclick="goToHeroSlide(1)" class="cover-dot w-1 sm:w-2 h-1 sm:h-2 rounded-full bg-slate-600 hover:bg-slate-400 transition-all" aria-label="Slide 2"></button>
+        <button onclick="goToHeroSlide(2)" class="cover-dot w-1 sm:w-2 h-1 sm:h-2 rounded-full bg-slate-600 hover:bg-slate-400 transition-all" aria-label="Slide 3"></button>
+        <button onclick="goToHeroSlide(3)" class="cover-dot w-1 sm:w-2 h-1 sm:h-2 rounded-full bg-slate-600 hover:bg-slate-400 transition-all" aria-label="Slide 4"></button>
+        <button onclick="goToHeroSlide(4)" class="cover-dot w-1 sm:w-2 h-1 sm:h-2 rounded-full bg-slate-600 hover:bg-slate-400 transition-all" aria-label="Slide 5"></button>
+      </div>
+
     </div>
   </section>
 
@@ -1127,27 +1121,89 @@
       window.open(`https://wa.me/919967384878?text=${message}`, '_blank');
     }
 
-    // Interactive Cover Edition Switcher (White Studio vs Vibrant 3D)
-    function switchCoverEdition(mode) {
-      const coverImg = document.getElementById('main-cover-img');
-      const btnWhite = document.getElementById('btn-cover-white');
-      const btnColor = document.getElementById('btn-cover-color');
+    // ==========================================
+    // 5-SLIDE COVER SHOWCASE CONTROLLER
+    // ==========================================
+    let currentHeroSlideIdx = 0;
+    const heroSlides = document.querySelectorAll('#hero-carousel-section .fb-slide');
+    const heroDots = document.querySelectorAll('#hero-carousel-section .cover-dot');
+    const slideCounter = document.getElementById('hero-slide-counter');
+    let heroSliderTimer = null;
+    let isSliderPaused = false;
+
+    function showHeroSlide(index) {
+      if (!heroSlides.length) return;
+      currentHeroSlideIdx = (index + heroSlides.length) % heroSlides.length;
       
-      if (!coverImg) return;
-      
-      if (mode === 'color') {
-        coverImg.src = 'assets/hero_cover_color_vibrant.jpg';
-        if (btnColor && btnWhite) {
-          btnColor.className = 'px-2 py-1 rounded bg-amber-500 text-slate-950 font-bold transition';
-          btnWhite.className = 'px-2 py-1 rounded text-slate-300 hover:text-white transition';
+      heroSlides.forEach((slide, i) => {
+        if (i === currentHeroSlideIdx) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
         }
-      } else {
-        coverImg.src = 'assets/hero_cover_white_vibrant.jpg';
-        if (btnColor && btnWhite) {
-          btnWhite.className = 'px-2 py-1 rounded bg-amber-500 text-slate-950 font-bold transition';
-          btnColor.className = 'px-2 py-1 rounded text-slate-300 hover:text-white transition';
+      });
+
+      heroDots.forEach((dot, i) => {
+        if (i === currentHeroSlideIdx) {
+          dot.classList.add('active');
+          dot.classList.remove('bg-slate-600');
+          dot.style.width = window.innerWidth < 640 ? '16px' : '24px';
+          dot.style.backgroundColor = '#F59E0B';
+        } else {
+          dot.classList.remove('active');
+          dot.classList.add('bg-slate-600');
+          dot.style.width = window.innerWidth < 640 ? '4px' : '8px';
+          dot.style.backgroundColor = '';
         }
+      });
+
+      if (slideCounter) {
+        slideCounter.textContent = `0${currentHeroSlideIdx + 1} / 0${heroSlides.length}`;
       }
+    }
+
+    function nextHeroSlide() {
+      showHeroSlide(currentHeroSlideIdx + 1);
+    }
+
+    function prevHeroSlide() {
+      showHeroSlide(currentHeroSlideIdx - 1);
+    }
+
+    function goToHeroSlide(index) {
+      showHeroSlide(index);
+    }
+
+    function startHeroSlider() {
+      if (heroSliderTimer) clearInterval(heroSliderTimer);
+      heroSliderTimer = setInterval(() => {
+        if (!isSliderPaused) {
+          nextHeroSlide();
+        }
+      }, 4500);
+    }
+    startHeroSlider();
+
+    const heroCarouselSection = document.getElementById('hero-carousel-section');
+    if (heroCarouselSection) {
+      heroCarouselSection.addEventListener('mouseenter', () => { isSliderPaused = true; });
+      heroCarouselSection.addEventListener('mouseleave', () => { isSliderPaused = false; });
+      
+      let touchStartX = 0;
+      let touchEndX = 0;
+      heroCarouselSection.addEventListener('touchstart', (e) => {
+        isSliderPaused = true;
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+      heroCarouselSection.addEventListener('touchend', (e) => {
+        isSliderPaused = false;
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 40) {
+          nextHeroSlide();
+        } else if (touchEndX - touchStartX > 40) {
+          prevHeroSlide();
+        }
+      }, { passive: true });
     }
   </script>
 
