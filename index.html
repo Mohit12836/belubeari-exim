@@ -114,6 +114,26 @@
       100% { left: 140%; }
     }
 
+    /* Amazon-Style Hero Slider */
+    .hero-slide {
+      display: none;
+      animation: fadeInSlide 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .hero-slide.active {
+      display: block;
+    }
+    @keyframes fadeInSlide {
+      from { opacity: 0; transform: scale(0.99); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .slider-dot {
+      transition: all 0.3s ease;
+    }
+    .slider-dot.active {
+      background-color: #D97706 !important;
+      width: 24px !important;
+    }
+
     /* 2. CATEGORY TILES ELASTIC ZOOM & TILT */
     .category-card {
       transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
@@ -176,65 +196,90 @@
 </head>
 <body class="selection:bg-amber-100 selection:text-amber-950 flex flex-col min-h-screen pb-16 lg:pb-0">
 
-  <!-- 1. MAIN EXECUTIVE HEADER (CLEAN WHITE, ZERO CLUTTER) -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs">
-    <div class="fluid-container py-3 sm:py-3.5 flex items-center justify-between gap-4">
+  <!-- =========================================================================
+       1. AMAZON-GRADE INDUSTRIAL HEADER (WITH SMART SEARCH & FAST JUMPS)
+       ========================================================================= -->
+  <header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-xs">
+    
+    <!-- Top Bar: Brand, Integrated Search, and Fast Actions -->
+    <div class="fluid-container py-2.5 sm:py-3 flex items-center justify-between gap-2 sm:gap-4">
       
-      <!-- Brand Logo & Identity -->
-      <a href="index.html" class="flex items-center gap-3 shrink-0 group">
-        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#0B1B33] flex items-center justify-center text-white font-black text-lg font-heading shadow-sm group-hover:bg-slate-800 transition shrink-0 border border-slate-700">
+      <!-- Brand Logo & Name -->
+      <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 shrink-0 group">
+        <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-[#0B1B33] flex items-center justify-center text-white font-black text-base sm:text-lg font-heading shadow-sm group-hover:bg-slate-800 transition shrink-0 border border-slate-700">
           BE
         </div>
-        <div class="min-w-0">
-          <div class="text-base sm:text-xl font-bold tracking-tight font-heading text-slate-900 leading-tight truncate">
+        <div class="min-w-0 hidden xs:block">
+          <div class="text-sm sm:text-lg font-bold tracking-tight font-heading text-slate-900 leading-tight truncate">
             M/s Belubeari Exim
           </div>
-          <div class="text-xs text-slate-500 font-medium flex items-center gap-1.5 truncate">
+          <div class="text-[11px] text-slate-500 font-medium flex items-center gap-1.5 truncate">
             <span>Masjid Bunder, Mumbai</span>
             <span class="text-slate-300">•</span>
-            <span class="text-amber-600 font-semibold">Wholesale Stockist</span>
+            <span class="text-amber-600 font-semibold">Direct Stockist</span>
           </div>
         </div>
       </a>
 
-      <!-- Desktop Navigation Links -->
-      <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-700">
-        <a href="index.html" class="text-amber-600 font-bold border-b-2 border-amber-600 pb-0.5">Home</a>
-        <a href="about.html" class="hover:text-amber-600 transition-colors">About Us</a>
-        <a href="products.html" class="hover:text-amber-600 transition-colors">Products</a>
-        <a href="services.html" class="hover:text-amber-600 transition-colors">Services</a>
-        <a href="gallery.html" class="hover:text-amber-600 transition-colors">Gallery</a>
-        <a href="faq.html" class="hover:text-amber-600 transition-colors">FAQ</a>
-        <a href="contact.html" class="hover:text-amber-600 transition-colors">Contact</a>
-      </nav>
+      <!-- Amazon-Style Smart Search Bar -->
+      <div class="flex-1 max-w-xl mx-1 sm:mx-4">
+        <form action="products.html" method="GET" class="relative flex items-center">
+          <div class="relative w-full flex items-center bg-slate-100 focus-within:bg-white rounded-xl border border-slate-300 focus-within:border-amber-500 focus-within:ring-2 focus-within:ring-amber-500/20 transition overflow-hidden">
+            <input type="text" name="q" placeholder="Search 10,000+ Belts, Bearings, Part No..." class="w-full bg-transparent px-3 sm:px-4 py-2 sm:py-2 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none">
+            <button type="submit" class="bg-amber-500 hover:bg-amber-600 text-slate-950 px-3.5 sm:px-4 py-2 sm:py-2 font-bold text-xs sm:text-sm flex items-center justify-center transition" aria-label="Search Catalog">
+              <i data-lucide="search" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </form>
+      </div>
 
-      <!-- Fast Action Buttons -->
-      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-1.5 sm:gap-3 shrink-0">
         
-        <!-- Direct Phone Link -->
-        <a href="tel:+919967384878" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200 transition text-xs font-bold font-mono" title="Call Warehouse">
+        <!-- Call Link -->
+        <a href="tel:+919967384878" class="hidden md:inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200 transition text-xs font-bold font-mono" title="Call Warehouse">
           <i data-lucide="phone" class="w-3.5 h-3.5 text-[#0B1B33]"></i>
           <span>+91 99673 84878</span>
         </a>
 
         <!-- WhatsApp Button -->
-        <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote%20for%20Industrial%20Belts." target="_blank" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm px-3.5 py-2 rounded-lg shadow-sm transition">
+        <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote%20for%20Industrial%20Belts." target="_blank" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm px-3 sm:px-3.5 py-2 rounded-lg shadow-sm transition">
           <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
-          <span>WhatsApp</span>
+          <span class="hidden sm:inline">WhatsApp</span>
         </a>
 
-        <!-- Primary Get Quote Button -->
-        <a href="contact.html#enquiry-form" class="hidden md:inline-flex items-center gap-1.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs sm:text-sm px-4 py-2 rounded-lg shadow-sm transition">
+        <!-- Get Quote Button -->
+        <a href="contact.html#enquiry-form" class="hidden sm:inline-flex items-center gap-1.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs sm:text-sm px-3.5 py-2 rounded-lg shadow-sm transition">
           <span>Get Quote</span>
-          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
         </a>
 
-        <!-- Mobile Hamburger Button -->
+        <!-- Mobile Drawer Toggle -->
         <button id="mobile-menu-toggle" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg bg-slate-100 border border-slate-300 text-slate-800 hover:text-amber-600 transition" aria-label="Toggle Menu">
           <i id="mobile-menu-icon" data-lucide="menu" class="w-5 h-5"></i>
         </button>
       </div>
 
+    </div>
+
+    <!-- Quick Category Nav Strip (Amazon Sub-Navbar) -->
+    <div class="bg-slate-50 border-t border-slate-200 py-1.5 px-3 sm:px-4 hidden sm:block">
+      <div class="fluid-container flex items-center justify-between gap-4 text-xs font-semibold text-slate-700 overflow-x-auto custom-scrollbar">
+        <div class="flex items-center gap-5 whitespace-nowrap">
+          <a href="products.html" class="flex items-center gap-1.5 text-slate-900 font-bold hover:text-amber-600 transition">
+            <i data-lucide="layout-grid" class="w-3.5 h-3.5 text-amber-500"></i> All Categories
+          </a>
+          <a href="products.html#timing-belts" class="hover:text-amber-600 transition">Timing Belts (HTD/GT4)</a>
+          <a href="products.html#conveyor-belts" class="hover:text-amber-600 transition">Conveyor Belts (FDA/PU)</a>
+          <a href="products.html#v-belts" class="hover:text-amber-600 transition">V-Belts (Cogged/Raw Edge)</a>
+          <a href="products.html#bearings" class="hover:text-amber-600 transition">Ball Bearings & Pillow Blocks</a>
+          <a href="products.html#linear-motion" class="hover:text-amber-600 transition">Linear Guides</a>
+          <a href="#fabrication" class="hover:text-amber-600 transition">Custom Splicing</a>
+        </div>
+        <div class="text-[11px] text-emerald-700 font-bold hidden lg:flex items-center gap-1 whitespace-nowrap">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Same-Day Mumbai Dispatch
+        </div>
+      </div>
     </div>
 
     <!-- Mobile Slide-Down Navigation Drawer -->
@@ -278,139 +323,236 @@
   </header>
 
   <!-- =========================================================================
-       SECTION 1 — CINEMATIC FULL-SCREEN COVER SHOWCASE
+       2. FULL-WIDTH AMAZON-STYLE HERO BANNER CAROUSEL
        ========================================================================= -->
-  <section id="hero-stage" class="relative bg-gradient-to-b from-[#071224] via-[#0B1B33] to-[#0A192F] text-white pt-8 sm:pt-12 pb-12 sm:pb-16 border-b border-slate-800 overflow-hidden">
+  <section id="hero-carousel-section" class="relative bg-gradient-to-b from-[#081324] via-[#0B1B33] to-[#0D2240] text-white overflow-hidden select-none">
     
-    <!-- Ambient Depth Background Lighting & Blueprint Grid -->
-    <div class="absolute top-0 right-0 w-[320px] sm:w-[550px] h-[320px] sm:h-[550px] bg-gradient-to-bl from-blue-500/15 via-amber-500/10 to-transparent rounded-full blur-[80px] pointer-events-none"></div>
-    <div class="absolute bottom-0 left-0 w-[260px] sm:w-[420px] h-[260px] sm:h-[420px] bg-gradient-to-tr from-amber-500/12 via-blue-600/10 to-transparent rounded-full blur-[70px] pointer-events-none"></div>
-    <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none opacity-40"></div>
-
-    <div class="fluid-container relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-        
-        <!-- Left Column: Master B2B Positioning & High-Conversion CTAs -->
-        <div class="lg:col-span-7 space-y-4 sm:space-y-6 text-left">
-          
-          <!-- Live Telemetry Eyebrow Pill -->
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-bold text-slate-200 backdrop-blur-md shadow-inner">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span class="text-amber-400 font-mono tracking-wide">POWER TRANSMISSION</span>
-            <span class="text-slate-500">•</span>
-            <span>MASJID BUNDER MUMBAI HUB</span>
-          </div>
-
-          <!-- Bold, Authority Master Headline -->
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-white leading-[1.12] tracking-tight">
-            Direct Importer & Stockist of <br class="hidden sm:inline">
-            <span class="text-amber-400">Industrial Belts</span> & Bearings
-          </h1>
-
-          <!-- Crisp B2B Spec Description -->
-          <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl font-normal">
-            Ready wholesale inventory of <strong>HTD/GT4 Timing Belts</strong>, FDA Food-Grade PU Conveyors, Raw-Edge Cogged V-Belts, and Mounted Ball Bearings for immediate Pan-India dispatch from our Mumbai warehouse.
-          </p>
-
-          <!-- 4 Clean Telemetry Bento Boxes -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 pt-1">
-            <div class="bg-slate-900/80 backdrop-blur-md p-3 rounded-xl border border-slate-700/70 flex items-center gap-2.5">
-              <i data-lucide="package" class="w-5 h-5 text-amber-400 shrink-0"></i>
-              <div class="min-w-0">
-                <div class="text-xs font-bold text-white leading-tight">10,000+ SKUs</div>
-                <div class="text-[11px] text-slate-400">Ready in Stock</div>
-              </div>
-            </div>
-            <div class="bg-slate-900/80 backdrop-blur-md p-3 rounded-xl border border-slate-700/70 flex items-center gap-2.5">
-              <i data-lucide="truck" class="w-5 h-5 text-emerald-400 shrink-0"></i>
-              <div class="min-w-0">
-                <div class="text-xs font-bold text-white leading-tight">Same-Day</div>
-                <div class="text-[11px] text-slate-400">Pan-India Dispatch</div>
-              </div>
-            </div>
-            <div class="bg-slate-900/80 backdrop-blur-md p-3 rounded-xl border border-slate-700/70 flex items-center gap-2.5">
-              <i data-lucide="shield-check" class="w-5 h-5 text-amber-400 shrink-0"></i>
-              <div class="min-w-0">
-                <div class="text-xs font-bold text-white leading-tight">100% Genuine</div>
-                <div class="text-[11px] text-slate-400">ISO Standard</div>
-              </div>
-            </div>
-            <div class="bg-slate-900/80 backdrop-blur-md p-3 rounded-xl border border-slate-700/70 flex items-center gap-2.5">
-              <i data-lucide="camera" class="w-5 h-5 text-sky-400 shrink-0"></i>
-              <div class="min-w-0">
-                <div class="text-xs font-bold text-white leading-tight">Photo Match</div>
-                <div class="text-[11px] text-slate-400">Send Old Part</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Dual Tactile Action CTAs -->
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
-            <a href="contact.html#enquiry-form" class="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-slate-950 font-extrabold text-sm sm:text-base px-6 py-3.5 rounded-xl shadow-md shadow-amber-500/20 transition transform hover:scale-[1.02] active:scale-[0.98]">
-              <i data-lucide="file-text" class="w-4 h-4"></i>
-              <span>Send Your Requirement</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
+    <!-- Slider Wrapper -->
+    <div id="hero-slider" class="relative min-h-[440px] sm:min-h-[480px] lg:min-h-[520px] flex items-center">
+      
+      <!-- Slide 1: High-Torque Timing Belts -->
+      <div class="hero-slide active w-full py-8 sm:py-12" data-index="0">
+        <div class="fluid-container">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
             
-            <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote%20for%20Industrial%20Belts%20/%20Bearings." target="_blank" class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm sm:text-base px-6 py-3.5 rounded-xl shadow-md shadow-emerald-600/20 transition transform hover:scale-[1.02] active:scale-[0.98]">
-              <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
-              <span>WhatsApp Photo RFQ</span>
-            </a>
-          </div>
-
-        </div>
-
-        <!-- Right Column: Interactive Luxury Cover Showcase -->
-        <div class="lg:col-span-5 relative mt-2 lg:mt-0">
-          <div class="bg-slate-900/90 rounded-2xl sm:rounded-3xl p-4 sm:p-6 border border-slate-700/80 shadow-2xl backdrop-blur-xl text-left relative overflow-hidden">
-            
-            <!-- Top Light Rim Accent -->
-            <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-slate-400/40 to-transparent"></div>
-
-            <!-- Switcher Tabs (4 Categories) -->
-            <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-800 gap-1 flex-wrap sm:flex-nowrap">
-              <div class="text-xs font-bold text-slate-200 flex items-center gap-1.5 shrink-0">
-                <i data-lucide="layers" class="w-4 h-4 text-amber-400"></i>
-                <span class="hidden sm:inline">Product Focus</span>
+            <div class="lg:col-span-7 text-left space-y-3 sm:space-y-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-xs font-bold text-amber-400">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                <span>POWER TRANSMISSION • READY STOCK</span>
               </div>
-              <div class="flex items-center gap-1 overflow-x-auto custom-scrollbar pb-1 sm:pb-0">
-                <button onclick="switchHeroShowcase('timing')" id="hero-tab-timing" class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-amber-500 text-slate-950 transition whitespace-nowrap">Timing Belts</button>
-                <button onclick="switchHeroShowcase('conveyor')" id="hero-tab-conveyor" class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition whitespace-nowrap">Conveyor</button>
-                <button onclick="switchHeroShowcase('bearings')" id="hero-tab-bearings" class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition whitespace-nowrap">Bearings</button>
-                <button onclick="switchHeroShowcase('linear')" id="hero-tab-linear" class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition whitespace-nowrap">Linear Motion</button>
-              </div>
-            </div>
-
-            <!-- Crisp Contained Product Image with Sheen Animation -->
-            <div class="hero-img-box aspect-[4/3] rounded-xl overflow-hidden bg-white p-3 border border-slate-700 flex items-center justify-center relative shadow-inner">
-              <img id="hero-product-img" src="assets/client_processed/gates-powergrip-gt4-heavy-duty-timing-belt.jpg" alt="Industrial Timing Belts and Power Transmission" class="w-full h-full object-contain transition-opacity duration-300">
-              <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-slate-900/90 border border-slate-700 text-[10px] font-mono text-amber-400 font-bold z-10">
-                MUMBAI STOCK READY
-              </div>
-            </div>
-
-            <!-- Dynamic Product Metadata -->
-            <div class="mt-3.5 space-y-1">
-              <div class="flex items-center justify-between text-xs">
-                <span id="hero-product-title" class="font-bold text-white font-heading text-sm">High-Torque GT4 / HTD Timing Belts</span>
-                <span id="hero-product-status" class="text-emerald-400 font-bold text-[11px] font-mono">● 10,000+ SKUs</span>
-              </div>
-              <p id="hero-product-desc" class="text-xs text-slate-400 leading-snug">
-                Pitch: 3M, 5M, 8M, 14M. Steel Cord PU & Rubber Cogged Profiles. Gates & Bando Compatible.
+              <h1 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-white leading-[1.15]">
+                High-Torque <span class="text-amber-400">Timing Belts</span> & V-Belts
+              </h1>
+              <p class="text-slate-300 text-xs sm:text-base leading-relaxed max-w-xl">
+                Direct importer & stockist of HTD 3M, 5M, 8M, 14M, GT4 & Steel-Cord Polyurethane (PU) timing belts. 10,000+ SKUs ready in Mumbai hub.
               </p>
+              <div class="flex flex-wrap gap-2 text-xs text-slate-300 pt-1">
+                <span class="px-2.5 py-1 rounded bg-slate-800/80 border border-slate-700">✓ Gates & Bando Compatible</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/80 border border-slate-700">✓ Same-Day Dispatch</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/80 border border-slate-700">✓ 100% Genuine ISO</span>
+              </div>
+              <div class="flex flex-wrap items-center gap-3 pt-2">
+                <a href="contact.html#enquiry-form" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-slate-950 font-extrabold text-xs sm:text-sm px-5 py-3 rounded-xl shadow-md transition">
+                  <i data-lucide="file-text" class="w-4 h-4"></i>
+                  <span>Send Your Requirement</span>
+                </a>
+                <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote%20for%20Timing%20Belts." target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm px-5 py-3 rounded-xl shadow-md transition">
+                  <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
+                  <span>WhatsApp Photo RFQ</span>
+                </a>
+              </div>
             </div>
 
-            <!-- Instant WhatsApp Push Action -->
-            <div class="mt-3.5 pt-3 border-t border-slate-800 flex items-center justify-between text-xs">
-              <span class="text-slate-400 font-medium">Masjid Bunder Warehouse</span>
-              <a id="hero-product-link" href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote%20for%20Timing%20Belts." target="_blank" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 transition">
-                <span>Inquire This Part</span>
-                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-              </a>
+            <div class="lg:col-span-5 relative mt-4 lg:mt-0">
+              <div class="hero-img-box aspect-[4/3] rounded-2xl overflow-hidden bg-white p-4 border border-slate-700 shadow-2xl flex items-center justify-center relative">
+                <img src="assets/client_processed/gates-powergrip-gt4-heavy-duty-timing-belt.jpg" alt="Gates GT4 Heavy Duty Timing Belt" class="w-full h-full object-contain">
+                <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-900/90 text-amber-400 font-mono text-[11px] font-bold border border-slate-700">
+                  MUMBAI STOCK READY
+                </div>
+              </div>
             </div>
 
           </div>
         </div>
+      </div>
+
+      <!-- Slide 2: Food-Grade Conveyors -->
+      <div class="hero-slide w-full py-8 sm:py-12" data-index="1">
+        <div class="fluid-container">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+            
+            <div class="lg:col-span-7 text-left space-y-3 sm:space-y-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-xs font-bold text-emerald-400">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>FDA FOOD-GRADE & INDUSTRIAL SPLICING</span>
+              </div>
+              <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-white leading-[1.15]">
+                Custom <span class="text-amber-400">Conveyor Belts</span> & Cleats
+              </h2>
+              <p class="text-slate-300 text-xs sm:text-base leading-relaxed max-w-xl">
+                Endless vulcanized, cleated, and corrugated sidewall PU/PVC conveyor belts. Custom cut-to-size and high-frequency cleat welding in Mumbai workshop.
+              </p>
+              <div class="flex flex-wrap gap-2 text-xs text-slate-300 pt-1">
+                <span class="px-2.5 py-1 rounded bg-slate-800/80 border border-slate-700">✓ Food-Grade Certified PU</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/80 border border-slate-700">✓ Custom T & Wave Cleats</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/80 border border-slate-700">✓ Endless Jointing</span>
+              </div>
+              <div class="flex flex-wrap items-center gap-3 pt-2">
+                <a href="contact.html#enquiry-form" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-slate-950 font-extrabold text-xs sm:text-sm px-5 py-3 rounded-xl shadow-md transition">
+                  <i data-lucide="file-text" class="w-4 h-4"></i>
+                  <span>Order Custom Conveyors</span>
+                </a>
+                <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote%20for%20Conveyor%20Belts." target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm px-5 py-3 rounded-xl shadow-md transition">
+                  <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
+                  <span>WhatsApp Photo RFQ</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 relative mt-4 lg:mt-0">
+              <div class="hero-img-box aspect-[4/3] rounded-2xl overflow-hidden bg-white p-4 border border-slate-700 shadow-2xl flex items-center justify-center relative">
+                <img src="assets/client_processed/food-grade-pu-conveyor-belts-poster.jpg" alt="FDA Food Grade PU Conveyor Belts" class="w-full h-full object-contain">
+                <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-900/90 text-emerald-400 font-mono text-[11px] font-bold border border-slate-700">
+                  WORKSHOP FABRICATION
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Bearings & Mounted Units -->
+      <div class="hero-slide w-full py-8 sm:py-12" data-index="2">
+        <div class="fluid-container">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+            
+            <div class="lg:col-span-7 text-left space-y-3 sm:space-y-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/15 border border-sky-500/30 text-xs font-bold text-sky-400">
+                <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+                <span>HEAVY-DUTY INDUSTRIAL HARDWARE</span>
+              </div>
+              <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-white leading-[1.15]">
+                Industrial <span class="text-amber-400">Bearings</span> & Pillow Blocks
+              </h2>
+              <p class="text-slate-300 text-xs sm:text-base leading-relaxed max-w-xl">
+                Complete range of Deep Groove Ball Bearings, Spherical Roller Bearings, and Cast Iron UCP/UCF Pillow Block Units for heavy manufacturing.
+              </p>
+              <div class="flex flex-wrap gap-2 text-xs text-slate-300 pt-1">
+                <span class="px-2.5 py-1 rounded bg-slate-800/80 border border-slate-700">✓ High-RPM Precision</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/80 border border-slate-700">✓ Heavy Load Rated</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/80 border border-slate-700">✓ Ready Mumbai Stock</span>
+              </div>
+              <div class="flex flex-wrap items-center gap-3 pt-2">
+                <a href="contact.html#enquiry-form" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-slate-950 font-extrabold text-xs sm:text-sm px-5 py-3 rounded-xl shadow-md transition">
+                  <i data-lucide="file-text" class="w-4 h-4"></i>
+                  <span>Inquire Bearings</span>
+                </a>
+                <a href="https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote%20for%20Bearings." target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm px-5 py-3 rounded-xl shadow-md transition">
+                  <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
+                  <span>WhatsApp Photo RFQ</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 relative mt-4 lg:mt-0">
+              <div class="hero-img-box aspect-[4/3] rounded-2xl overflow-hidden bg-white p-4 border border-slate-700 shadow-2xl flex items-center justify-center relative">
+                <img src="assets/client_processed/industrial-bearings-pillow-blocks-needle-roller.jpg" alt="Industrial Bearings and Pillow Blocks" class="w-full h-full object-contain">
+                <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-900/90 text-sky-400 font-mono text-[11px] font-bold border border-slate-700">
+                  ALL STANDARD SIZES
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Slider Navigation Buttons (Left & Right Arrows) -->
+    <button onclick="prevHeroSlide()" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-slate-900/80 hover:bg-amber-500 text-white hover:text-slate-950 border border-slate-700 flex items-center justify-center transition shadow-lg z-20" aria-label="Previous Slide">
+      <i data-lucide="chevron-left" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+    </button>
+    <button onclick="nextHeroSlide()" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-slate-900/80 hover:bg-amber-500 text-white hover:text-slate-950 border border-slate-700 flex items-center justify-center transition shadow-lg z-20" aria-label="Next Slide">
+      <i data-lucide="chevron-right" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+    </button>
+
+    <!-- Slider Dots / Indicators -->
+    <div class="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 z-20">
+      <button onclick="goToHeroSlide(0)" class="slider-dot active w-6 h-2 rounded-full bg-amber-500 transition-all" aria-label="Slide 1"></button>
+      <button onclick="goToHeroSlide(1)" class="slider-dot w-2 h-2 rounded-full bg-slate-600 hover:bg-slate-400 transition-all" aria-label="Slide 2"></button>
+      <button onclick="goToHeroSlide(2)" class="slider-dot w-2 h-2 rounded-full bg-slate-600 hover:bg-slate-400 transition-all" aria-label="Slide 3"></button>
+    </div>
+
+  </section>
+
+  <!-- =========================================================================
+       3. AMAZON-STYLE 4 QUICK CATEGORY JUMP CARDS
+       ========================================================================= -->
+  <section class="py-6 sm:py-8 bg-slate-100 border-b border-slate-200">
+    <div class="fluid-container">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        
+        <!-- Card 1: Timing Belts -->
+        <a href="products.html#timing-belts" class="category-card group bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200 shadow-xs flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-xs sm:text-sm text-slate-900 font-heading group-hover:text-amber-600 transition">Timing Belts & Pulleys</h3>
+            <p class="text-[11px] text-slate-500 mt-0.5">HTD, GT4, PU & Steel Cord</p>
+          </div>
+          <div class="my-2.5 aspect-square bg-slate-50 rounded-lg p-2 flex items-center justify-center overflow-hidden border border-slate-100">
+            <img src="assets/products/white_bg/02_white_pu_timing_belt.jpg" alt="Timing Belts" loading="lazy" class="cat-img w-full h-full object-contain">
+          </div>
+          <span class="text-xs font-bold text-amber-600 group-hover:text-amber-700 flex items-center gap-1">
+            <span>Explore Timing Belts</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </a>
+
+        <!-- Card 2: Conveyor Belts -->
+        <a href="products.html#conveyor-belts" class="category-card group bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200 shadow-xs flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-xs sm:text-sm text-slate-900 font-heading group-hover:text-amber-600 transition">Conveyor Belts & Cleats</h3>
+            <p class="text-[11px] text-slate-500 mt-0.5">FDA Food-Grade, PVC & Sidewalls</p>
+          </div>
+          <div class="my-2.5 aspect-square bg-slate-50 rounded-lg p-2 flex items-center justify-center overflow-hidden border border-slate-100">
+            <img src="assets/products/white_bg/01_white_conveyor_belt_roll.jpg" alt="Conveyor Belts" loading="lazy" class="cat-img w-full h-full object-contain">
+          </div>
+          <span class="text-xs font-bold text-amber-600 group-hover:text-amber-700 flex items-center gap-1">
+            <span>Explore Conveyors</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </a>
+
+        <!-- Card 3: Industrial V-Belts -->
+        <a href="products.html#v-belts" class="category-card group bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200 shadow-xs flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-xs sm:text-sm text-slate-900 font-heading group-hover:text-amber-600 transition">Industrial V-Belts</h3>
+            <p class="text-[11px] text-slate-500 mt-0.5">Cogged Wedge & Raw Edge</p>
+          </div>
+          <div class="my-2.5 aspect-square bg-slate-50 rounded-lg p-2 flex items-center justify-center overflow-hidden border border-slate-100">
+            <img src="assets/products/white_bg/03_white_v_belts_set.jpg" alt="V-Belts" loading="lazy" class="cat-img w-full h-full object-contain">
+          </div>
+          <span class="text-xs font-bold text-amber-600 group-hover:text-amber-700 flex items-center gap-1">
+            <span>Explore V-Belts</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </a>
+
+        <!-- Card 4: Ball Bearings -->
+        <a href="products.html#bearings" class="category-card group bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200 shadow-xs flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-xs sm:text-sm text-slate-900 font-heading group-hover:text-amber-600 transition">Bearings & Units</h3>
+            <p class="text-[11px] text-slate-500 mt-0.5">Ball Bearings & Pillow Blocks</p>
+          </div>
+          <div class="my-2.5 aspect-square bg-slate-50 rounded-lg p-2 flex items-center justify-center overflow-hidden border border-slate-100">
+            <img src="assets/products/white_bg/04_white_ball_bearings.jpg" alt="Ball Bearings" loading="lazy" class="cat-img w-full h-full object-contain">
+          </div>
+          <span class="text-xs font-bold text-amber-600 group-hover:text-amber-700 flex items-center gap-1">
+            <span>Explore Bearings</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </a>
 
       </div>
     </div>
@@ -1030,89 +1172,84 @@
       window.open(`https://wa.me/919967384878?text=${message}`, '_blank');
     }
 
-    // Hero Product Switcher Data
-    const heroShowcaseData = {
-      timing: {
-        title: 'High-Torque GT4 / HTD Timing Belts',
-        desc: 'Pitch: 3M, 5M, 8M, 14M. Steel Cord PU & Rubber Cogged Profiles. Gates & Bando Compatible.',
-        img: 'assets/client_processed/gates-powergrip-gt4-heavy-duty-timing-belt.jpg',
-        wa: 'Timing Belts',
-        status: '● 10,000+ SKUs'
-      },
-      conveyor: {
-        title: 'FDA Food-Grade PU & PVC Conveyor Belts',
-        desc: 'Endless vulcanized, cleated, and sidewall belts for food processing, pharma & packaging lines.',
-        img: 'assets/client_processed/food-grade-pu-conveyor-belts-poster.jpg',
-        wa: 'Conveyor Belts',
-        status: '● Custom Fabricated'
-      },
-      bearings: {
-        title: 'Industrial Bearings & UCP Pillow Blocks',
-        desc: 'Cast iron mounted units, deep groove ball bearings, and needle roller bearings.',
-        img: 'assets/client_processed/industrial-bearings-pillow-blocks-needle-roller.jpg',
-        wa: 'Bearings and Pillow Blocks',
-        status: '● Heavy Duty'
-      },
-      linear: {
-        title: 'Precision Linear Guides & CNC Blocks',
-        desc: 'High-rigidity profile rails, recirculating ball carriages, and pillow blocks for automation.',
-        img: 'assets/products/white_bg/05_white_pillow_block.jpg',
-        wa: 'Linear Motion & Guides',
-        status: '● Zero Backlash'
-      }
-    };
+    // Amazon-Style Hero Banner Carousel Logic
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.slider-dot');
+    let heroSliderTimer = null;
+    let isSliderPaused = false;
 
-    const heroKeys = ['timing', 'conveyor', 'bearings', 'linear'];
-    let heroAutoInterval = null;
-    let heroIsPaused = false;
-
-    function switchHeroShowcase(key, manual = false) {
-      if (manual) heroIsPaused = true;
-      const item = heroShowcaseData[key];
-      if (!item) return;
-
-      heroKeys.forEach(k => {
-        const tab = document.getElementById(`hero-tab-${k}`);
-        if (tab) {
-          if (k === key) {
-            tab.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold bg-amber-500 text-slate-950 transition whitespace-nowrap shadow-xs';
-          } else {
-            tab.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition whitespace-nowrap';
-          }
+    function showHeroSlide(index) {
+      if (!slides.length) return;
+      currentSlide = (index + slides.length) % slides.length;
+      
+      slides.forEach((slide, i) => {
+        if (i === currentSlide) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
         }
       });
 
-      const img = document.getElementById('hero-product-img');
-      if (img) {
-        img.style.opacity = '0';
-        setTimeout(() => {
-          img.src = item.img;
-          document.getElementById('hero-product-title').textContent = item.title;
-          document.getElementById('hero-product-desc').textContent = item.desc;
-          document.getElementById('hero-product-status').textContent = item.status;
-          document.getElementById('hero-product-link').href = `https://wa.me/919967384878?text=Hello%20M/s%20Belubeari%20Exim,%20I%20need%20a%20price%20quote%20for%20${encodeURIComponent(item.wa)}.`;
-          img.style.opacity = '1';
-        }, 120);
-      }
+      dots.forEach((dot, i) => {
+        if (i === currentSlide) {
+          dot.classList.add('active');
+          dot.classList.remove('bg-slate-600');
+          dot.style.width = '24px';
+          dot.style.backgroundColor = '#D97706';
+        } else {
+          dot.classList.remove('active');
+          dot.classList.add('bg-slate-600');
+          dot.style.width = '8px';
+          dot.style.backgroundColor = '';
+        }
+      });
     }
 
-    // Auto-cycle showcase smoothly
-    let currentHeroIndex = 0;
-    function startHeroShowcaseAutoCycle() {
-      heroAutoInterval = setInterval(() => {
-        if (!heroIsPaused) {
-          currentHeroIndex = (currentHeroIndex + 1) % heroKeys.length;
-          switchHeroShowcase(heroKeys[currentHeroIndex]);
+    function nextHeroSlide() {
+      showHeroSlide(currentSlide + 1);
+    }
+
+    function prevHeroSlide() {
+      showHeroSlide(currentSlide - 1);
+    }
+
+    function goToHeroSlide(index) {
+      showHeroSlide(index);
+    }
+
+    // Auto-advance banner every 5s
+    function startHeroSlider() {
+      if (heroSliderTimer) clearInterval(heroSliderTimer);
+      heroSliderTimer = setInterval(() => {
+        if (!isSliderPaused) {
+          nextHeroSlide();
         }
       }, 5000);
     }
-    startHeroShowcaseAutoCycle();
+    startHeroSlider();
 
-    const heroStageEl = document.getElementById('hero-stage');
-    if (heroStageEl) {
-      heroStageEl.addEventListener('mouseenter', () => { heroIsPaused = true; });
-      heroStageEl.addEventListener('mouseleave', () => { heroIsPaused = false; });
-      heroStageEl.addEventListener('touchstart', () => { heroIsPaused = true; }, { passive: true });
+    const heroCarouselSection = document.getElementById('hero-carousel-section');
+    if (heroCarouselSection) {
+      heroCarouselSection.addEventListener('mouseenter', () => { isSliderPaused = true; });
+      heroCarouselSection.addEventListener('mouseleave', () => { isSliderPaused = false; });
+      
+      // Mobile touch swipe support
+      let touchStartX = 0;
+      let touchEndX = 0;
+      heroCarouselSection.addEventListener('touchstart', (e) => {
+        isSliderPaused = true;
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+      heroCarouselSection.addEventListener('touchend', (e) => {
+        isSliderPaused = false;
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 45) {
+          nextHeroSlide(); // Swiped left -> next
+        } else if (touchEndX - touchStartX > 45) {
+          prevHeroSlide(); // Swiped right -> prev
+        }
+      }, { passive: true });
     }
   </script>
 
